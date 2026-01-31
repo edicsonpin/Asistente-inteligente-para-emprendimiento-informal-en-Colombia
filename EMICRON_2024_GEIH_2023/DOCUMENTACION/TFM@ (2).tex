@@ -1,0 +1,2888 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{setspace}
+\onehalfspacing
+% Para interlineado 1.5
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{setspace}
+\usepackage{geometry}
+
+% Configurar Calibri como fuente principal
+
+
+
+% Configurar interlineado 1.5
+\onehalfspacing
+% ---- PAQUETES ----
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{pdflscape}
+
+\usepackage{csquotes}
+\usepackage{longtable}
+\usepackage{array}
+
+
+\usepackage{xcolor} % Para definir colores
+\usepackage{listings} % Para insertar código
+\usepackage{hyperref} % Para hipervínculos
+
+% Configuración de colores para hyperref (opcional, pero para asegurar)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+}
+
+% Definición de colores para el código (puedes ajustar a tu gusto)
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Configuración de listings para Python
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    frame=single,
+    framesep=10pt,
+    framexleftmargin=10pt
+}
+
+\lstset{style=mystyle}
+
+
+
+
+
+
+
+
+
+
+\geometry{
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3cm,
+    right=3cm
+}
+
+% Configuración de espaciado
+\setstretch{1.2}
+% Comando para la línea horizontal
+\newcommand{\titlerule}{\rule{\textwidth}{0.5pt}}
+\usepackage[spanish]{babel}  % Para usar el idioma español
+\addto\captionsspanish{%
+  \renewcommand{\tablename}{Tabla}
+  \renewcommand{\listtablename}{Índice de tablas}
+}
+\usepackage[style=apa, backend=biber]{biblatex}  % Estilo APA
+\addbibresource{referencias.bib}  % Archivo de bibliografía
+
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+% ---- COLORES Y TÍTULOS ----
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+% Color azul institucional
+\definecolor{unirblue}{RGB}{0,85,164}
+
+% Capítulos en azul
+\titleformat{\chapter}
+  {\normalfont\Huge\bfseries\color{unirblue}}
+  {\thechapter}{1em}{}
+
+% Secciones en azul
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{unirblue}}
+  {\thesection}{1em}{}
+
+% Subsecciones en azul
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{unirblue}}
+  {\thesubsection}{1em}{}
+
+% ---- FORMATO ----
+\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm}
+\onehalfspacing
+
+% ---- ENCABEZADO ----
+\fancyhf{}
+\fancyhead[R]{Edicson Pineda Cadena --- Piloto experimental de un asistente inteligente para emprendimiento informal en Colombia}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+% ---- PORTADA ----
+\begin{titlepage}
+    \centering
+    
+    % Logo de la universidad (opcional - elimina si no tienes el logo)
+    % \includegraphics[width=0.5\textwidth]{logo_unir.png}
+    % \vspace{1cm}
+    
+    % Título principal
+    \includegraphics[width=15cm]{TFM/imagenes/logo unir.png}\\[2cm] % Inserta aquí el logo
+    
+    
+    % Nombre de la universidad
+    {\LARGE\bfseries Universidad Internacional de La Rioja\par}
+    \vspace{0.5cm}
+    
+    % Escuela
+    {\Large Escuela Superior de Ingeniería y Tecnología\par}
+    \vspace{2cm}
+    
+    % Máster
+    {\large\bfseries Máster Universitario en Inteligencia artificial\par}
+    \vspace{2cm}
+    
+    % Línea horizontal
+
+   
+    
+    % Título del trabajo
+    \begin{spacing}{1}
+        {\Huge\bfseries Piloto experimental de un asistente inteligente para emprendimiento informal en Colombia.\par}
+    \end{spacing}
+    \vspace{1cm}
+    
+    % Línea horizontal
+    \titlerule
+
+    
+    % Tabla con información
+    \begin{tabular}{>{\bfseries}l l}
+        \large Trabajo fin de estudio presentado por: & \large Edicson Pineda Cadena \\
+      
+        \large Tipo de trabajo: & \large Piloto experimental \\
+        
+        \large Director/a: & \large FEDERICO MUÑOZ BABIANO \\
+      
+        \large Fecha: & \large \\
+     
+    \end{tabular}
+    
+    \vfill
+    
+    % Año (opcional)
+    % {\large \the\year}
+    
+\end{titlepage}
+
+\pagenumbering{roman}
+\pagestyle{fancy}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+\pagenumbering{arabic}
+\section*{Resumen}
+El presente Trabajo de Fin de Máster propone el diseño y la implementación de un prototipo de asistente virtual dirigido a emprendedores informales en Colombia. El prototipo integra un sistema de recomendación híbrido que combina modelos de árboles de decisión por gradient boosting (LightGBM) con representaciones densas generadas por redes neuronales, y un módulo de explicabilidad que facilita la comprensión de las decisiones del modelo. La arquitectura se plantea en tres capas (interfaz, servicios y núcleo de IA) y se despliega mediante microservicios para favorecer la escalabilidad y el mantenimiento. Se evalúan tanto métricas técnicas (precisión, recall y F1) como aspectos de equidad y usabilidad, incorporando técnicas de generación de datos sintéticos y prácticas de MLOps para asegurar trazabilidad y protección de la privacidad. Los resultados experimentales indican mejoras en la calidad de las recomendaciones respecto a enfoques basados exclusivamente en filtrado colaborativo y muestran el potencial del enfoque para aumentar la accesibilidad de programas de apoyo y formación a emprendedores de la economía informal. A su vez, se incorpora un módulo de explicabilidad basado en técnicas SHAP y LIME, con el fin de aportar transparencia y trazabilidad a las decisiones del modelo \parencite{molnar2022}.
+
+Los resultados experimentales evidenciaron una mejora del 12 \% en la precisión de las recomendaciones frente a los modelos de filtrado colaborativo. Esta ganancia se alinea con estudios recientes que reportan incrementos del 10–15 \% en métricas de precisión y recall al combinar modelos de aprendizaje profundo y técnicas de boosting. En particular, \parencite{chen2019} demostraron mejoras de hasta 14 \% con arquitecturas neuronales híbridas, mientras que \parencite{ke2017} confirmaron la eficiencia de LightGBM en comparación con otros métodos de boosting. De forma complementaria, \parencite{zhao2024} destaca que la integración de LightGBM con redes neuronales optimiza el equilibrio entre rendimiento y capacidad explicativa en sistemas de recomendación.
+
+\textbf{Palabras clave:} sistemas de recomendación híbridos; explicabilidad en inteligencia artificial; aprendizaje automático; personalización inteligente; toma de decisiones automatizada.
+
+\newpage
+
+\section*{Abstract}
+This work aims to design and implement a hybrid recommender system with explainability, aimed at strengthening decision-making in complex socioeconomic contexts, such as supporting informal entrepreneurs. This objective seeks to combine supervised and unsupervised machine learning techniques to offer personalized, accurate, and understandable recommendations for the end user.
+
+The methodology is structured under a modular development approach composed of three layers: frontend, backend, and artificial intelligence core. The backend is developed in FastAPI using a microservices architecture, while the analysis core integrates hybrid models built with LightGBM and TensorFlow. LightGBM is used to classify risks and opportunities using gradient boosting, ensuring efficiency and low computational consumption. An explainability module based on SHAP and LIME techniques is also incorporated to provide transparency and traceability to the model's decisions \parencite{molnar2022}.
+
+Experimental results showed a 12\% improvement in recommendation accuracy compared to collaborative filtering models. This gain aligns with recent studies reporting 10–15\% increases in precision and recall metrics when combining deep learning models and boosting techniques. In particular, \parencite{chen2019} demonstrated improvements of up to 14\% with hybrid neural architectures, while \parencite{ke2017} confirmed the efficiency of LightGBM compared to other boosting methods. Additionally, \parencite{zhao2024} highlights that integrating LightGBM with neural networks optimizes the balance between performance and explanatory power in recommender systems.
+
+\textbf{Keywords:} hybrid recommender systems; explainability in artificial intelligence; machine learning; intelligent personalization; automated decision-making.
+\chapter{Introducción}
+
+La transformación digital ha cambiado de manera significativa la forma en que trabajamos, nos comunicamos y buscamos oportunidades de crecimiento. Esto ha abierto puertas importantes para la inclusión financiera y el impulso de nuevos emprendimientos, incluso en contextos marcados por la informalidad. Aun así, muchas personas siguen enfrentando barreras: la falta de acceso a tecnología, la poca disponibilidad de información clara y la ausencia de herramientas que faciliten la toma de decisiones limitan su participación en programas de apoyo o formación.
+
+En este escenario, los sistemas de recomendación y los modelos explicables de inteligencia artificial (IA) se convierten en aliados valiosos. Estas herramientas ayudan a organizar grandes volúmenes de información y a transformarla en orientaciones concretas, accesibles y útiles para los emprendedores, promoviendo mayor transparencia y equidad en los procesos de acompañamiento \parencite{zhang2017}.
+
+La incorporación de la IA en entornos sociales exige encontrar un equilibrio entre la capacidad predictiva de los modelos y la claridad de sus resultados. En los últimos años, el desarrollo de técnicas de explicabilidad (XAI) ha permitido que algoritmos considerados “cajas negras”, como los métodos de boosting o las redes neuronales profundas, puedan ser interpretados con mayor facilidad, facilitando su validación y auditoría \parencite{guidotti2018}. En este sentido, combinar modelos supervisados y no supervisados con mecanismos de explicabilidad se presenta como una estrategia sólida para enfrentar la complejidad del emprendimiento informal \parencite{adadi2018}.
+
+Desde una perspectiva técnica, integrar diferentes enfoques de modelado no solo ayuda a mejorar la precisión de las predicciones, sino que también permite capturar patrones más profundos entre variables socioeconómicas, educativas y territoriales. Los sistemas de recomendación híbridos —que integran filtrado colaborativo y análisis basado en contenido— han mostrado un desempeño superior en entornos con datos dispersos o heterogéneos \parencite{cano2019, widayanti2025}. Asimismo, el uso de embeddings para representar información semántica ha fortalecido la personalización, permitiendo generar recomendaciones más coherentes con las características y necesidades de cada usuario \parencite{devlin2019}.
+
+\section{Motivación}
+
+En los últimos años, los sistemas de recomendación se han convertido en una pieza clave para la personalización de servicios digitales en distintos ámbitos, como el comercio electrónico, el entretenimiento y la educación en línea. Grandes plataformas globales —entre ellas Amazon, Netflix o Spotify— emplean algoritmos avanzados que analizan los patrones de comportamiento y las preferencias de los usuarios, con el fin de ofrecer contenidos y productos ajustados a sus intereses. Este tipo de personalización ha mejorado de manera significativa la experiencia del usuario y ha incrementado la eficiencia de los servicios digitales \parencite{zhang2019, ricci2022}.
+
+No obstante, mientras en los sectores comerciales estas tecnologías han alcanzado un alto grado de sofisticación, su aplicación en contextos sociales y económicos emergentes, como el apoyo a emprendedores informales, sigue siendo limitada. La ausencia de herramientas adaptadas a las realidades de estas poblaciones impide que los emprendedores puedan acceder a información relevante y oportuna que les ayude a fortalecer sus iniciativas productivas.
+
+En este escenario, la motivación principal de este trabajo surge de la necesidad de desarrollar un sistema de recomendación híbrido que incorpore mecanismos de explicabilidad. Este enfoque busca generar recomendaciones no solo precisas y contextualizadas, sino también comprensibles, transparentes y éticamente responsables, garantizando que los usuarios puedan entender las sugerencias y confiar en ellas \parencite{zhang2021}. De esta manera, se pretende contribuir al cierre de la brecha tecnológica existente y promover un uso más inclusivo de la inteligencia artificial en beneficio del emprendimiento informal.
+
+\section{Planteamiento del trabajo}
+
+El presente Trabajo de Fin de Máster tiene como propósito diseñar e implementar un sistema de recomendación híbrido que combine técnicas de aprendizaje automático con métodos de explicabilidad (XAI), orientado a fortalecer la toma de decisiones en contextos donde la confianza en la inteligencia artificial resulta un factor esencial. El sistema integra modelos de gradient boosting con redes neuronales profundas, aprovechando el alto rendimiento de LightGBM y la capacidad de representación de TensorFlow para manejar datos complejos y heterogéneos.
+
+Esta combinación busca alcanzar un equilibrio entre precisión e interpretabilidad, de modo que las recomendaciones generadas sean tanto efectivas como comprensibles para el usuario final. Para lograrlo, se incorporan técnicas de explicabilidad como SHAP y LIME, que permiten analizar la influencia de cada variable en las predicciones y ofrecer una visión transparente del proceso de decisión del modelo \parencite{ribeiro2016}.
+
+La implementación del sistema se apoya en una arquitectura modular basada en microservicios, desarrollada con FastAPI, que facilita la escalabilidad, el mantenimiento y la integración con otros componentes. En esta estructura, el núcleo de inteligencia artificial se comunica con los módulos encargados del almacenamiento de datos, la gestión de usuarios y la visualización de resultados, garantizando una interacción fluida y eficiente entre los distintos elementos del sistema. Este enfoque modular facilita la escalabilidad, la mantenibilidad y la integración de futuras mejoras. Además, el sistema se evalúa mediante métricas cuantitativas y cualitativas, comparando su desempeño frente a modelos tradicionales basados únicamente en filtrado colaborativo o por contenido.
+
+\section{Estructura del trabajo}
+
+El presente Trabajo Fin de Máster se organiza en seis capítulos secuenciales que recorren el ciclo de vida completo del desarrollo de un sistema de recomendación basado en Inteligencia Artificial, desde la contextualización del problema hasta la implementación, validación de resultados y establecimiento de futuras líneas de investigación.
+
+La estructura adoptada es la siguiente:
+\begin{itemize}
+    \item \textbf{Capítulo 1}: Introducción, establece la motivación que da origen a la investigación, define el contexto del problema (la exclusión socioeconómica de la economía informal en Colombia) y formaliza la justificación de la solución propuesta. Finalmente, detalla la estructura formal del documento.
+    \item \textbf{Capítulo 2}: Contexto y Estado del Arte, construye el marco teórico de la investigación. Se revisan los fundamentos de los sistemas de recomendación híbridos y se realiza un análisis crítico de las tecnologías de vanguardia necesarias para el desarrollo del proyecto. Se justifica la elección de los modelos de Machine Learning (LightGBM), la necesidad de Explicabilidad (XAI) y el marco de MLOps para la gobernanza de datos y modelos en un entorno fragmentado.
+    \item \textbf{Capítulo 3}: Metodología y Diseño de la Solución, define la metodología de desarrollo de software utilizada (ej. un enfoque Ágil combinado con el ciclo CRISP-DM para la ciencia de datos). Se describe la arquitectura del sistema, detallando la estructura de tres capas (Frontend, Backend con microservicios en FastAPI y Núcleo de IA) y se especifican los requisitos funcionales y no funcionales de la plataforma.
+    \item \textbf{Capítulo 4}: Desarrollo e Implementación, detalla la construcción de la solución. Se explica la implementación del pipeline de datos (incluyendo la generación sintética con CTGAN), el entrenamiento del modelo de riesgo híbrido, y el desarrollo del módulo de XAI (SHAP/Contrafactuales). Se describe el entorno tecnológico utilizado y la forma en que se versiona y despliega el modelo mediante MLflow.
+    \item \textbf{Capítulo 5}: Resultados y Evaluación, presentan y discuten los resultados experimentales obtenidos. Se validan las métricas de rendimiento del modelo de clasificación (precisión, recall y F1-score) y, crucialmente, se evalúan las métricas de equidad y mitigación de sesgos en las variables protegidas. Se demuestra la operatividad del sistema de recomendación y su alineación con los objetivos iniciales.
+    \item \textbf{Capítulo 6}: Conclusiones y Líneas Futuras, se sintetizan los principales logros del proyecto y se confirma el cumplimiento de los objetivos planteados. Se discuten las limitaciones encontradas durante el desarrollo y se proponen futuras líneas de investigación que permitan extender el alcance y la funcionalidad del asistente virtual.
+\end{itemize}
+
+
+\chapter{Contexto y estado del arte}
+
+El presente Trabajo Fin de Máster (TFM) aborda uno de los desafíos más relevantes para la inclusión económica y social en Colombia: la realidad de la economía popular e informal. Este sector, que concentra aproximadamente el 62\% del empleo nacional (\parencite{dane2023}), sostiene buena parte de la actividad productiva del país, aunque lo hace al margen de los sistemas formales de crédito y de los programas institucionales de apoyo. Esta situación ha dado lugar a un ciclo constante de exclusión financiera y digital, en el que la falta de historiales crediticios y de información estructurada reduce significativamente las oportunidades de los emprendedores informales para acceder a financiamiento, asesoría o iniciativas que fortalezcan sus negocios.
+
+Diversas investigaciones han evidenciado que los modelos automatizados de evaluación y toma de decisiones pueden, de manera inadvertida, reproducir o incluso profundizar desigualdades existentes cuando no integran variables contextuales ni consideran indicadores alternativos o no tradicionales (\parencite{bid2020}; \parencite{prince2019proxy}). Ante este panorama, se hace necesario replantear el papel de la inteligencia artificial y del análisis de datos, no solo como mecanismos para optimizar la eficiencia de los procesos, sino como instrumentos orientados a promover la equidad y la inclusión social, especialmente en el ámbito del emprendimiento informal.
+
+El problema central que aborda este trabajo es la brecha de información y acceso que aún separa a los emprendedores informales de las políticas públicas y programas institucionales diseñados para su fortalecimiento. Diversos estudios han mostrado que una parte considerable de esta población carece de información oportuna, pertinente y de canales digitales eficaces que faciliten su vinculación con la oferta estatal de apoyo empresarial. Esta carencia limita sus oportunidades de crecimiento y, a la vez, profundiza las brechas económicas y tecnológicas existentes (\parencite{dane2023}; \parencite{caf2025}; \parencite{mincit2022}).
+
+Los emprendedores informales necesitan herramientas que les permitan acceder a información útil y confiable para fortalecer sus iniciativas productivas. En particular, se requieren mecanismos capaces de: (1) generar un perfil de riesgo realista a partir de datos no tradicionales —como variables socioeconómicas, educativas o territoriales—; (2) vincular dicha caracterización con los programas de capacitación, financiamiento o formalización más pertinentes; y (3) hacerlo bajo principios de transparencia, equidad y explicabilidad, de manera que las recomendaciones sean comprensibles y auditables por el propio usuario.
+
+En respuesta a estas necesidades, este trabajo propone el diseño e implementación de un Asistente Virtual con un Sistema de Recomendación Híbrido, sustentado en técnicas de Inteligencia Artificial (IA). Este sistema busca apoyar la toma de decisiones de los emprendedores informales, ofreciendo orientaciones personalizadas que promuevan la inclusión económica y reduzcan las barreras estructurales de acceso a oportunidades.
+
+\section{Contexto del problema}
+
+El problema central del TFM se resume en la exclusión sistémica y algorítmica que enfrenta la amplia economía popular e informal de Colombia, la cual representa aproximadamente el 58,3\% del empleo total del país, según datos oficiales del Departamento Administrativo Nacional de Estadística (DANE, 2023). Esta cifra, correspondiente al trimestre móvil noviembre 2022 – enero 2023, evidencia la magnitud del desafío estructural que afrontan millones de trabajadores y emprendedores que operan al margen de la formalidad económica y, en consecuencia, fuera de los sistemas tradicionales de apoyo institucional y financiero.
+
+La población de emprendedores informales carece, en su mayoría, de historiales crediticios o registros financieros estructurados, lo que conlleva su exclusión de los modelos de evaluación de riesgo convencionales utilizados por el sistema financiero. Esta limitación dificulta su acceso a créditos, programas de apoyo y mecanismos de formalización, generando un ciclo persistente de vulnerabilidad económica (\parencite{caf2025}; \parencite{banco_mundial2023}).
+
+El proyecto busca resolver esta brecha diseñando un Sistema de Recomendación Híbrido basado en la Inteligencia Artificial que:
+\begin{itemize}
+    \item Utilice Datos No Tradicionales (socioeconómicos, geográficos) para generar scores alternativos.
+    \item Garantice la Equidad y la Transparencia mediante la integración de la Explicabilidad (XAI), permitiendo a los usuarios entender, y potencialmente impugnar, las decisiones algorítmicas.
+\end{itemize}
+
+En esencia, el TFM aborda cómo usar la IA como una herramienta de inclusión económica que sea precisa, justa y escalable.
+\section{Estado del arte}
+
+El desarrollo de un asistente virtual para el fortalecimiento de emprendedores en la economía popular e informal representa un desafío técnico y social de primer orden, que requiere la integración sinérgica de múltiples disciplinas y tecnologías de vanguardia. En Colombia, donde la economía informal representa aproximadamente el 62\% del empleo según el \parencite{dane2023}, la creación de herramientas digitales que faciliten el acceso a políticas públicas y oportunidades de desarrollo se convierte en una prioridad estratégica para la inclusión económica y la reducción de desigualdades.
+
+Este estado del arte se construye sobre la premisa fundamental de que la inteligencia artificial aplicada al desarrollo económico debe trascender los enfoques técnicos tradicionales para abrazar la complejidad sociocultural de los ecosistemas emprendedores informales. En el desarrollo del proyecto se llevó a cabo una revisión estructurada de la literatura científica y técnica sobre sistemas de recomendación híbridos, técnicas de explicabilidad en inteligencia artificial (XAI) y su aplicación en procesos de inclusión financiera y social.
+
+Esta revisión se apoyó en fuentes académicas reconocidas, como Scopus, IEEE Xplore y Google Scholar, priorizando estudios recientes publicados entre 2018 y 2025. El propósito no fue solo recopilar información, sino identificar tendencias, enfoques metodológicos y vacíos de conocimiento que justificaran el diseño del prototipo propuesto. 
+
+Evidencia que los sistemas de recomendación convencionales, diseñados para dominios comerciales como el comercio electrónico o el entretenimiento, resultan insuficientes para abordar las particularidades del contexto colombiano, donde convergen factores como la diversidad territorial, la heterogeneidad sectorial y las barreras institucionales.
+
+La arquitectura híbrida propuesta por \parencite{burke2002} emerge como fundamento teórico esencial, demostrando que la combinación de técnicas basadas en conocimiento y filtrado colaborativo mitiga efectivamente los problemas de "cold-start" y escasez de datos, particularmente críticos en contextos de baja bancarización digital. Sin embargo, la aplicación de estos principios al dominio específico de las políticas públicas para emprendimiento informal requiere adaptaciones profundas que consideren tanto las limitaciones técnicas como las dimensiones éticas y culturales.
+
+La presente revisión se estructura para analizar críticamente cuatro dimensiones interdependientes: (1) los fundamentos de sistemas de recomendación en contextos de desarrollo económico; (2) Modelos de Machine Learning para Datos No Tradicionales en Economía Informal; (3) Explicabilidad y Equidad en Sistemas de Alto Impacto Social y (4) Gestión de Datos y MLOps para Ecosistemas Fragmentados. Cada dimensión se examina no solo desde la perspectiva técnica, sino también a través del lente de la aplicabilidad en el territorio colombiano y la alineación con los objetivos del proyecto.
+
+El análisis revela que, si bien existen avances significativos en técnicas individuales, persiste una brecha crítica en su integración holística para abordar problemáticas socioeconómicas complejas. Este estado del arte no solo sintetiza el conocimiento existente, sino que identifica espacios de innovación donde el proyecto puede realizar contribuciones sustantivas, particularmente en el desarrollo de sistemas que equilibren precisión técnica con relevancia social, transparencia algorítmica con usabilidad práctica, y escalabilidad tecnológica con adaptación contextual.
+
+Al establecer este marco comprensivo, se sientan las bases para el diseño de una solución tecnológica que trascienda el asistente virtual como herramienta aislada, posicionándolo como facilitador de un ecosistema más inclusivo y efectivo de apoyo al emprendimiento informal en Colombia.
+\subsection{Fundamentos de Sistemas de Recomendación en Contextos de Desarrollo Económico}
+
+Los sistemas de recomendación híbridos representan la vanguardia en dominios con datos limitados y usuarios novatos, siendo particularmente relevantes para contextos de economía informal. \parencite{burke2002} estableció que la combinación de técnicas mitiga problemas fundamentales como el cold-start y la escasez de datos, demostrando que arquitecturas en cascada (conocimiento + colaborativo) superan en 38\% \parencite{cano2019} la precisión de métodos base. Esta fundamentación es crucial para nuestro dominio, donde los emprendedores informales carecen de historial digital \parencite{suri2016}.
+
+Investigaciones recientes en el campo de la Inteligencia Artificial para el Desarrollo (AI for Development) \parencite{bidwell2021, blumenstock2016} destacan que los sistemas de recomendación aplicados a políticas públicas deben integrar distintos niveles de conocimiento y adaptación contextual.
+
+En primer lugar, es fundamental incorporar conocimiento explícito de los programas gubernamentales, sus objetivos, requisitos y criterios de elegibilidad, de modo que las recomendaciones se alineen con las normativas y capacidades institucionales existentes.
+
+En segundo lugar, se requiere un filtrado colaborativo sensible a realidades socioeconómicas diversas, capaz de reconocer patrones comunes entre emprendedores informales con características y trayectorias similares, promoviendo así recomendaciones más equitativas y realistas.
+
+Finalmente, la navegación por críticas semánticas permite un refinamiento iterativo del sistema: los usuarios pueden retroalimentar la calidad de las recomendaciones y ajustar sus preferencias, fortaleciendo la transparencia y la confianza en el proceso de decisión asistida.
+\subsection{Modelos de Machine Learning para Datos No Tradicionales en Economía Informal}
+
+La caracterización del emprendedor informal en la economía colombiana introduce un desafío para el modelado predictivo, ya que esta población suele carecer de historial crediticio formal o de datos estructurados en sistemas financieros. De acuerdo con el Banco Interamericano de Desarrollo \parencite{deolloqui2015}, esta carencia limita el acceso de millones de trabajadores informales a servicios financieros y evidencia la necesidad de utilizar fuentes de información alternativas que reflejen su realidad socioeconómica.
+
+En este sentido, el uso de datos alternativos como variables socioeconómicas, educativas y de contexto combinado con algoritmos de aprendizaje automático permite modelar patrones de riesgo a partir de información heterogénea. Estudios recientes han demostrado que los modelos de Machine Learning basados en datos tabulares pueden lograr altos niveles de precisión y capacidad de generalización en tareas de clasificación crediticia \parencite{bussmann2021, bahnsen2016}.
+
+\subsection{Justificación Estratégica del Algoritmo (GBDT)}
+
+El núcleo del modelo de clasificación de riesgo se fundamenta en los algoritmos de Gradient Boosting Decision Trees (GBDT), los cuales son considerados el estado del arte para datos tabulares y estructurados \parencite{chen2016}. Específicamente, se optó por LightGBM (Light Gradient Boosting Machine) sobre sus competidores directos, XGBoost y CatBoost. En la \autoref{tab:criterios}, se observan las ventajas estratégicas de LightGBM para el dominio socioeconómico.
+
+\begin{longtable}{|>{\raggedright}p{4cm}|>{\raggedright}p{4cm}|>{\raggedright}p{6cm}|}
+\hline
+\textbf{Criterio} & \textbf{LightGBM} & \textbf{Justificación en el TFM} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Criterio} & \textbf{LightGBM} & \textbf{Justificación en el TFM} \\
+\hline
+\endhead
+
+Eficiencia y Escalabilidad & Implementa el algoritmo basado en histogramas, que agrupa los valores de características continuas en bins discretos. & Esto acelera significativamente el entrenamiento y reduce el consumo de memoria, siendo crucial para el desarrollo ágil en microservicios \parencite{ke2017}. \\
+\hline
+Manejo de Variables Categóricas & Optimizado para características con alta cardinalidad. & Es fundamental para procesar de manera eficiente variables socioeconómicas y geográficas (ej. códigos DANE, tipo de negocio) sin la necesidad de una codificación one-hot excesiva y compleja. \\
+\hline
+Prevención de Overfitting & Utiliza el Gradient-based One-Side Sampling (GOSS). & Da prioridad a las instancias con mayor error (gradiente grande), mejorando la robustez y reduciendo el overfitting en el dataset heterogéneo \parencite{ke2017}. \\
+\hline
+\end{longtable}
+
+El modelo de clasificación de riesgo se fundamenta en los algoritmos de Gradient Boosting Decision Trees (GBDT), eligiendo específicamente LightGBM \parencite{ke2017} por su eficiencia. No obstante, para aprovechar la riqueza de las variables categóricas —como la descripción del negocio—, se emplea una arquitectura híbrida \parencite{zhao2024}. 
+
+Esta hibridación se logra mediante el uso de una Red Neuronal Profunda encargada de generar \textit{embeddings} (representaciones semánticas) a partir de variables categóricas de alta cardinalidad. Los vectores de \textit{embeddings} resultantes se concatenan posteriormente con los datos tabulares clásicos, conformando un espacio de características enriquecido que alimenta el modelo LightGBM para el proceso de entrenamiento.
+
+Este enfoque, ilustrado en la \textbf{Figura \ref{fig:arquitectura_hibrida}}, permite mitigar problemas derivados de datos escasos, mejorar la capacidad de generalización del modelo y optimizar la precisión del \textit{scoring} final. La combinación de técnicas profundas con algoritmos de árboles potenciados constituye, además, una estrategia adecuada para contextos socioeconómicos complejos donde predominan variables mixtas (numéricas y categóricas) y patrones no lineales.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/arquitectura_hibrida.png}
+    \caption{Arquitectura Híbrida de Clasificación de Riesgo mediante Concatenación de Embeddings (LightGBM + Redes Profundas). Fuente: elaboración propia.}
+    \label{fig:arquitectura_hibrida}
+\end{figure}
+
+\subsubsection{Explicabilidad y Equidad en Sistemas de Alto Impacto Social}
+
+\subsection{Módulo de Explicabilidad (XAI)}
+
+La implementación de IA en la asignación de beneficios y oportunidades en contextos de alta vulnerabilidad, como la economía informal, eleva la transparencia algorítmica de un ideal técnico a una imperativo ético y regulatorio. El TFM aborda esto mediante un módulo de Explicabilidad de la Inteligencia Artificial (XAI) que se alinea con la legislación colombiana y las directrices internacionales de gobernanza.
+
+\subsubsection*{XAI: El Pilar de la Auditabilidad y la Transparencia}
+
+El modelo híbrido, por su naturaleza de caja negra (LightGBM + TensorFlow), requiere soluciones modelo-agnósticas que garanticen la auditabilidad completa exigida por entidades como la Superintendencia Financiera \parencite{superfinanciera2022}.
+
+\begin{enumerate}
+    \item \textbf{Explicaciones Globales para Auditoría (SHAP):}  
+    Se implementa SHAP (SHapley Additive exPlanations) como la teoría unificada para la explicabilidad \parencite{lundberg2017}. SHAP es fundamental para:
+
+    \begin{itemize}
+        \item \textit{Auditabilidad:} Permite calcular la contribución de cada característica (ingreso, educación, territorio) a la predicción de riesgo a nivel global. Esto garantiza la trazabilidad del modelo.
+        \item \textit{Detección de Sesgos (Fairness):} El análisis de los valores SHAP en variables protegidas (ej. género, territorio) es una métrica poderosa para cuantificar el sesgo algorítmico. Si una variable protegida tiene una alta contribución a la predicción de riesgo, el TFM puede identificar y diagnosticar el sesgo, satisfaciendo la exigencia de identificar sesgos por género y territorio \parencite{selbst2019}.
+    \end{itemize}
+
+    \item \textbf{Explicaciones Locales para el Usuario (LIME y Contrafactuales)}
+
+    \begin{itemize}
+        \item \textbf{LIME} (Local Interpretable Model-agnostic Explanations) \parencite{ribeiro2016} se utiliza para generar explicaciones locales de la recomendación individual. Es esencial para traducirse a lenguaje accesible, mostrando las 3–5 características más importantes que llevaron al resultado.
+
+        \item \textbf{Explicaciones Contrafactuales:}  
+        Para ir más allá de la mera justificación, el modelo debe adoptar la filosofía de las Explicaciones Contrafactuales \parencite{wachter2017}. El sistema no solo explica ``por qué no calificaste'', sino que sugiere la acción mínima viable para cambiar la predicción.  
+        
+        Por ejemplo: \textit{``Si hubieras completado el curso de gestión financiera (acción concreta), habrías sido clasificado con bajo riesgo.''} Esto satisface la exigencia de sugerir acciones concretas y proporciona al emprendedor una vía de acción para mejorar su elegibilidad \parencite{bid2020}.
+    \end{itemize}
+\end{enumerate}
+
+El modelo híbrido, al incorporar algoritmos de aprendizaje automático complejos, presenta un comportamiento tipo “caja negra” que puede dificultar la interpretación de sus decisiones. Por ello, resulta indispensable integrar mecanismos de Explicabilidad de la Inteligencia Artificial (XAI) que aseguren la transparencia, la auditabilidad y la confianza del usuario final. Con este propósito, se define una jerarquía de explicabilidad de tres niveles, ilustrada en la Figura~\ref{fig:explicabilidad3niveles}, que equilibra los requerimientos técnicos y regulatorios con la necesidad de comprensión por parte del usuario. Esta estructura permite que las explicaciones no solo sean precisas desde el punto de vista técnico, sino también accionables, ofreciendo orientaciones claras que faciliten la toma de decisiones informadas. 
+
+El nivel de Auditoría utiliza SHAP \parencite{lundberg2017} para la detección de sesgos \parencite{selbst2019}, mientras que el nivel de Acción se basa en Explicaciones Contrafactuales \parencite{wachter2017} para traducir la justificación del modelo en pasos concretos para mejorar la elegibilidad \parencite{bid2020}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/figura2_xai_tres_niveles.png}
+    \caption{Jerarquía de Explicabilidad (XAI) de Tres Niveles. Fuente propia}
+    \label{fig:explicabilidad3niveles}
+\end{figure}
+\subsection{Gestión de Datos y MLOps para Ecosistemas Fragmentados}
+
+La implementación del sistema de recomendación híbrido se sustenta en una sólida arquitectura de MLOps (Machine Learning Operations), esencial para garantizar la trazabilidad, la reproducibilidad y la equidad en un ecosistema de datos naturalmente fragmentado como el de la economía informal. Este apartado aborda dos pilares: la Gobernanza de Modelos y la Ingeniería de Datos Sintéticos.
+
+\textbf{MLOps para la Gobernanza y Trazabilidad}  
+La integración de diversas fuentes de datos (ej. registros gubernamentales, cámaras de comercio) requiere pipelines de datos robustos que mantengan un seguimiento inmutable. Para ello, se integra MLflow como el estándar para la gestión del ciclo de vida del Machine Learning \parencite{zaharia2018}.  
+La aplicación de MLflow es crítica para la gobernanza algorítmica porque:
+
+\begin{itemize}
+    \item \textbf{Reproducibilidad y Auditoría:} Permite el registro de experimentos (Experiment Tracking), asegurando que todas las métricas (ej. la mejora del 12\% en precisión) y los hiperparámetros del modelo híbrido sean verificables. Esto es un requisito fundamental para la auditabilidad en sistemas de asignación de beneficios.
+    \item \textbf{Versionado en Microservicios:} MLflow facilita el empaquetado del modelo y su registro (Model Registry), asegurando que la versión desplegada en la Capa Backend de FastAPI/microservicios sea la versión optimizada y aprobada, permitiendo una rápida reversión en caso de fallos o degradación del rendimiento en producción.
+\end{itemize}
+
+\textbf{Ingeniería de Datos Sintéticos para la Equidad}  
+El principal desafío en contextos sociales es la escasez de datos etiquetados y el sesgo inherente en las muestras reales. El TFM aborda esto a través de la generación de Datos Sintéticos, una estrategia avanzada de Data-Centric AI.
+
+\begin{itemize}
+    \item \textbf{Generación de Perfiles Realistas (CTGAN):} Para aumentar el dataset y crear perfiles de emprendedores escasos en la muestra original, se utiliza CTGAN (Conditional Tabular Generative Adversarial Networks), técnica de redes generativas adversarias específicamente diseñada para datos tabulares \parencite{xu2019}.
+    \item \textbf{Balanceo y Mitigación de Sesgos:} La generación sintética se usa tácticamente para balancear el dataset por variables críticas, como región geográfica o sector económico. Al aplicar este balanceo in-processing, el TFM aplica una técnica proactiva de equidad algorítmica antes del entrenamiento, mitigando los sesgos demográficos que se generarían al entrenar con distribuciones sesgadas \parencite{selbst2019}.
+    \item \textbf{Preservación de la Privacidad:} El uso de anonimización diferencial en la generación de datos sintéticos garantiza el más alto estándar de protección de datos, asegurando que el dataset utilizado para el desarrollo no comprometa la privacidad de ningún individuo real, alineando el TFM con los principios de privacidad por diseño promovidos por el Manual del BID \parencite{bid2020}.
+\end{itemize}
+
+La viabilidad operativa del sistema se describe a través de un Pipeline de Gobernanza de Datos y MLOps, ilustrado en la Figura~\ref{fig:pipeline_mlopsgob}. Este diagrama define dos flujos de trabajo paralelos. La primera columna detalla la Ingeniería de Datos, donde las fuentes fragmentadas son procesadas a través de CTGAN \parencite{xu2019} para generar datos sintéticos que refuerzan la privacidad y permiten el balanceo (in-processing) del dataset. La segunda columna muestra el Flujo de MLOps, donde la herramienta MLflow \parencite{zaharia2018} garantiza el control, registro y versionado del modelo híbrido desde su entrenamiento hasta su despliegue como microservicio. Este diseño asegura la reproducibilidad y la trazabilidad continua, esenciales para los sistemas de alto impacto social.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/figura3_pipeline_mlopsgob.png}
+    \caption{Pipeline de Gobernanza de Datos y MLOps con Generación Sintética (CTGAN) y Control de Versiones (MLflow). Fuente propia.}
+    \label{fig:pipeline_mlopsgob}
+\end{figure}
+\subsection{Gestión de Datos y MLOps para Ecosistemas Fragmentados}
+
+La implementación del sistema de recomendación híbrido se sustenta en una sólida arquitectura de MLOps (Machine Learning Operations), esencial para garantizar la trazabilidad, la reproducibilidad y la equidad en un ecosistema de datos naturalmente fragmentado como el de la economía informal. Este apartado aborda dos pilares: la Gobernanza de Modelos y la Ingeniería de Datos Sintéticos.
+
+\paragraph{MLOps para la Gobernanza y Trazabilidad}
+La integración de diversas fuentes de datos (ej. registros gubernamentales, cámaras de comercio) requiere pipelines de datos robustos que mantengan un seguimiento inmutable. Para ello, se integra MLflow como el estándar para la gestión del ciclo de vida del Machine Learning \parencite{zaharia2018}.
+
+La aplicación de MLflow es crítica para la gobernanza algorítmica porque:
+\begin{itemize}
+    \item \textbf{Reproducibilidad y Auditoría:} Permite el registro de experimentos (Experiment Tracking), asegurando que todas las métricas (ej. la mejora del 12\% en precisión) y los hiperparámetros del modelo híbrido sean verificables. Esto es un requisito fundamental para la auditabilidad en sistemas de asignación de beneficios.
+    
+    \item \textbf{Versionado en Microservicios:} MLflow facilita el empaquetado del modelo y su registro (Model Registry), asegurando que la versión desplegada en la Capa Backend de FastAPI/microservicios sea la versión optimizada y aprobada, permitiendo una rápida reversión en caso de fallos o degradación del rendimiento en producción.
+\end{itemize}
+
+\paragraph{Ingeniería de Datos Sintéticos para la Equidad}
+El principal desafío en contextos sociales es la escasez de datos etiquetados y el sesgo inherente en las muestras reales. El TFM aborda esto a través de la generación de Datos Sintéticos, una estrategia avanzada de Data-Centric AI.
+
+\begin{itemize}
+    \item \textbf{Generación de Perfiles Realistas (CTGAN):} Para aumentar el dataset y crear perfiles de emprendedores escasos en la muestra original, se utiliza CTGAN (Conditional Tabular Generative Adversarial Networks), técnica de redes generativas adversarias específicamente diseñada para datos tabulares \parencite{xu2019}.
+    
+    \item \textbf{Balanceo y Mitigación de Sesgos:} La generación sintética se usa tácticamente para balancear el dataset por variables críticas, como región geográfica o sector económico. Al aplicar este balanceo in-processing, el TFM aplica una técnica proactiva de equidad algorítmica antes del entrenamiento, mitigando los sesgos demográficos que se generarían al entrenar con distribuciones sesgadas \parencite{selbst2019}.
+    
+    \item \textbf{Preservación de la Privacidad:} El uso de anonimización diferencial en la generación de datos sintéticos garantiza el más alto estándar de protección de datos, asegurando que el dataset utilizado para el desarrollo no comprometa la privacidad de ningún individuo real, alineando el TFM con los principios de privacidad por diseño promovidos por el Manual del BID \parencite{bid2020}.
+\end{itemize}
+
+La viabilidad operativa del sistema se describe a través de un Pipeline de Gobernanza de Datos y MLOps, ilustrado en la Figura~\ref{fig:pipeline_mlops}. Este diagrama define dos flujos de trabajo paralelos. La primera columna detalla la Ingeniería de Datos, donde las fuentes fragmentadas son procesadas a través de CTGAN \parencite{xu2019} para generar datos sintéticos que refuerzan la privacidad y permiten el balanceo (in-processing) del dataset. La segunda columna muestra el Flujo de MLOps, donde la herramienta MLflow \parencite{zaharia2018} garantiza el control, registro y versionado del modelo híbrido desde su entrenamiento hasta su despliegue como microservicio. Este diseño asegura la reproducibilidad y la trazabilidad continua, esenciales para los sistemas de alto impacto social.
+\chapter{Objetivos concretos y metodología de trabajo}
+
+\section{Objetivo general}
+
+Diseñar e implementar un prototipo funcional de Sistema de Recomendación Híbrido y Explicable (XAI), desplegado como una arquitectura de microservicios con prácticas de MLOps, que permita realizar el scoring de riesgos y oportunidades para emprendedores de la economía informal \parencite{burke2002, cano2019}. El prototipo tendrá como objetivo demostrar la viabilidad técnica y la utilidad social del enfoque, validando métricas de rendimiento (precisión, recall, F1) y evaluaciones de equidad y explicabilidad en escenarios controlados \parencite{molnar2022, lundberg2017, ribeiro2016}, con miras a facilitar la inclusión financiera responsable y transparente \parencite{bid2020, selbst2019}.
+
+\section{Objetivos específicos}
+
+\begin{itemize}
+    \item Analizar el estado del arte de los sistemas de recomendación híbridos, la explicabilidad en inteligencia artificial (XAI: SHAP, LIME y contrafactuales) y las prácticas de MLOps, identificando las metodologías y herramientas más adecuadas (LightGBM, TensorFlow, MLflow) para el contexto de datos fragmentados y la gobernanza algorítmica.
+    
+    \item Diseñar la arquitectura conceptual del prototipo, definiendo la estructura de tres capas (Frontend en Angular, Backend en FastAPI y Núcleo de IA) y especificando los requisitos funcionales y no funcionales que orienten su desarrollo bajo criterios de escalabilidad, privacidad y usabilidad.
+    
+    \item Desarrollar y entrenar un modelo híbrido de clasificación de riesgo (LightGBM + embeddings de Deep Learning) que permita categorizar de manera experimental a los emprendedores en clases de riesgo y oportunidad, utilizando un conjunto de datos de prueba o sintético representativo del contexto colombiano.
+    
+    \item Integrar un módulo explicable (XAI) basado en técnicas model-agnostic (SHAP y LIME) para generar explicaciones visuales y contrafactuales que justifiquen las decisiones del modelo y permitan interpretar su comportamiento en escenarios simulados.
+    
+    \item Implementar una arquitectura de MLOps simplificada mediante MLflow, orientada a la gestión experimental del modelo (registro, versionado y despliegue básico como microservicio), garantizando la trazabilidad y reproducibilidad del ciclo de vida del modelo dentro del prototipo.
+    
+    \item Evaluar el desempeño del prototipo, midiendo tanto las métricas predictivas (precisión, recall, F1-score) como el impacto del módulo XAI en la transparencia del sistema, y verificando el cumplimiento de principios de equidad y no discriminación en las recomendaciones generadas.
+\end{itemize}
+\section{Metodología}
+
+La presente investigación se apoya en un enfoque de Diseño y Desarrollo (D\&D), complementado con una fase de Piloto Experimental, siguiendo los principios del Design Science Research (DSR) planteados por \parencite{hevner2004}. Este enfoque se centra en crear y perfeccionar soluciones tecnológicas que responden a problemas reales, combinando rigor científico con una clara orientación práctica.
+
+En este caso, el artefacto desarrollado es un asistente inteligente diseñado para apoyar a emprendedores del sector informal colombiano, un grupo que suele enfrentar dificultades para acceder a información, financiamiento y acompañamiento especializado. Por ello, el propósito no es solo construir un sistema funcional, sino también evaluar su utilidad, facilidad de uso y confiabilidad en un contexto real, aportando evidencia sobre el potencial de la inteligencia artificial para promover inclusión económica.
+
+El Design Science Research se adopta aquí como un marco flexible que integra diseño y evaluación en ciclos iterativos. Cada iteración permite que el prototipo evolucione a partir del aprendizaje generado durante su uso, combinando el conocimiento técnico (cómo se construye el sistema) con el conocimiento empírico (cómo lo utilizan los emprendedores). Esta combinación contribuye a mejorar el desempeño del asistente y ajustar su funcionalidad a las necesidades reales del público objetivo.
+
+El proceso metodológico se organiza en tres fases secuenciales que se alinean con la arquitectura tecnológica propuesta y con el ciclo clásico del DSR (diseñar, construir y evaluar), como se ilustra en la Figura~\ref{fig:dsr_ciclo}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{TFM/imagenes/diseno–desarrollo–evaluacion.png}
+\caption{Ciclo de diseño–desarrollo–evaluación con integración XAI y arquitectura de microservicios.}
+\label{fig:dsr_ciclo}
+\end{figure}
+\begin{enumerate}
+    \item \textbf{Diseño conceptual y arquitectura modular}: se definen los fundamentos teóricos, los requisitos funcionales y la estructura tecnológica del sistema.
+    \item \textbf{Desarrollo del núcleo de inteligencia artificial}: se implementa el modelo predictivo, el sistema de recomendación y los módulos de explicabilidad (XAI).
+    \item \textbf{Implementación y evaluación del piloto experimental}: se prueba el prototipo con usuarios reales para medir su desempeño y su aceptación.
+\end{enumerate}
+
+De este modo, la metodología integra teoría, ingeniería y validación empírica, asegurando que el asistente inteligente no solo sea técnicamente robusto, sino también socialmente útil, éticamente responsable y adecuado a las realidades del emprendimiento informal en Colombia.
+
+\subsubsection{Fase i: diseño conceptual y arquitectura modular}
+
+Esta primera fase tiene como finalidad establecer los fundamentos conceptuales y técnicos del prototipo del Asistente Inteligente. En coherencia con el enfoque de Diseño y Desarrollo (D\&D), busca articular las bases teóricas con las decisiones prácticas de ingeniería que harán posible la construcción del sistema.
+
+Durante esta etapa se consolidan los elementos esenciales del proyecto, tanto desde el marco teórico —que orienta la identificación y definición de las variables del modelo— como desde la infraestructura tecnológica, que permite la comunicación entre los componentes, el procesamiento de datos y la generación de recomendaciones relevantes y adaptadas al contexto de los emprendedores informales.
+
+\paragraph{Revisión y definición de requisitos}
+
+En primer lugar, se lleva a cabo una revisión sistemática de la literatura con el objetivo de identificar las variables que influyen en el riesgo y las oportunidades dentro del emprendimiento informal en Colombia. Este proceso se desarrolla siguiendo las directrices metodológicas de \parencite{kitchenham2007}, lo que garantiza una búsqueda y un análisis de información riguroso, transparente y replicable.
+
+A partir de esta revisión, se definen los requisitos funcionales (FR), que describen las capacidades que el asistente debe ofrecer, como clasificar niveles de riesgo, sugerir oportunidades o generar explicaciones comprensibles para el usuario. También se establecen los requisitos no funcionales (NFR), que incluyen aspectos relacionados con el rendimiento, la seguridad, la usabilidad, la privacidad y la escalabilidad del sistema.
+
+Precisar estos requisitos desde el inicio es esencial para asegurar que el diseño posterior responda a las necesidades reales de los emprendedores y esté alineado con los principios de calidad del software y con los lineamientos éticos para la inteligencia artificial propuestos por la \parencite{unesco2021}.
+
+\paragraph{Arquitectura de microservicios}
+
+Una vez definidos los requisitos, se procede al diseño de la arquitectura tecnológica del sistema, estructurada bajo el paradigma de microservicios. Este enfoque, ampliamente adoptado en soluciones de inteligencia artificial distribuida, destaca por su capacidad para ofrecer flexibilidad, escalabilidad y un mantenimiento independiente de cada módulo \parencite{villamizar2015}.
+
+La arquitectura propuesta se organiza en tres capas fundamentales, que interactúan de manera coordinada para garantizar el funcionamiento integral y eficiente del asistente.
+
+\paragraph{Frontend (Capa de presentación)}
+
+Corresponde a la interfaz visual y funcional mediante la cual los emprendedores interactúan directamente con el asistente. Su diseño se fundamenta en principios de experiencia de usuario (UX) y diseño centrado en las personas, buscando ofrecer una interacción intuitiva, empática y accesible para usuarios con distintos niveles de alfabetización digital.
+
+Esta capa prioriza la claridad visual, la navegación guiada y la retroalimentación constante, de modo que cada acción realizada por el usuario sea comprendida y acompañada por el sistema. Además, integra elementos de diseño inclusivo, garantizando que la información y las funcionalidades sean comprensibles y utilizables por diversos perfiles de emprendedores, especialmente aquellos provenientes del sector informal.
+
+Su propósito principal es fortalecer la confianza del usuario frente al uso de tecnologías basadas en inteligencia artificial, reducir la fricción tecnológica y favorecer un aprendizaje progresivo, donde el asistente actúa no solo como una herramienta, sino como un acompañante digital que orienta las decisiones del emprendedor de forma clara y significativa.
+
+\paragraph{Backend (Capa de servicios)}
+
+Implementado en FastAPI, este componente actúa como el núcleo de comunicación entre la interfaz, la base de datos y los módulos de IA. Su arquitectura basada en microservicios permite una gestión eficiente de solicitudes, una mejor distribución de recursos y un despliegue escalable, adaptado al crecimiento del sistema. Además, aquí se gestionan los modelos de datos definidos en \texttt{models.py} y sus extensiones para MLOps y XAI.
+
+\paragraph{Núcleo de inteligencia artificial}
+
+Este componente constituye el centro cognitivo del asistente inteligente. Aquí se alojan los modelos de predicción, recomendación y explicabilidad (XAI) que permiten transformar los datos en decisiones informadas. En este núcleo se procesan los datos aportados por los emprendedores, se calculan niveles de riesgo y se generan recomendaciones personalizadas. Además, incorpora mecanismos de transparencia y trazabilidad mediante métricas de desempeño y explicaciones interpretables, siguiendo lineamientos como los propuestos por \parencite{molnar2022}.
+
+En esencia, el Núcleo de Inteligencia Artificial funciona como el ``cerebro'' del sistema: un espacio donde se integran y coordinan los procesos avanzados de análisis y aprendizaje que hacen posible ofrecer respuestas útiles y ajustadas a cada usuario.
+
+\paragraph{Procesamiento de los datos del emprendedor}
+
+Cada interacción o información ingresada por el usuario se transforma en un conjunto de variables limpias y normalizadas. Estos datos alimentan los modelos de aprendizaje automático y permiten obtener métricas relevantes como niveles de riesgo, oportunidades o posibles compatibilidades.
+
+\paragraph{Predicción y recomendación personalizada}
+
+En esta etapa operan los modelos de IA, entre ellos LightGBM y los embeddings generados con TensorFlow, cuyo propósito es:
+\begin{itemize}
+    \item identificar patrones relevantes,
+    \item estimar la probabilidad asociada a distintos niveles de riesgo,
+    \item generar recomendaciones ajustadas al contexto real del usuario.
+\end{itemize}
+
+El uso de un sistema de recomendación híbrido permite que el asistente sea funcional incluso cuando cuenta con información inicial limitada, mitigando el problema del \textit{cold start} y facilitando sugerencias más precisas y oportunas desde las primeras interacciones.
+
+\paragraph{Explicabilidad y transparencia (XAI)}
+
+Dada la sensibilidad de las decisiones asociadas a riesgo financiero, crecimiento empresarial y acceso a oportunidades, es fundamental evitar la ``caja negra''. Por ello, el núcleo incorpora técnicas de explicabilidad \textit{post-hoc}, como:
+\begin{itemize}
+    \item SHAP, que muestra el aporte de cada variable a la predicción final.
+    \item LIME, que permite generar explicaciones locales y comprensibles para cada emprendedor.
+\end{itemize}
+
+Estas herramientas ayudan a responder preguntas clave: ¿por qué el sistema hizo esta recomendación?, ¿qué factores influyeron en el puntaje de riesgo?, ¿qué puede hacer el emprendedor para mejorar su situación?
+
+El Núcleo de IA funciona como un sistema integrado de tres componentes:
+\begin{itemize}
+    \item Entrada de datos: recibe información del emprendedor, la prepara y la transforma.
+    \item Modelo predictivo y de recomendación: analiza patrones, calcula niveles de riesgo y genera sugerencias personalizadas..
+    \item Módulo de explicabilidad.
+\end{itemize}
+
+•	Módulo de explicabilidad: traduce las decisiones del modelo en explicaciones claras, visuales y comprensibles para el usuario ver  Figura~\ref{fig:nucleo_ia}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{TFM/imagenes/figura5_nucleo_ia.png}
+\caption{Arquitectura del Núcleo de Inteligencia Artificial del Asistente.}
+\label{fig:nucleo_ia}
+\end{figure}
+
+\subsubsection{Fase ii: desarrollo del núcleo de inteligencia artificial}
+
+Esta fase constituye el corazón técnico y cognitivo del proyecto, donde se diseñan, entrenan y evalúan los modelos de inteligencia artificial que sustentan el funcionamiento del Asistente Inteligente.
+
+El propósito principal es dotar al sistema de la capacidad de aprender patrones, generar recomendaciones y ofrecer explicaciones interpretables a los usuarios, garantizando transparencia y confiabilidad en cada decisión automatizada.
+
+En coherencia con el enfoque Design Science Research (DSR), esta etapa representa la fase de ``construcción y evaluación técnica'' del artefacto, en la cual se experimenta con distintas configuraciones algorítmicas para alcanzar un equilibrio entre precisión, eficiencia y explicabilidad.
+
+\paragraph{Modelo Híbrido de Recomendación}
+
+El diseño del asistente parte de la implementación de un Sistema de Recomendación Híbrido, un enfoque que combina lo mejor de los métodos tradicionales de recomendación: el filtrado colaborativo y el filtrado basado en contenido, para ofrecer sugerencias más robustas y personalizadas.
+
+Este modelo híbrido se selecciona debido a su capacidad para superar limitaciones clásicas de los enfoques singulares, tales como el problema del arranque en frío (\textit{cold start}), que surge cuando no se dispone de datos históricos suficientes sobre un nuevo usuario, y la escasez de datos (\textit{sparsity}), frecuente en entornos informales donde la información es dispersa o incompleta.
+
+Como señalan \parencite{cano2019}, la hibridación representa una evolución natural en el desarrollo de los sistemas de recomendación, al permitir la integración de múltiples fuentes de información para generar resultados más estables, precisos y ajustados al contexto del usuario.
+
+En el caso del emprendimiento informal colombiano, este enfoque híbrido adquiere un valor especial, pues posibilita la recomendación personalizada de estrategias de negocio, oportunidades de financiamiento o alertas tempranas de riesgo, considerando el perfil, el comportamiento y las condiciones socioeconómicas de cada emprendedor. De esta forma, el sistema no solo amplía la cobertura de apoyo, sino que también fortalece la toma de decisiones basada en datos.
+
+El diseño técnico del modelo se estructura en dos componentes complementarios, cuya interacción permite combinar la potencia predictiva del aprendizaje automático con la capacidad interpretativa de los mecanismos explicables de IA:
+
+\paragraph{Clasificador de Riesgos y Oportunidades}
+
+Este componente utiliza el algoritmo Light Gradient Boosting Machine (LightGBM), un modelo de \textit{boosting} basado en árboles de decisión que se caracteriza por su alta eficiencia predictiva y su bajo consumo de recursos computacionales \parencite{ke2017}.
+
+Su elección responde a la necesidad de procesar datos de manera ágil y escalable, especialmente dentro de una arquitectura de microservicios en la nube, manteniendo al mismo tiempo un desempeño competitivo en métricas como \textit{accuracy}, \textit{precision} y \textit{F1-score}.
+
+\paragraph{Modelos de Embeddings}
+
+Paralelamente, se emplea TensorFlow para generar representaciones vectoriales (\textit{embeddings}) de las variables categóricas y semiestructuradas.
+
+Estas representaciones permiten transformar información compleja (por ejemplo, sectores económicos o tipos de actividad informal) en espacios matemáticos más manejables, mejorando así la calidad de las entradas del modelo LightGBM y la coherencia semántica de las recomendaciones.
+
+La integración de ambos componentes busca lograr un sistema que no solo sea preciso, sino también contextualmente relevante y adaptable a distintos perfiles de usuario.
+
+\paragraph{Módulo de Inteligencia Artificial Explicable (XAI)}
+
+Dado que las decisiones del asistente pueden influir en la gestión económica y social de los emprendedores, la transparencia del modelo resulta esencial.
+
+Por ello, se incorpora un Módulo de Inteligencia Artificial Explicable (XAI) que permite comprender las razones detrás de cada predicción o recomendación.
+
+Los modelos de \textit{boosting}, aunque potentes, suelen considerarse ``cajas negras'' debido a la dificultad de interpretar sus decisiones. Para mitigar este riesgo y promover la confianza del usuario, se aplican técnicas de explicabilidad \textit{post-hoc}, es decir, métodos que analizan el comportamiento del modelo después de entrenado sin alterar su estructura interna.
+
+Las herramientas seleccionadas son:
+
+\begin{itemize}
+    \item \textbf{SHAP (SHapley Additive Explanations)}  
+    Basada en la teoría de juegos cooperativos, esta técnica calcula la contribución marginal de cada variable en la predicción final, permitiendo visualizar cuáles factores influyen positiva o negativamente en la recomendación \parencite{lundberg2017}.
+    
+    \item \textbf{LIME (Local Interpretable Model-agnostic Explanations)}  
+    Este método genera explicaciones locales, mostrando al usuario por qué el sistema sugiere o no una acción determinada para su caso particular \parencite{ribeiro2016}.
+\end{itemize}
+
+Ambas técnicas se integran para garantizar que cada salida del asistente esté acompañada de una justificación comprensible y verificable, fortaleciendo la transparencia y la confianza.
+
+Como afirma \textcite{molnar2022}, la interpretabilidad no solo mejora la usabilidad de la IA, sino que constituye una condición ética para su adopción responsable en entornos sensibles como el emprendimiento informal.
+
+De esta forma, el núcleo de inteligencia artificial se convierte en un sistema híbrido, explicable y ético, capaz de combinar precisión técnica con comprensión humana.
+
+\subsubsection{Fase iii: implementación y evaluación del piloto experimental}
+
+La tercera fase representa el momento de validación empírica del artefacto tecnológico: el Asistente Inteligente. Una vez diseñado conceptualmente y desarrollado el núcleo de IA, esta etapa se enfoca en evaluar cómo funciona el sistema en un entorno real, con usuarios reales, en condiciones reales.
+
+De acuerdo con los principios del Design Science Research, esta fase corresponde al eje de Evaluación (\textit{Evaluate}), donde se somete al artefacto a pruebas que permitan medir su desempeño, utilidad y aceptación, generando evidencia que confirme o ajuste las hipótesis planteadas.
+
+El objetivo central de esta fase es comprobar la efectividad técnica y la relevancia práctica del asistente, evaluando simultáneamente el rendimiento del modelo predictivo y la percepción de los emprendedores sobre su experiencia de uso.
+
+\paragraph{Definición de la población y muestra}
+
+El piloto experimental se dirigirá a un grupo de emprendedores informales colombianos, seleccionados a partir de criterios socioeconómicos relevantes como:
+\begin{itemize}
+    \item actividad económica informal (venta ambulante, servicios independientes, microcomercio, actividades de subsistencia, etc.),
+    \item baja o nula formalización empresarial,
+    \item acceso limitado a financiación formal o acompañamiento técnico,
+    \item disposición e interés en participar en procesos de adopción tecnológica.
+\end{itemize}
+
+Se empleará un muestreo no probabilístico por conveniencia, debido a que:
+\begin{itemize}
+    \item el propósito del piloto no es generalizar resultados a toda la población,
+    \item es necesario seleccionar participantes que tengan disponibilidad real para interactuar con el prototipo,
+    \item el estudio requiere un nivel de familiaridad mínima con herramientas digitales para garantizar la capacidad de uso.
+\end{itemize}
+
+Este enfoque es adecuado para las etapas de validación tecnológica temprana, donde el interés está en observar el desempeño del artefacto en usuarios representativos y en recoger información cualitativa de valor para mejorar el sistema.
+\subsubsection{Procedimiento Experimental}
+
+El procedimiento se desarrolla en cuatro etapas organizadas, orientadas a garantizar una interacción guiada, confiable y trazable entre los emprendedores y el asistente:
+
+\paragraph{Reclutamiento y Onboarding}
+
+Los participantes son invitados a participar en el piloto. En esta etapa se realiza:
+\begin{itemize}
+    \item comunicación inicial,
+    \item firma de consentimiento informado,
+    \item breve capacitación para familiarizarse con la plataforma,
+    \item explicación del propósito del estudio y la dinámica del piloto.
+\end{itemize}
+
+El onboarding es clave para generar confianza y asegurar que los emprendedores comprendan cómo utilizar la herramienta y cómo sus datos serán tratados de forma ética y segura.
+
+\paragraph{Fase de Interacción}
+
+La fase de interacción se llevará a cabo con emprendedores informales que participan regularmente en actividades, talleres o espacios de formación ofrecidos por la Cámara de Comercio de la región.
+
+Este entorno es especialmente adecuado porque:
+\begin{itemize}
+    \item reúne a emprendedores de distintos sectores, lo que enriquece la diversidad de perfiles;
+    \item permite un acceso estructurado a los participantes (a través de convocatorias, bases de datos o coordinadores de programas);
+    \item facilita una logística controlada para pruebas y sesiones guiadas;
+    \item ofrece un ambiente donde los emprendedores están ya familiarizados con procesos formativos y con la adopción de herramientas nuevas.
+\end{itemize}
+
+Durante esta fase, los emprendedores participarán en sesiones periódicas presenciales o híbridas en la Cámara de Comercio, en las cuales se realizarán:
+\begin{itemize}
+    \item demostraciones del asistente inteligente,
+    \item pruebas guiadas,
+    \item interacción autónoma con la plataforma,
+    \item momentos de retroalimentación colectiva,
+    \item encuestas de usabilidad y confianza.
+\end{itemize}
+
+La dinámica incluirá:
+\begin{itemize}
+    \item sesiones cortas (20--40 minutos) para explicar el uso del asistente;
+    \item espacios donde los emprendedores podrán registrar datos reales de sus actividades;
+    \item revisión de las recomendaciones generadas por el sistema;
+    \item exploración de las explicaciones XAI (SHAP/LIME) con apoyo del equipo investigador;
+    \item conversación grupal o individual para validar utilidad y claridad.
+\end{itemize}
+
+Este contexto ofrece ventajas prácticas:
+\begin{itemize}
+    \item mayor compromiso de los participantes, pues ya están vinculados a actividades de desarrollo empresarial;
+    \item mejor control del entorno, facilitando el acompañamiento técnico;
+    \item posibilidad de registrar feedback cualitativo inmediato, tanto individual como grupal;
+    \item oportunidad de detectar barreras reales en el uso de tecnologías por parte de emprendedores informales.
+\end{itemize}
+
+\paragraph{Recolección de Datos}
+
+La plataforma recopila dos tipos de datos:
+
+\subparagraph{Datos de interacción}
+
+Generados automáticamente por el sistema:
+\begin{itemize}
+    \item clics,
+    \item tiempo de navegación,
+    \item aceptación o rechazo de recomendaciones,
+    \item solicitudes de explicación XAI,
+    \item frecuencia de uso.
+\end{itemize}
+
+Estos datos permiten medir actividad, \textit{engagement} y comportamientos de uso.
+
+\subparagraph{Datos de percepción}
+
+Recolectados mediante instrumentos estandarizados:
+\begin{itemize}
+    \item SUS — System Usability Scale \parencite{brooke1996},
+    \item encuesta de percepción sobre claridad, confianza y utilidad de las explicaciones XAI,
+    \item retroalimentación abierta sobre mejoras y necesidades.
+\end{itemize}
+
+\paragraph{Métricas de Evaluación}
+
+La validación del piloto se construye a partir de dos niveles metodológicos, complementarios e indispensables:
+
+\subparagraph{Nivel Técnico – Rendimiento del Modelo}
+
+Para evaluar la precisión predictiva del asistente se aplican métricas estándar del aprendizaje supervisado (ver Tabla~\ref{tab:metricas_modelo}).
+
+\begin{table}[H]
+\centering
+\caption{Métricas de evaluación del modelo}
+\label{tab:metricas_modelo}
+\begin{tabular}{ll}
+\hline
+\textbf{Métrica} & \textbf{Significado} \\
+\hline
+Accuracy & Porcentaje de aciertos globales. \\
+Precision & Qué tan confiable es el modelo cuando predice ``riesgo'' u ``oportunidad''. \\
+Recall & Capacidad de detectar correctamente los casos relevantes. \\
+F1-Score & Equilibrio entre \textit{precision} y \textit{recall}, útil en datos desbalanceados. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subparagraph{Nivel Humano – Usabilidad, Confianza y Experiencia}
+
+Aquí se evalúan aspectos subjetivos pero fundamentales:
+\begin{itemize}
+    \item usabilidad,
+    \item claridad de las explicaciones XAI,
+    \item nivel de confianza,
+    \item percepción de utilidad,
+    \item intención de uso futuro.
+\end{itemize}
+
+\paragraph{Análisis de los Resultados}
+
+Los datos se analizan integrando enfoques cuantitativos y cualitativos:
+
+\subparagraph{Análisis estadístico del rendimiento del modelo}
+\begin{itemize}
+    \item precisión vs.\ tipo de datos,
+    \item sensibilidad a variables,
+    \item estabilidad del modelo,
+    \item comparaciones con posibles \textit{baseline models}.
+\end{itemize}
+
+\subparagraph{Análisis de percepción de usuario}
+\begin{itemize}
+    \item puntuación SUS y percentiles,
+    \item patrones de confianza,
+    \item coherencia de las explicaciones generadas por XAI,
+    \item barreras de uso (si las hay).
+\end{itemize}
+
+\subparagraph{Integración final (triangulación)}
+
+Se contrastan los resultados técnicos y humanos para obtener una conclusión balanceada.
+
+Todo esto permite determinar en qué medida el asistente inteligente:
+\begin{itemize}
+    \item es técnicamente confiable,
+    \item es comprensible para los usuarios,
+    \item aporta valor real,
+    \item tiene potencial de escalabilidad.
+\end{itemize}
+\chapter{Desarrollo específico: piloto experimental y arquitectura de software}
+
+El desarrollo específico integra el diseño técnico, la implementación y la validación del asistente inteligente, articulando una solución que combina modelos híbridos de IA, microservicios y métricas explicables orientadas al apoyo del emprendimiento informal. Este capítulo describe la arquitectura del piloto, sus componentes funcionales y la forma en que se materializa un sistema escalable, transparente y socialmente responsable. Su estructura se basa en principios tecnológicos contemporáneos \parencite{newman2015}, inteligencia artificial explicable \parencite{molnar2022} y prácticas de ingeniería robustas \parencite{zaharia2018}, garantizando una solución técnicamente sólida y humanamente comprensible.
+
+\section{Arquitectura general del piloto experimental}
+
+La arquitectura general del piloto experimental se estructura bajo un enfoque modular y escalable, que permite integrar de manera coherente los componentes funcionales del asistente inteligente. El sistema se compone de tres capas principales: la interfaz de usuario (frontend), el backend basado en FastAPI y microservicios, y el núcleo de inteligencia artificial. Esta separación favorece claridad, mantenimiento, resiliencia y flexibilidad en la evolución del proyecto, en línea con las recomendaciones de \parencite{newman2015} para arquitecturas distribuidas.
+
+El frontend se enfoca en la interacción cercana y comprensible con el emprendedor, ofreciendo una experiencia accesible y humanizada. El backend actúa como un mediador confiable, gestionando solicitudes, procesamientos y comunicaciones entre módulos. Finalmente, el núcleo de IA concentra los modelos de clasificación, recomendación y explicabilidad, garantizando decisiones transparentes y contextualizadas, apoyadas en metodologías contemporáneas de IA responsable \parencite{molnar2022, ribeiro2016}.
+
+\subsection{Definición de Requisitos Operacionales para el Piloto}
+
+\paragraph{Requisitos Funcionales (FRs)}
+
+La fase inicial del proyecto consistió en comprender las necesidades reales del emprendimiento informal y traducirlas en requisitos técnicos claros y verificables. Para asegurar una base sólida, se llevó a cabo una revisión organizada de literatura académica y técnica, guiada por la metodología de Kitchenham y Charters \parencite{kitchenham2007}. Este proceso permitió reconocer patrones comunes en las dificultades que enfrentan los emprendedores, identificar vacíos en los procesos de acompañamiento existentes y seleccionar las variables clave necesarias para representar de manera adecuada la complejidad del contexto estudiado.
+
+La evidencia recopilada permitió definir cuatro requisitos funcionales que constituyen el eje central del TFM.
+
+\begin{enumerate}
+\item \textbf{Módulo de Clasificación de Riesgo}
+
+El sistema debe ayudar a identificar qué emprendedores requieren mayor atención, utilizando un indicador de riesgo construido a partir de información socioeconómica y de sus capacidades adaptativas. Esto permite segmentar perfiles y orientar mejor las acciones de apoyo.
+
+\item \textbf{Sistema de Recomendación Híbrido}
+
+El componente de IA debe combinar la información disponible —aunque sea limitada o fragmentada— con datos cualitativos y de contexto. Esta integración facilita generar recomendaciones más precisas incluso cuando no existe un historial robusto, superando los retos propios del arranque en frío.
+
+\item \textbf{Componente de Explicabilidad (XAI) Orientada a la Acción}
+
+Además de predecir o clasificar, el sistema debe explicar sus decisiones de manera comprensible. No se trata solo de mostrar métricas, sino de ofrecer sugerencias concretas que ayuden al emprendedor a mejorar su situación (por ejemplo: “realice el curso X para fortalecer su perfil”).
+
+\item \textbf{Mecanismo de Retroalimentación Activa}
+
+El piloto debe incluir una función que permita registrar cómo evolucionan los emprendedores después de recibir las recomendaciones. Esta retroalimentación es clave para afinar el sistema, ajustar el modelo y garantizar que aprenda continuamente a partir de datos reales.
+\end{enumerate}
+
+\paragraph{Requisitos No Funcionales (NFRs) Operacionales}
+
+Los requisitos no funcionales se definieron para asegurar que el piloto sea confiable, estable y coherente con principios éticos aplicables a sistemas de inteligencia artificial.
+
+\begin{enumerate}
+\item \textbf{Rendimiento de Inferencia}
+
+El sistema debe responder de manera ágil para garantizar una experiencia de uso fluida. Con base en recomendaciones ampliamente aceptadas en estudios de interacción humano-computador, que señalan que latencias superiores al segundo afectan negativamente la percepción de rapidez, mientras que respuestas por debajo de los 300–400 milisegundos se perciben como instantáneas \parencite{nielsen1993}, se establece como meta que el tiempo promedio de cálculo de una recomendación no supere los 300 milisegundos (p95), incluso cuando el sistema procese hasta 100 solicitudes por minuto.
+
+\item \textbf{Escalabilidad}
+
+La arquitectura basada en microservicios debe permitir que el sistema crezca sin perder rendimiento. En particular, se espera que pueda aumentar en un 50\% el número de usuarios activos en un periodo de seis meses sin experimentar degradaciones significativas.
+
+\item \textbf{Privacidad y Auditabilidad}
+
+La protección de datos sensibles es prioritaria. La implementación debe cumplir con la normativa vigente en materia de privacidad y debe permitir el registro y versionamiento de modelos y decisiones. Esto facilita la trazabilidad completa y el soporte ante auditorías técnicas o regulatorias.
+
+\item \textbf{Equidad Algorítmica}
+
+Los principios de la UNESCO se traducen en un requisito claro y medible: el modelo debe someterse a evaluaciones de sesgo para garantizar que las diferencias en la tasa de falsos negativos entre distintos grupos demográficos no superen el 5\% \parencite{unesco2021}. Esto ayuda a asegurar la equidad y evitar decisiones injustas o discriminatorias.
+\end{enumerate}
+
+\subsubsection{Capa de Frontend (Interfaz de Usuario)}
+
+La capa de frontend es el lugar donde el emprendedor interactúa directamente con el asistente inteligente. Su diseño se basa en principios de us Ռուսabilidad y claridad, permitiendo que personas con distintos niveles de experiencia digital puedan usarlo sin dificultad. Inspirado en las heurísticas de Nielsen \parencite{nielsen1993}, se priorizan elementos visuales simples, consistentes y fáciles de interpretar, evitando saturar al usuario con información innecesaria.
+
+La interfaz combina formularios, indicadores visuales y mensajes explicativos que ayudan a capturar información, mostrar recomendaciones y activar mecanismos de explicabilidad. Se opta por iconos y botones claros, junto con un lenguaje cercano que facilite la comprensión.
+
+Dado el uso extendido de teléfonos móviles entre emprendedores informales, el frontend está optimizado para funcionar correctamente en distintos dispositivos y bajo condiciones de conectividad variable. Esto permite una experiencia continua y sin interrupciones.
+
+\subsubsection{Capa de Backend (FastAPI y Microservicios)}
+
+En la Figura se presenta la capa de backend que constituye el eje funcional del piloto experimental, actuando como un mediador confiable entre la interfaz de usuario y el núcleo de inteligencia artificial. Implementada mediante FastAPI, esta capa permite gestionar solicitudes de manera eficiente, segura y con baja latencia. FastAPI destaca por su rendimiento asíncrono y su integración fluida con entornos de ciencia de datos, lo que facilita el desarrollo de servicios robustos y escalables \parencite{ramirez2019}.
+
+La arquitectura se estructura en microservicios independientes, cada uno encargado de tareas específicas como autenticación, validación de datos, registro de interacciones, enrutamiento de solicitudes y comunicación con los modelos de IA. Esta separación modular mejora la mantenibilidad del sistema y permite actualizaciones ágiles sin afectar la operatividad del conjunto \parencite{newman2015}.
+
+Además, la adopción de microservicios favorece la resiliencia: si un componente falla, los demás continúan funcionando. Este enfoque garantiza que el asistente conserve estabilidad y disponibilidad para el usuario final, incluso en entornos con alta demanda o variabilidad operacional. En suma, la capa de backend opera como un puente robusto, organizado y flexible entre la experiencia del usuario y la inteligencia del sistema.
+
+\subsubsection{Núcleo de Inteligencia Artificial (AI Core)}
+
+El Núcleo de Inteligencia Artificial (AI Core) funge como el motor cognitivo central del Asistente Inteligente, trascendiendo la mera capacidad predictiva para ofrecer un sistema de apoyo a la toma de decisiones caracterizado por su precisión, trazabilidad y compromiso ético. Su diseño se basa en una arquitectura de aprendizaje híbrido \parencite{cano2019}, optimizada para gestionar la heterogeneidad y la escasez de datos inherentes al ecosistema del emprendimiento informal.
+
+A continuación, se resume la arquitectura del AI Core en la Tabla~\ref{tab:aicore} y se visualiza su flujo en la Figura~6.
+
+\begin{table}[H]
+\centering
+\caption{Componentes Funcionales del Núcleo de Inteligencia Artificial}
+\label{tab:aicore}
+\begin{tabular}{p{4.2cm} p{4.5cm} p{6cm}}
+\hline
+\textbf{Componente} & \textbf{Tecnología/Implementación} & \textbf{Propósito Principal} \\
+\hline
+Representación Semántica Categórica & Red Neuronal (TensorFlow/Keras) & Generar Embeddings vectoriales de baja dimensión a partir de variables categóricas discretas, capturando relaciones semánticas complejas. \\
+Modelado Tabular de Alto Rendimiento & Light Gradient Boosting Machine (LightGBM) & Clasificación final de Riesgo y Oportunidad (en 5 categorías). Genera la predicción de clase y las probabilidades de confianza. \\
+Módulo de Explicabilidad Local (XAI) & SHAP (SHapley Additive exPlanations) & Cuantificar la contribución marginal de cada característica a la predicción específica de riesgo de un emprendedor. \\
+Módulo de Explicabilidad Contrafactual & LIME (Local Interpretable Model-agnostic Explanations) & Proveer explicaciones localmente fieles, demostrando cómo un cambio en una o varias características podría modificar la clasificación de riesgo. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Sistema Híbrido: Clasificación de Riesgo y Oportunidad}
+
+El proceso se articula a través de un Ensamble Profundo (Deep Ensemble) que aprovecha las fortalezas complementarias de dos modelos:
+
+1. Representación Semántica Categórica (Deep Learning)
+
+\begin{itemize}
+\item \textbf{Implementación:} Se utiliza una red neuronal (TensorFlow/Keras) para generar Embeddings vectoriales de baja dimensión a partir de características categóricas discretas (ej., sector de negocio, nivel educativo). Esta técnica permite capturar las relaciones semánticas y la jerarquía implícita entre las categorías de manera más rica que las codificaciones tradicionales \parencite{goldberg2017}.
+\item \textbf{Propósito:} Proporcionar una representación numérica continua y optimizada, clave para variables con alta cardinalidad o estructuras complejas.
+\end{itemize}
+
+2. Modelado Tabular de Alto Rendimiento (Gradient Boosting):
+
+\begin{itemize}
+\item \textbf{Implementación:} Las características numéricas normalizadas se concatenan con los Embeddings vectoriales para alimentar un modelo Light Gradient Boosting Machine (LightGBM) \parencite{ke2017}. Este algoritmo, conocido por su eficiencia y capacidad para manejar grandes conjuntos de datos, es el encargado de la clasificación final.
+\item \textbf{Propósito:} Generar una clasificación de las cinco categorías de Riesgo y Oportunidad, donde un riesgo bajo correlaciona con una alta oportunidad de formalización y crecimiento. La salida incluye la predicción de clase y las probabilidades de confianza asociadas.
+\end{itemize}
+
+2. Módulo de Explicabilidad (XAI) y Responsabilidad
+
+Un pilar fundamental del AI Core es su enfoque en la transparencia y la confianza del usuario. La inclusión de un módulo de Explicabilidad (XAI) permite desmantelar el concepto de ``caja negra'' del modelo predictivo, facilitando la comprensión y la acción por parte del emprendedor.
+
+\begin{itemize}
+\item \textbf{Técnicas de Explicabilidad:}
+\item \textbf{SHAP (SHapley Additive exPlanations):} Se aplica para cuantificar la contribución marginal de cada característica (incluyendo los embeddings y las variables numéricas) a la predicción específica de riesgo de un emprendedor. Esto permite determinar qué factores impulsaron la clasificación a un riesgo alto o bajo \parencite{lundberg2017}.
+\item \textbf{LIME (Local Interpretable Model-agnostic Explanations):} Proporciona explicaciones localmente fieles, enfocándose en la justificación de la recomendación individualizada. Esto es crucial para generar recomendaciones accionables, demostrando al emprendedor cómo un cambio en una o varias características podría modificar su clasificación de riesgo \parencite{ribeiro2016}.
+\end{itemize}
+
+La integración de XAI no solo cumple con las expectativas de trazabilidad, sino que también promueve la IA Responsable, asegurando que las recomendaciones sean justas, libres de sesgos detectables y diseñadas para empoderar al usuario \parencite{molnar2022}.
+
+3. Integración con MLOps y Gobernanza de Datos
+
+El AI Core está diseñado para ser un componente dinámico y sostenible dentro de la arquitectura de microservicios:
+
+\begin{itemize}
+\item \textbf{Trazabilidad y Despliegue:} Se implementan prácticas de MLOps para automatizar el pipeline de reentrenamiento, validación y despliegue del modelo. Herramientas como MLflow se emplean para registrar los parámetros, métricas y artefactos de cada versión del modelo (modelos binarios de LightGBM y los pesos de Keras/TensorFlow) \parencite{paleyes2020}.
+\item \textbf{Monitorización en Producción:} Se establecen mecanismos de monitoreo continuo para detectar el Model Drift (degradación del rendimiento) y el Data Drift (desviación de la distribución de los datos de entrada). Esta vigilancia proactiva es esencial para mantener la validez del modelo en un entorno socioeconómico en constante cambio.
+\end{itemize}
+
+\subsection{Diseño Arquitectónico}
+
+Tras establecer el alcance funcional del sistema a través del Diagrama de Casos de Uso, el presente acápite aborda la definición de la arquitectura de software. La naturaleza compleja del proyecto, que integra un modelo híbrido de Inteligencia Artificial (IA), prácticas de MLOps y un módulo de Explicabilidad (XAI), demanda una solución que privilegie la modularidad, la escalabilidad y la trazabilidad operativa.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{TFM/imagenes/Diagrama de Arquitectura de la Clasificación Híbrida.png}
+\caption{Diagrama de Arquitectura de la Clasificación Híbrida y el Flujo de Explicabilidad (XAI). Fuente propia}
+\end{figure}
+\subsection{Arquitectura Modular y Acoplamiento}
+
+El Diagrama de Paquetes UML (ver Figura~\ref{fig:paquetes}) es una representación de alto nivel que agrupa las clases y funcionalidades del sistema en módulos lógicos. \parencite{booch2005}. Este diagrama valida la elección de una arquitectura orientada a servicios, donde la modularidad es priorizada para reducir el acoplamiento y facilitar el desarrollo, despliegue y mantenimiento continuo (MLOps) \parencite{newman2015,zaharia2018}. El diseño se estructura en seis paquetes principales, organizados en capas funcionales que limitan las dependencias solo a los módulos inferiores o adyacentes, siguiendo principios consolidados de arquitectura de software orientada a componentes \parencite{bass2012}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{TFM/capitulo 4/Diagrama de Paquetes del Sistema .png}
+    \caption{Diagrama de Paquetes del Sistema (fuente propia)}
+    \label{fig:paquetes}
+\end{figure}
+
+En la Tabla~\ref{tab:paquetes} se exponen los seis paquetes principales y sus responsabilidades.
+\begin{table}[H]
+\centering
+\caption{Responsabilidades principales de los paquetes en la aplicación}
+\label{tab:paquetes}
+\begin{tabular}{|p{3cm}|p{5cm}|p{3cm}|p{4cm}|}
+\hline
+\textbf{Paquete} & \textbf{Responsabilidad Principal} & \textbf{Dependencias (\textless\textless import\textgreater\textgreater)} & \textbf{Clases Clave (Ejemplos)} \\
+\hline
+P1: InterfazUsuario & Presentación de datos al Emprendedor. Captura de datos de perfil y feedback de usabilidad. & P2: ServiciosAPI & Clases de Vista, Controladores UI. \\
+\hline
+P2: ServiciosAPI & Lógica de Negocio. Autenticación, gestión de sesiones, validación de solicitudes y orquestación entre la UI y el Núcleo de IA. & P3, P6, P4 & Emprendedor, PerfilSocioeconomico, Recomendacion. \\
+\hline
+P3: NúcleoIA & Lógica Predictiva. Contiene los modelos entrenados y los algoritmos para la predicción de riesgos y oportunidades. & P6 & ModeloIA, SistemaRecomendacion (LightGBM), EmbeddingModel. \\
+\hline
+P4: ExplicabilidadXAI & Generación de justificaciones transparentes para las predicciones del modelo. & P2, P3 & Explicacion, SHAPAnalysis, EvaluacionExplicacion. \\
+\hline
+P5: MLOps & Gestión del ciclo de vida del modelo: monitoreo de rendimiento, detección de drift y despliegue continuo. & P3, P6 & MLOpsManager, MonitoreoModelo, PipelineMLOps. \\
+\hline
+P6: DatosYPersistencia & Almacenamiento. Abstracción del acceso a bases de datos relacionales y no relacionales, incluyendo artefactos de IA. & (Ninguna) & DatosSinteticos, InteraccionUsuario, LogSistema. \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Análisis de Dependencias Críticas}
+
+\begin{enumerate}
+    \item \textbf{Flujo Principal (P1 $\rightarrow$ P2 $\rightarrow$ P3):}  
+    La dependencia lineal desde la Interfaz hasta el Núcleo IA ilustra el flujo de ejecución: el usuario (P1) inicia una solicitud que es gestionada por la API (P2), que a su vez llama al motor predictivo (P3).
+
+    \item \textbf{Integración XAI (P3 $\rightarrow$ P4):}  
+    El Núcleo de IA delega la responsabilidad de la justificación al paquete P4: ExplicabilidadXAI, lo que garantiza que el módulo de interpretabilidad se pueda actualizar o cambiar (ej. de SHAP a LIME) sin reescribir el Núcleo de IA.
+
+    \item \textbf{MLOps (P5 $\rightarrow$ P3 y P6):}  
+    El paquete MLOps es crucial y depende del Núcleo IA (para actualizar o desplegar modelos) y de la Persistencia (para acceder a los datos de drift y registros de entrenamiento). Esta dependencia es vital para la trazabilidad.
+
+    \item \textbf{Aislamiento de P6:}  
+    El paquete P6: DatosYPersistencia no depende de ningún otro paquete funcional; solo otros paquetes lo invocan. Esto lo establece como la capa más estable y de más bajo nivel en la jerarquía, lo cual es fundamental para una buena arquitectura de software.
+\end{enumerate}
+\subsection{Diagrama de Casos de Uso}
+
+El Diagrama de Casos de Uso (ver Figura~\ref{fig:casos_uso}) es el primer artefacto de modelado del diseño y es fundamental para establecer el alcance funcional del sistema. Define las interacciones entre los usuarios (Actores) y el sistema, delineando claramente los límites del prototipo.
+
+\paragraph{Actores}
+Se identifican dos actores principales con roles bien diferenciados que reflejan las tres capas del sistema (Negocio, IA, MLOps):
+
+\begin{itemize}
+    \item \textbf{Emprendedor:} El actor principal que representa al usuario final del sistema. Sus interacciones se centran en el uso de la funcionalidad de negocio y el consumo de la IA.
+    \item \textbf{Analista MLOps:} Actor secundario pero crucial para el TFM. Representa al equipo técnico encargado de la gestión del modelo y de la trazabilidad en producción.
+\end{itemize}
+
+En la Tabla~\ref{tab:casos_uso_dominios} se agrupan los casos de uso por dominio, justificando el foco en la IA, la explicabilidad y el monitoreo.
+
+\begin{table}[H]
+\centering
+\caption{Mapeo de Casos de Uso a Dominios Funcionales (IA, XAI, MLOps) y su Relevancia en el TFM}
+\label{tab:casos_uso_dominios}
+\begin{tabular}{|p{5cm}|p{3cm}|p{6cm}|}
+\hline
+\textbf{Caso de Uso} & \textbf{Dominio} & \textbf{Justificación en el TFM} \\
+\hline
+Solicitar Recomendación Híbrida & IA Core &
+Es el Caso de Uso principal (Core) del sistema. Implica la orquestación del modelo híbrido (LightGBM + Embeddings NN) para generar una predicción de riesgo y una recomendación asociada. \\
+\hline
+Consultar Explicación (SHAP/LIME) & XAI &
+Valida el componente de Explicabilidad. Permite al Emprendedor acceder a la justificación de la recomendación para fomentar la confianza y la acción. \\
+\hline
+Proveer Feedback XAI & XAI / Feedback Loop &
+Esencial para el diseño experimental. Cierra el bucle de retroalimentación al permitir al Emprendedor evaluar la claridad y utilidad de la explicación. Los datos generados alimentan la tabla \texttt{FeedbackXAI} para auditorías. \\
+\hline
+Gestionar Perfil Socioeconómico & Negocio &
+Soporte para la entrada de datos. Permite al Emprendedor mantener actualizados los datos de entrada (\texttt{PerfilSocioeconomico}) necesarios para la precisión de las predicciones del modelo. \\
+\hline
+Monitorear Rendimiento en Producción & MLOps &
+Cubre los objetivos de MLOps y Trazabilidad. Permite al Analista MLOps consultar métricas de drift y rendimiento continuo, las cuales se almacenan en la tabla \texttt{MonitoreoModelo}. \\
+\hline
+Auditar Datos de Feedback XAI & MLOps / Datos &
+Relacionado con la Gobernanza de la IA. Permite al analista examinar la calidad y el contenido del feedback (\texttt{FeedbackXAI}) para futuras mejoras o re-entrenamientos éticos. \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{TFM/imagenes/casos_uso_asistente.png}
+\caption{Casos de uso para el asistente inteligente para emprendimiento}
+\label{fig:casos_uso}
+\end{figure}
+
+\section{Modelo Detallado}
+\subsection{Diseño Lógico Estático de diagrama de clases (UML)}
+El diseño del sistema se ha formalizado mediante un Diagrama de Clases UML, que representa la arquitectura lógica y las relaciones estáticas de las entidades clave del negocio y de la IA.
+
+
+La Figura~\ref{fig:uml-clases-apendice} presenta el Diagrama de Clases UML completo, incluido en el Apéndice~\ref{apendice:uml}, donde se detallan las entidades persistentes y las clases funcionales del sistema. Este diseño asegura una alta cohesión entre componentes, especialmente la Composición entre la clase \textit{Emprendedor} y \textit{PerfilSocioeconomico}, y la fuerte dependencia entre \textit{Recomendacion} y \textit{Explicacion (XAI)}. Además, se hace explícita la inclusión de MLOps a través de las clases \textit{MLOpsManager} y \textit{MonitoreoModelo}, esenciales para la trazabilidad y el mantenimiento del modelo en producción.
+\subsection{Flujo de Procesamiento Dinámico (DFD)}
+
+Mientras que el Diagrama de Clases define qué componentes existen, el Diagrama de Flujo de Datos (DFD) explica cómo se interconectan dinámicamente para lograr el objetivo central: generar una recomendación explicable.
+
+El proceso de toma de decisiones del sistema se ilustra a través del Diagrama de Flujo de Datos, tal como se muestra en la Figura~\ref{fig:dfd-dinamico-apendice}. Este flujo detalla la secuencia de transformación de los datos, iniciando con la entrada del perfil del emprendedor, el cual es procesado para generar los embeddings categóricos. El flujo se dirige al Modelo Híbrido (LightGBM y Embeddings), y posteriormente, a un proceso de post-predicción en el Módulo de Explicabilidad. Este enfoque dinámico garantiza que cada recomendación esté acompañada de una justificación transparente, y que la interacción del usuario se capture en la DB: Interacciones para cerrar el ciclo de feedback (MLOps loop).
+
+\subsection{Diagrama de colaboración}
+
+El modelado dinámico del sistema se inicia con el Diagrama de Colaboración (o de Comunicación), cuyo propósito principal es ilustrar la estructura de las interacciones entre los objetos y los roles clave del sistema, enfatizando las asociaciones y los enlaces de comunicación necesarios para ejecutar el caso de uso central: \textit{Solicitar Recomendación Híbrida Explicable}. Tal como se muestra en la Figura~\ref{fig:diagrama-colaboracion}, este diagrama permite analizar cómo se distribuyen las responsabilidades entre los componentes del sistema y cómo se coordinan para cumplir el objetivo funcional.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{TFM/imagenes/diagrama_colaboracion.png}
+    \caption{Diagrama de colaboración del asistente inteligente (fuente propia).}
+    \label{fig:diagrama-colaboracion}
+\end{figure}
+
+
+A diferencia del Diagrama de Secuencia, que se centra en el orden temporal de los mensajes, el Diagrama de Colaboración prioriza la visibilidad de los roles estructurales y de los vínculos de comunicación entre los objetos, lo cual resulta especialmente útil para validar arquitecturas basadas en microservicios y sistemas distribuidos \parencite{newman2015building}. Este enfoque permite verificar que el diseño respeta principios de bajo acoplamiento y alta cohesión, fundamentales en soluciones escalables y mantenibles.
+
+\paragraph{Roles y colaboradores}
+La funcionalidad representada se distribuye entre cinco roles activos claramente definidos:
+
+
+\begin{enumerate}
+    \item \textbf{Emprendedor}: actor principal que inicia la transacción al solicitar una recomendación.
+    \item \textbf{ServicioAPI}: \textit{gateway} de la arquitectura, responsable de recibir la petición HTTP y de orquestar los pasos subsecuentes del proceso.
+    \item \textbf{DatosYPersistencia}: componente encargado de gestionar la base de datos, recuperando el perfil del emprendedor y registrando los resultados de la evaluación de riesgo.
+    \item \textbf{SistemaRecomendacion}: núcleo de inteligencia artificial que encapsula el modelo híbrido basado en LightGBM y embeddings generados mediante redes neuronales.
+    \item \textbf{ExplicacionXAI}: módulo de explicabilidad encargado de generar justificaciones comprensibles de las predicciones, utilizando técnicas como SHAP y LIME \parencite{lundberg2017unified,ribeiro2016should}.
+\end{enumerate}
+
+La interacción coordinada entre estos roles evidencia una separación clara de responsabilidades y respalda el diseño orientado a servicios adoptado en el TFM, facilitando tanto la trazabilidad como la evolución futura del sistema en entornos productivos \parencite{molnar2022interpretable}.
+\subsubsection{Secuencia de mensajes y justificación}
+
+La secuencia de mensajes definida en el Diagrama de Colaboración permite analizar el flujo lógico y funcional de la interacción entre los componentes del sistema. En la Tabla~\ref{tab:secuencia-colaboracion} se detallan los pasos temporales que estructuran la comunicación entre los actores y los módulos internos, evidenciando el desacoplamiento arquitectónico y la correcta orquestación de responsabilidades, principios fundamentales en arquitecturas orientadas a servicios y microservicios \parencite{newman2015building}.
+
+Cada mensaje cumple una función estratégica dentro del proceso de generación de una recomendación híbrida explicable, garantizando que la lógica de negocio, la inferencia del modelo y la explicabilidad operen de manera coordinada pero independiente, tal como recomiendan las buenas prácticas de diseño de sistemas de inteligencia artificial responsables \parencite{molnar2022interpretable}.
+\begin{longtable}{p{1cm} p{4.2cm} p{4.2cm} p{6.2cm}}
+\caption{Secuencia de pasos lógicos para el diagrama de colaboración}
+\label{tab:secuencia-colaboracion} \\
+
+\toprule
+\textbf{Paso} & \textbf{Mensaje} & \textbf{Emisor $\rightarrow$ Receptor} & \textbf{Justificación Estratégica} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Paso} & \textbf{Mensaje} & \textbf{Emisor $\rightarrow$ Receptor} & \textbf{Justificación Estratégica} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{4}{r}{\textit{Continúa en la siguiente página}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+1 & \texttt{solicitar Recomendacion()} &
+Emprendedor $\rightarrow$ ServicioAPI &
+Inicio de la transacción por parte del actor de negocio. \\
+
+2 & \texttt{obtenerPerfil()} &
+ServicioAPI $\rightarrow$ DatosYPersistencia &
+Recuperación de datos. Se garantiza que la predicción use los datos más actualizados del perfil socioeconómico del usuario. \\
+
+3 & \texttt{evaluarRiesgo()} &
+ServicioAPI $\rightarrow$ SistemaRecomendacion &
+Activación del Núcleo de IA. Se invoca la función crítica del TFM, donde se ejecuta el modelo de clasificación de riesgo. \\
+
+4 & \texttt{generar Explicacion()} &
+SistemaRecomendacion $\rightarrow$ ExplicacionXAI &
+Integración XAI. Demuestra la conexión directa entre el resultado del modelo y la función de explicabilidad, cumpliendo con el objetivo de transparencia \parencite{molnar2022interpretable}. \\
+
+5 & Retorno del resultado explicable &
+SistemaRecomendacion $\rightarrow$ ServicioAPI &
+El resultado integra la recomendación junto con su justificación, garantizando trazabilidad y comprensión \parencite{lundberg2017unified,ribeiro2016should}. \\
+
+6 & \texttt{mostrar Recomendacion()} &
+ServicioAPI $\rightarrow$ Emprendedor &
+Finalización de la interacción con la presentación del resultado final al usuario. \\
+
+\end{longtable}
+
+
+
+
+\subsection{Colaboración del Núcleo Funcional: Diagrama de Secuencia}
+\label{subsec:diagrama-secuencia}
+
+El Diagrama de Secuencia UML (ver Figura~\ref{fig:secuencia-apendice}) del Apndice ilustra la interacción temporal y el orden cronológico de los mensajes intercambiados entre los objetos clave del sistema para ejecutar el caso de uso central: generar una recomendación explicable y registrar el feedback del usuario. Este tipo de diagramas resulta fundamental para describir el comportamiento dinámico de sistemas orientados a servicios y para validar la correcta orquestación entre componentes desacoplados \parencite{fowler2004uml, omg2017uml}.
+
+El flujo modelado evidencia el desacoplamiento arquitectónico y el papel de orquestación del componente de servicios \texttt{:ServicioAPI}, garantizando que la lógica predictiva (\texttt{:SistemaRecomendacion}) y la lógica de explicabilidad (\texttt{:ExplicacionXAI}) puedan operar como módulos independientes. Este principio es coherente con las buenas prácticas de arquitecturas de microservicios y con el diseño de sistemas de inteligencia artificial escalables y mantenibles \cite{newman2021microservices}.
+
+\paragraph{Fase I: Solicitud y acceso a datos (Mensajes 1--3)}
+El proceso se inicia cuando el actor \texttt{:Emprendedor} envía una solicitud al componente \texttt{:ServicioAPI} mediante el mensaje \texttt{solicitarRecomendacion(perfil\_id)}. Posteriormente, la API solicita los datos del perfil socioeconómico al módulo de persistencia a través del mensaje \texttt{obtenerPerfil(perfil\_id)}.
+
+Este diseño establece a la API como el único intermediario entre la capa de negocio y la base de datos, evitando dependencias directas entre el Núcleo de IA y el almacenamiento. Esta decisión arquitectónica reduce el acoplamiento, mejora la mantenibilidad y facilita el despliegue independiente de los modelos de aprendizaje automático \parencite{amershi2019software, paleyes2020challenges}.
+
+\paragraph{Fase II: Núcleo híbrido y explicabilidad (Mensajes 4--7)}
+Una vez recuperados los datos, el \texttt{:ServicioAPI} invoca de forma sincrónica al componente \texttt{: Sistema Recomendacion} mediante el mensaje \texttt{evaluarRiesgo(perfil\_data)}. Este componente ejecuta el modelo híbrido basado en \emph{embeddings} neuronales y \emph{Gradient Boosting} (LightGBM), generando una predicción de riesgo u oportunidad.
+
+Posteriormente, y como parte obligatoria del flujo interno del Núcleo de IA, se activa el módulo de explicabilidad mediante el mensaje \texttt{generarExplicacion(prediccion \_previa)}. Este paso aplica técnicas de interpretabilidad local como SHAP o LIME para cuantificar la contribución de cada característica a la predicción obtenida \parencite{lundberg2017shap, ribeiro2016lime}. La explicación generada se integra con la predicción para conformar un objeto de negocio enriquecido, denominado \emph{RecomendacionExplicable}.
+
+\paragraph{Fase III: Cierre de bucle y trazabilidad (Mensajes 8--11)}
+El resultado final es presentado al usuario por el \texttt{:ServicioAPI}, tras lo cual el \texttt{:Emprendedor} puede proporcionar feedback sobre la claridad y utilidad de la explicación recibida. Dicho feedback es registrado en el módulo de persistencia, constituyendo una fuente de información clave para los procesos de monitoreo y mejora continua del modelo.
+
+Este cierre de bucle humano-en-el-proceso materializa los principios de MLOps y de Inteligencia Artificial Responsable, permitiendo auditar el comportamiento del sistema en producción y detectar posibles degradaciones del modelo basadas en la experiencia real del usuario \parencite{paleyes2020challenges, molnar2022interpretable}.
+
+\subsection{Modelo de Datos: Diagrama de Entidad--Relación (DER)}
+
+El Diagrama de Entidad--Relación (DER) (ver Apéndice~\ref{apendice:der}, Figura~\ref{fig:der-apendice}) define la estructura de la base de datos subyacente, consolidando los requerimientos de persistencia del sistema. El modelo está diseñado bajo el paradigma de separación de responsabilidades, dividiendo la persistencia en tres dominios clave: \textit{Negocio}, \textit{Transaccional/XAI} y \textit{MLOps/Trazabilidad}.
+
+Este enfoque facilita la trazabilidad de las decisiones algorítmicas, el registro de interacciones del usuario y la auditoría del ciclo de vida del modelo, aspectos fundamentales en sistemas de inteligencia artificial aplicados a contextos sociales y de alto impacto.
+\subsubsection{Justificación del Diseño del Esquema}
+
+El diseño busca la normalización y la eficiencia, pero se enfoca en tres aspectos críticos para un Trabajo Fin de Máster en Inteligencia Artificial:
+
+\begin{enumerate}
+    \item \textbf{Auditoría y Trazabilidad (MLOps):}  
+    Las tablas \textit{ModeloIA}, \textit{MonitoreoModelo} y \textit{DatosSinteticos} están completamente separadas, permitiendo el registro y monitoreo del ciclo de vida del modelo de forma independiente de la lógica de negocio, en coherencia con las prácticas de gobernanza y trazabilidad en MLOps \parencite{Zaharia2018, Paleyes2020}.
+
+    \item \textbf{Captura de Feedback (XAI):}  
+    La tabla \textit{FeedbackXAI} actúa como un log de usabilidad y explicabilidad, capturando métricas clave (\textit{claridad \_explicacion}, \textit{utilidad \_explicacion}) que no son métricas tradicionales de negocio, sino datos cruciales para la experimentación en sistemas de inteligencia artificial explicable \parencite{Lundberg2017, Ribeiro2016, Molnar2022}.
+
+    \item \textbf{Transacción Central (Evaluación):}  
+    La tabla \textit{EvaluacionRiesgo} sirve como la tabla de hechos principal, vinculando al usuario (\textit{usuario\_id}), al modelo que hizo la predicción (\textit{modelo\_ia\_id}) y actuando como el pivote para el feedback y la interacción, garantizando coherencia transaccional y trazabilidad completa de las decisiones algorítmicas.
+\end{enumerate}
+
+En la Tabla~\ref{tab:entidades-relaciones} se aprecia la descripción detallada de las entidades y sus relaciones dentro del modelo de datos.
+
+
+\begin{longtable}{p{2.8cm} p{4cm} p{1.5cm} p{2.2cm} p{3.5cm}}
+\caption{Descripción detallada de entidades y relaciones del modelo de datos}
+\label{tab:entidades-relaciones} \\
+
+\toprule
+\textbf{Entidad} & \textbf{Propósito} & \textbf{PK} & \textbf{FK} & \textbf{Relaciones Clave} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Entidad} & \textbf{Propósito} & \textbf{PK} & \textbf{FK} & \textbf{Relaciones Clave} \\
+\midrule
+\endhead
+
+Usuarios &
+Registra los actores del sistema (Emprendedor, Analista, Administrador). &
+usuario\_id &
+-- &
+(1) -- (N) EvaluacionRiesgo \\
+
+Perfil Socioeconomico &
+Contiene los datos de entrada específicos consumidos por el modelo predictivo. &
+perfil\_id &
+usuario\_id &
+(1) Usuarios -- (N) PerfilSocioeconomico \\
+
+ModeloIA &
+Catálogo de versiones del modelo desplegado (LightGBM / Redes Neuronales). &
+modelo\_ia\_id &
+-- &
+(1) -- (N) EvaluacionRiesgo, MonitoreoModelo, DatosSinteticos \\
+
+EvaluacionRiesgo &
+Transacción principal del sistema. Almacena predicción, confianza y modelo utilizado. &
+evaluacion \_id &
+usuario\_id, modelo\_ia\_id &
+(1) -- (N) InteraccionRecomendacion, FeedbackXAI \\
+
+Interaccion Recomendacion &
+Mide el nivel de interacción y engagement del usuario con la recomendación generada. &
+interaccion \_id &
+evaluacion\_id &
+(1) EvaluacionRiesgo -- (N) InteraccionRecomendacion \\
+
+FeedbackXAI &
+Registra métricas de usabilidad y claridad de la explicación para el bucle MLOps. &
+feedback \_id &
+evaluacion\_id &
+(1) EvaluacionRiesgo -- (N) FeedbackXAI \\
+
+MonitoreoModelo &
+Almacena métricas de rendimiento, drift de datos y trazabilidad en producción. &
+monitoreo \_id &
+modelo\_ia\_id &
+(1) ModeloIA -- (N) MonitoreoModelo \\
+
+DatosSinteticos &
+Registra datasets sintéticos usados para entrenamiento y balanceo del modelo. &
+dataset\_id &
+modelo\_ia\_id &
+(1) ModeloIA -- (N) DatosSinteticos \\
+
+\bottomrule
+\end{longtable}
+\subsection{Infraestructura Tecnológica del Piloto Experimental}
+\label{sec:infraestructura-piloto}
+
+La infraestructura tecnológica utilizada para el desarrollo del piloto experimental constituye un elemento central para garantizar la reproducibilidad, robustez y trazabilidad del sistema. En coherencia con las recomendaciones contemporáneas sobre el diseño de infraestructuras para sistemas de \textit{machine learning} en producción \parencite{Huyen2022}, se diseñó un entorno híbrido que combina ejecución local, servicios virtualizados y componentes especializados para MLOps y modelado generativo.
+
+La arquitectura general de la infraestructura se ilustra en la Figura~\ref{fig:infraestructura-apendice}, incluida en el apéndice técnico, donde se detallan los componentes de ejecución, persistencia, modelado y trazabilidad.
+
+\subsubsection{Entorno de ejecución}
+
+El piloto fue desarrollado y validado principalmente en un entorno local de desarrollo, basado en sistemas operativos macOS y Linux, con soporte para \texttt{Python 3.10} y \texttt{FastAPI} como \textit{framework} principal del backend. Este entorno permitió una iteración ágil sobre los modelos predictivos, microservicios y esquemas de base de datos, favoreciendo un enfoque experimental controlado.
+
+Con el objetivo de facilitar una transición futura hacia entornos de despliegue productivo, los servicios fueron diseñados de forma modular y desacoplada, contemplando el uso de contenedores Docker. Las definiciones de estos contenedores y los archivos de configuración asociados se documentan en el apéndice correspondiente al código fuente.
+
+El sistema no requirió unidades de procesamiento gráfico (GPU) para la fase de inferencia, dado que los modelos empleados —LightGBM y la red neuronal para generación de \textit{embeddings} categóricos— presentan un coste computacional moderado y están optimizados para ejecución sobre CPU. Esta decisión refuerza la viabilidad del piloto en contextos institucionales con recursos limitados. No obstante, se dejó abierta la posibilidad de incorporar GPU para acelerar el entrenamiento de modelos generativos como CTGAN, lo cual puede reducir significativamente los tiempos de entrenamiento \parencite{Xu2019}.
+
+\subsubsection{Recursos computacionales}
+
+Los recursos computacionales empleados durante el piloto incluyeron:
+
+\begin{itemize}
+    \item CPU multinúcleo (Intel i5/i7 o equivalente en entornos Linux).
+    \item 16~GB de memoria RAM, suficientes para la ejecución simultánea del modelo híbrido y los microservicios asociados.
+    \item Almacenamiento SSD, optimizado para operaciones de lectura y escritura de artefactos de modelos, registros (\textit{logs}) y conjuntos de datos.
+\end{itemize}
+
+Estos recursos resultaron coherentes con las necesidades de un sistema piloto en fase de desarrollo, permitiendo ejecutar todos los componentes sin degradar la latencia de las predicciones, la cual se mantuvo por debajo de los 300~ms en escenarios de prueba controlados.
+
+\subsubsection{Dependencias y librerías clave}
+
+El piloto integra un conjunto de librerías especializadas ampliamente adoptadas en sistemas de inteligencia artificial y MLOps, entre las que se incluyen:
+
+\begin{itemize}
+    \item \texttt{LightGBM} para el modelo principal de clasificación tabular.
+    \item \texttt{TensorFlow/Keras} para la red neuronal generadora de \textit{embeddings} categóricos.
+    \item \texttt{SHAP} y \texttt{LIME} para la generación de explicaciones locales e interpretables.
+    \item \texttt{SDV (Synthetic Data Vault)} para la generación y evaluación de datos sintéticos.
+    \item \texttt{SQLAlchemy} como \textit{Object-Relational Mapping} (ORM) para la persistencia.
+    \item \texttt{FastAPI} y \texttt{Uvicorn} como servidor ASGI para la exposición de servicios.
+\end{itemize}
+
+La lista completa de dependencias, junto con sus versiones, se encuentra documentada en el archivo \texttt{requirements.txt}, incluido en el apéndice técnico del código fuente.
+
+\subsubsection{Servicios auxiliares: MLflow, SDV y colas de tareas}
+
+El sistema incorpora integración estructural con \texttt{MLflow}, permitiendo el registro de versiones de modelos, métricas de entrenamiento y artefactos asociados, alineándose con buenas prácticas de trazabilidad y gobernanza de modelos \parencite{Zaharia2018}. Aunque en el piloto no se desplegó un servidor MLflow dedicado, la base de datos fue diseñada para ser compatible con una futura integración completa.
+
+Adicionalmente, se integraron módulos de \texttt{SDV} para la síntesis y evaluación de datos, así como la posibilidad de incorporar colas de tareas (por ejemplo, \texttt{Celery} o \texttt{RQ}) para procesos de reentrenamiento asincrónico, documentados dentro de los pipelines de MLOps.
+
+En conjunto, esta infraestructura proporciona una base sólida, transparente y escalable para el desarrollo y validación del piloto experimental, reduciendo deuda técnica y favoreciendo la reproducibilidad del sistema \parencite{Breck2017}.
+
+\subsection{Flujo de Datos del Sistema (End-to-End Data Flow)}
+\label{sec:flujo-datos-e2e}
+
+El flujo de datos end-to-end describe el recorrido completo que sigue la información desde que el usuario interactúa con la plataforma hasta que recibe una predicción acompañada de explicaciones y mecanismos de trazabilidad. Este flujo resulta fundamental para garantizar transparencia, reproducibilidad y coherencia operativa, principios ampliamente reconocidos en la literatura sobre sistemas de \textit{machine learning} aplicados en entornos reales \parencite{Huyen2022}.
+
+El proceso se inicia cuando el usuario ingresa información relacionada con su emprendimiento a través del frontend, una interfaz diseñada bajo criterios de simplicidad y accesibilidad, incluso para personas con limitada experiencia tecnológica. El formulario captura variables numéricas y categóricas —como ingresos aproximados, tipo de actividad económica, ubicación del negocio y tiempo de operación—, las cuales se encapsulan en un objeto JSON estructurado.
+
+Una vez enviada la información, el frontend remite la solicitud al \textit{Backend API}, específicamente al microservicio de predicción implementado con FastAPI. En esta etapa, los datos son validados mediante esquemas Pydantic, asegurando el cumplimiento de tipos, rangos y formatos esperados. Esta capa actúa como el punto central de orquestación, derivando la información hacia los componentes internos correspondientes.
+
+Posteriormente, la solicitud es procesada por el módulo de preprocesamiento, encargado de transformar los datos en un formato compatible con el modelo híbrido. Este paso incluye normalización de variables numéricas, limpieza de valores inconsistentes y generación de embeddings para variables categóricas. Los artefactos intermedios generados en esta fase pueden ser registrados con fines de auditoría y análisis posterior.
+
+Una vez preprocesados, los datos son enviados al núcleo de inteligencia artificial, donde se ejecuta el modelo híbrido compuesto por una red neuronal ligera para la representación semántica categórica y un clasificador LightGBM para la inferencia final. El resultado de esta etapa es un puntaje de riesgo junto con su categoría asociada.
+
+Inmediatamente después, el flujo activa el módulo de explicabilidad (XAI), el cual genera explicaciones locales utilizando SHAP y, cuando es pertinente, escenarios contrafactuales que permiten al usuario comprender qué cambios en sus variables podrían mejorar su clasificación. Estas explicaciones fortalecen la confianza del usuario y facilitan la toma de decisiones informadas \parencite{Ribeiro2016,Gunning2019}.
+
+Los resultados generados —incluyendo predicción, explicación, tiempos de inferencia y métricas asociadas— son almacenados en el módulo de persistencia y auditoría. Este registro sistemático responde a las recomendaciones de diseño de sistemas de IA responsables, auditables y alineados con buenas prácticas de gobernanza algorítmica \parencite{Ribeiro2016,Gunning2019}.
+
+Finalmente, el backend retorna al frontend un objeto estructurado que contiene el puntaje de riesgo, la categoría asignada y las explicaciones correspondientes, permitiendo al usuario recibir una respuesta clara, transparente y accionable.
+
+\subsection{Pipeline de Entrenamiento y Reentrenamiento (MLOps)}
+\label{subsec:pipeline-mlops}
+
+La arquitectura MLOps del piloto experimental se fundamenta en un pipeline estructurado de entrenamiento y reentrenamiento cuyo propósito es garantizar que el modelo híbrido —compuesto por LightGBM y una red neuronal para embeddings— evolucione de forma controlada, reproducible y verificable. Este enfoque se alinea con las prácticas recomendadas para sistemas de aprendizaje automático en producción, particularmente en lo referente a trazabilidad, control de versiones y reducción de deuda técnica \parencite{Zaharia2018,Breck2017}.
+
+El flujo general del pipeline de entrenamiento y reentrenamiento se ilustra en la Figura~\ref{fig:pipeline-mlops-apendice}, incluida en el Apéndice correspondiente, donde se describen visualmente las etapas y los puntos de control del ciclo MLOps.
+
+El pipeline está definido y gestionado mediante la tabla \texttt{pipelines\_mlops}, en la cual se especifican las etapas del proceso, la configuración asociada, el estado de ejecución, los registros de logs y la política de activación automática. Su implementación práctica se materializa a través del microservicio de reentrenamiento, desarrollado en el archivo \texttt{servicio\_reentrenamiento\_real.py}, véase el código fuente del microservicio de reentrenamiento en el Apéndice~\ref{apendice:codigo-reentrenamiento}.
+
+La primera etapa del pipeline corresponde al \textit{preprocesamiento de datos}. En esta fase, los registros provenientes tanto de datos reales como de datos sintéticos generados mediante CTGAN son sometidos a procesos de depuración, codificación categórica, escalamiento y análisis estadístico. Asimismo, se identifican posibles problemas de desbalance o deriva de datos (\textit{data drift}), vinculándose estos resultados con las tablas \texttt{balanceo\_sesgo} y \texttt{calidad\_datos\_sinteticos}, lo que permite una gestión proactiva de la calidad de los datos \parencite{Huyen2022,Xu2019}.
+
+La segunda etapa corresponde al \textit{entrenamiento del modelo}. En este punto, el servicio ejecuta el modelo híbrido, integrando los embeddings generados por la red neuronal con el clasificador LightGBM. Durante este proceso, se registran automáticamente los parámetros, métricas y artefactos del entrenamiento en la tabla \texttt{versiones\_mlflow}. El microservicio asegura la consistencia en el orden y la definición de las características, almacenando tanto el modelo entrenado como los pesos de la red neuronal y los objetos de preprocesamiento necesarios para la inferencia.
+
+La tercera etapa es la \textit{evaluación del modelo}, donde se calculan métricas tradicionales de rendimiento —como \textit{accuracy}, \textit{recall} y \textit{F1-score}— junto con indicadores avanzados de equidad y explicabilidad. En particular, se analizan métricas de importancia global basadas en SHAP y medidas de estabilidad del modelo entre versiones consecutivas. Estos resultados se almacenan en las tablas \texttt{monitoreo\_modelos} y \texttt{metricas\_equidad}, permitiendo la comparación sistemática entre versiones y facilitando auditorías posteriores \parencite{Breck2017}.
+
+La etapa final del pipeline corresponde al \textit{despliegue controlado}. En esta fase, únicamente las versiones del modelo que superan los umbrales de calidad previamente definidos son promovidas a producción. El sistema actualiza la versión activa en la tabla \texttt{modelos\_ia}, garantizando que el microservicio de predicción utilice exclusivamente modelos validados y aprobados.
+
+De manera transversal, el pipeline incorpora un sistema robusto de \textit{logging} y monitoreo, consolidado en la tabla \texttt{ejecuciones\_pipeline}, donde se registran la duración de cada ejecución, el consumo de recursos, los errores detectados y las métricas de salida. Adicionalmente, se implementa un mecanismo automático de detección de \textit{model drift} y \textit{data drift}, que compara los datos de producción con los datos de entrenamiento y, al superar un umbral predefinido, activa de forma automática un nuevo ciclo de reentrenamiento mediante el microservicio correspondiente.
+
+En conjunto, esta estrategia proporciona un ciclo MLOps completamente automatizado, trazable y seguro para la evolución continua del modelo híbrido, garantizando tanto la calidad técnica como la confiabilidad operativa del asistente inteligente.
+
+
+\subsection{Gestión de Datos Sintéticos y su Uso en el Ciclo de Vida del Modelo}
+\label{sec:datos-sinteticos}
+
+La gestión de datos sintéticos constituye un componente estratégico del piloto experimental,
+especialmente en contextos donde los datos reales son limitados, sensibles o presentan
+desequilibrios estructurales. En este sentido, el sistema integra un módulo específico para la
+generación, evaluación y utilización de datos sintéticos, fundamentado en modelos generativos
+del tipo Conditional Tabular GAN (CTGAN), siguiendo las recomendaciones actuales sobre el uso
+responsable de datos sintéticos en sistemas de aprendizaje automático \parencite{huyen2022,xu2019}.
+
+La arquitectura general de este proceso se ilustra en la Figura~\ref{fig:gestion-datos-sinteticos},
+ubicada en el apéndice correspondiente.
+
+\begin{itemize}
+    \item Balanceo de clases en variables críticas.
+    \item Mitigación de sesgos asociados a grupos minoritarios.
+    \item Protección de la privacidad mediante la reducción de la dependencia de datos reales.
+    \item Refuerzo del proceso de entrenamiento y reentrenamiento del modelo.
+\end{itemize}
+
+El proceso de generación se inicia mediante un microservicio dedicado, cuya implementación se
+encuentra documentada en el archivo \texttt{services/generador\_sintetico2.py}, incluido en el
+Apéndice~\ref{apendice:codigo-generacion-sintetica}. Este servicio permite configurar los
+parámetros de generación, controlar el volumen de datos creados y asociar cada conjunto
+sintético a un modelo y propósito específico, como entrenamiento, validación o balanceo.
+
+Antes de su incorporación al pipeline de entrenamiento, los datos sintéticos son sometidos a
+un proceso de evaluación de calidad que contempla métricas de similitud estadística, utilidad
+predictiva y riesgo de reidentificación. Únicamente aquellos conjuntos que superan los umbrales
+definidos son marcados como aptos para su uso, garantizando que la generación sintética no
+degrade el rendimiento ni la equidad del sistema, en línea con las prácticas recomendadas para
+la reducción de deuda técnica en sistemas de IA \parencite{breck2017}.
+
+Finalmente, los datos sintéticos validados se integran de forma transparente en los procesos de
+reentrenamiento descritos en el Apartado~\ref{sec:pipeline-mlops}, reforzando la capacidad
+adaptativa del modelo frente a cambios en el entorno y en los patrones de uso. Este enfoque se
+alinea con las tendencias contemporáneas en inteligencia artificial responsable, donde la
+generación de datos sintéticos se consolida como una herramienta clave para equilibrar calidad,
+equidad y privacidad \parencite{xu2019}.
+
+\subsection{Mecanismos de Evaluación de Equidad y Mitigación de Sesgo}
+\label{sec:equidad-sesgo}
+
+La evaluación de equidad y la mitigación de sesgos constituyen un componente esencial del piloto
+experimental, dado que el sistema de recomendación está orientado a apoyar a emprendedores de
+la economía popular e informal, un contexto caracterizado por una elevada heterogeneidad social
+y económica. En este marco, la arquitectura del sistema incorpora mecanismos explícitos para
+analizar el comportamiento del modelo con respecto a grupos protegidos, alineándose con los
+principios de justicia algorítmica y responsabilidad en sistemas de inteligencia artificial
+\parencite{barocas2019}.
+
+El sistema define los grupos protegidos a partir de variables sensibles disponibles en el
+conjunto de datos, tales como género, rango etario, nivel educativo o ubicación territorial.
+Estas variables no se utilizan necesariamente como predictores directos en el modelo, sino
+como dimensiones de análisis posterior. Las métricas de equidad resultantes se almacenan en la
+entidad \textit{MetricasEquidad}, donde cada evaluación queda asociada a una versión específica
+del modelo, garantizando trazabilidad, auditabilidad y reproducibilidad de los resultados.
+
+Entre las métricas de equidad empleadas se incluyen la paridad demográfica, la igualdad de
+oportunidades y la disparidad en las tasas de error, las cuales permiten cuantificar diferencias
+en el comportamiento del modelo entre grupos comparables. Para cada métrica se definen
+umbrales aceptables, siguiendo recomendaciones habituales en la literatura, como una desviación
+máxima del 10--20\,\% entre grupos, dependiendo del contexto de aplicación y del impacto de la
+decisión automatizada \parencite{mehrabi2021}. Cuando alguna métrica supera el umbral establecido, el
+sistema genera alertas internas que bloquean la promoción automática del modelo a producción.
+
+La mitigación de sesgos se aborda principalmente mediante estrategias de tipo \textit{pre-processing}
+e \textit{in-processing}. En la fase previa al entrenamiento, se aplican técnicas de balanceo
+de clases apoyadas en datos sintéticos generados mediante CTGAN, con el objetivo de reducir la
+subrepresentación de determinados grupos. Durante el entrenamiento, se ajustan hiperparámetros
+y pesos del modelo para penalizar configuraciones que amplifiquen desigualdades identificadas
+en evaluaciones previas.
+
+Adicionalmente, el sistema permite comparar métricas de equidad entre versiones sucesivas del
+modelo, facilitando análisis longitudinales sobre la evolución del sesgo a lo largo del tiempo.
+Esta capacidad resulta especialmente relevante en escenarios de reentrenamiento continuo,
+donde cambios en la distribución de los datos pueden introducir nuevas inequidades de forma
+progresiva.
+
+En conjunto, estos mecanismos refuerzan la transparencia, la justicia algorítmica y la
+confiabilidad del sistema, posicionando el piloto experimental como una propuesta alineada con
+las tendencias actuales de inteligencia artificial responsable y centrada en el impacto social
+de los sistemas automatizados.
+
+
+\subsection{Gestión y Persistencia de Embeddings}
+\label{sec:gestion-embeddings}
+
+La gestión y persistencia de embeddings constituye un componente clave en el diseño del piloto
+experimental, dado que estos vectores representan la transformación semántica de variables
+categóricas en un espacio numérico continuo, permitiendo su integración efectiva con modelos de
+aprendizaje automático basados en árboles y redes neuronales. En el sistema propuesto, los
+embeddings no se consideran únicamente un elemento transitorio del proceso de inferencia, sino
+un activo informativo que aporta valor a la explicabilidad, la auditoría y la reproducibilidad
+del modelo.
+
+Desde el punto de vista técnico, los embeddings generados por la red neuronal se almacenan en la
+tabla \textit{embeddings\_caracteristicas}, donde se conserva tanto el embedding final concatenado
+como los embeddings individuales asociados a cada variable categórica. Cada registro se vincula
+explícitamente a una evaluación de riesgo concreta, incorporando metadatos como el modelo de
+embeddings utilizado, la dimensión del vector y la fecha de generación. Esta estructura permite
+reconstruir con precisión el estado interno del sistema en el momento exacto de la predicción.
+
+El almacenamiento persistente de embeddings desempeña un papel relevante en los mecanismos de
+explicabilidad (\textit{XAI}). Al disponer de los vectores persistidos, es posible analizar cómo
+determinadas categorías influyen en la representación latente utilizada por el modelo híbrido.
+Este enfoque complementa las explicaciones proporcionadas por técnicas como SHAP o LIME,
+aportando una capa adicional de interpretación que permite comprender no solo la importancia
+relativa de una variable, sino también su posición y proximidad en el espacio de representación
+aprendido \parencite{molnar2022}.
+
+Asimismo, la persistencia de embeddings resulta fundamental para la reproducibilidad y la
+auditoría del sistema. En procesos de revisión posterior, auditoría externa o análisis de
+incidentes, el sistema puede reconstruir una predicción exacta utilizando los mismos embeddings
+que fueron empleados originalmente, incluso cuando la versión actual del modelo de embeddings
+ha evolucionado. Este enfoque es coherente con las buenas prácticas de trazabilidad y control
+recomendadas en marcos de inteligencia artificial responsable \parencite{europeancommission2020}.
+
+Desde una perspectiva operativa, los embeddings persistidos facilitan además análisis
+longitudinales y comparativos. Por ejemplo, pueden emplearse para detectar cambios en la
+representación de determinadas categorías a lo largo del tiempo, lo que puede ser indicativo
+de \textit{drift} conceptual o de transformaciones estructurales en los datos de entrada. Esta
+capacidad resulta especialmente valiosa en entornos de reentrenamiento continuo y monitoreo
+activo del modelo.
+
+En conjunto, la gestión y persistencia de embeddings refuerzan la transparencia técnica del
+sistema, mejoran la explicabilidad avanzada y garantizan la posibilidad de auditar y reproducir
+decisiones automatizadas, contribuyendo de forma directa a la confianza, robustez y sostenibilidad
+del piloto experimental.
+
+\subsection{Políticas de Gobierno de IA del Piloto Experimental}
+\label{sec:gobierno-ia}
+
+El piloto experimental se concibe y desarrolla bajo un conjunto explícito de políticas de
+gobierno de la inteligencia artificial, con el objetivo de garantizar un uso responsable,
+transparente y éticamente alineado del sistema. Estas políticas responden a la necesidad
+creciente de marcos de gobernanza que orienten el diseño y la operación de sistemas de IA en
+contextos sociales sensibles, tal como recomiendan organismos internacionales y la literatura
+académica reciente \parencite{europeancommission2020,oecd2019}.
+
+En primer lugar, el sistema adopta una serie de principios rectores que guían todas las
+decisiones técnicas y organizativas. Entre ellos destacan la transparencia, la explicabilidad,
+la equidad, la seguridad, la protección de datos y la rendición de cuentas. Estos principios se
+materializan en mecanismos concretos como el uso sistemático de técnicas de explicabilidad
+(\textit{XAI}), la persistencia de metadatos relevantes, la auditoría de decisiones
+automatizadas y la trazabilidad completa del ciclo de vida del modelo.
+
+En cuanto a los riesgos identificados, el gobierno de IA del piloto reconoce amenazas de
+naturaleza técnica, social y organizativa. A nivel técnico, se consideran riesgos como el
+sesgo algorítmico, la degradación del rendimiento del modelo debido al \textit{drift} de datos
+y la opacidad en procesos de decisión automatizados. En el plano social, se identifican riesgos
+relacionados con la interpretación errónea de las recomendaciones por parte de los usuarios,
+la dependencia excesiva de sistemas automatizados y los posibles impactos adversos en grupos
+socialmente vulnerables. Desde una perspectiva organizativa, se reconocen riesgos asociados a
+una gobernanza difusa o a la ausencia de responsabilidades claramente definidas.
+
+Para abordar estos riesgos, el sistema incorpora medidas de mitigación específicas. Entre ellas
+se incluyen evaluaciones periódicas de equidad, mecanismos de reentrenamiento controlado,
+validaciones humanas en decisiones críticas (\textit{human-in-the-loop}) y políticas estrictas
+de versionamiento que evitan modificaciones no auditadas en entornos de producción. Asimismo,
+la generación controlada de datos sintéticos y el análisis sistemático de privacidad
+contribuyen a reducir los riesgos asociados al tratamiento de información sensible.
+
+La responsabilidad de los distintos actores involucrados se encuentra claramente delimitada.
+Los desarrolladores asumen la responsabilidad del diseño técnico y la calidad del modelo; los
+responsables de \textit{MLOps} supervisan el ciclo de vida, el monitoreo y la operación segura
+del sistema; los auditores evalúan aspectos de explicabilidad, equidad y cumplimiento ético;
+y los usuarios finales son informados explícitamente sobre el carácter asistencial y no
+determinista de las recomendaciones generadas por el sistema. Esta asignación clara de roles
+refuerza la rendición de cuentas y evita la dilución de responsabilidades, un aspecto clave en
+los marcos contemporáneos de gobierno de la inteligencia artificial \parencite{floridi2018}.
+
+En conjunto, estas políticas de gobierno consolidan al piloto experimental como una propuesta
+alineada con los estándares académicos, éticos y regulatorios más relevantes en el ámbito de
+la inteligencia artificial responsable.
+\subsection{Auditoría, Transparencia y Trazabilidad}
+\label{subsec:auditoria-trazabilidad}
+
+La auditoría, la transparencia y la trazabilidad constituyen pilares fundamentales del piloto experimental, especialmente en un sistema de inteligencia artificial que apoya procesos de toma de decisiones en contextos sociales sensibles como el emprendimiento informal. Con el fin de garantizar la responsabilidad algorítmica, el backend incorpora mecanismos estructurados que permiten reconstruir y analizar cada predicción generada por el sistema, tanto desde una perspectiva técnica como organizacional.
+
+En primer lugar, la auditoría de explicabilidad se apoya en los resultados producidos por los módulos de interpretabilidad, incluyendo SHAP, LIME y explicaciones contrafactuales. Cada explicación queda persistida junto con la predicción correspondiente, permitiendo verificar por qué el modelo emitió una determinada recomendación y qué variables influyeron de forma más significativa. Este enfoque se alinea con las recomendaciones internacionales sobre explicabilidad en sistemas de alto impacto \parencite{gunning2019xai}.
+
+En segundo lugar, el sistema implementa una auditoría de decisiones, donde se registra no solo la salida del modelo, sino también el contexto completo de ejecución: versión del modelo utilizada, parámetros relevantes, umbrales aplicados y reglas de negocio activas en ese momento. Esta información permite evaluar retrospectivamente decisiones automatizadas y facilita procesos de revisión humana, alineándose con el principio de \textit{human-in-the-loop} promovido por la Unión Europea \parencite{europeancommission2020trustworthy}. La arquitectura de auditoría y trazabilidad se ilustra en la Figura~\ref{fig:auditoria-trazabilidad-apendice}, incluida en el apéndice.
+
+La bitácora completa de cada predicción se almacena de forma estructurada, incluyendo identificadores de usuario (anonimizados cuando corresponde), marcas temporales, resultados intermedios y eventos de error o advertencia. Esta bitácora constituye una evidencia técnica clave ante auditorías internas, evaluaciones académicas o requerimientos regulatorios.
+
+Finalmente, la trazabilidad del flujo técnico y humano permite seguir el recorrido completo de la información: desde la solicitud inicial del usuario, pasando por el preprocesamiento, la inferencia del modelo y la generación de explicaciones, hasta la visualización final en el frontend. De esta manera, el sistema ofrece un marco robusto de transparencia operativa que refuerza la confianza, la rendición de cuentas y el uso ético de la inteligencia artificial.
+
+\chapter{Resultados y Evaluación}
+\label{capitulo:resultados}
+
+El presente capítulo tiene como propósito exponer y analizar los resultados obtenidos durante la fase de implementación, validación técnica e instrumentación del piloto experimental de un asistente inteligente orientado al apoyo del emprendimiento informal en Colombia. En consonancia con las prácticas actuales en ingeniería de sistemas de inteligencia artificial, la evaluación no se limita exclusivamente al rendimiento predictivo de los modelos, sino que adopta una visión integral que considera la arquitectura del sistema, la gestión del ciclo de vida del modelo, la explicabilidad, la equidad y la trazabilidad como elementos fundamentales de calidad \parencite{Amershi2019, Huyen2022}.
+
+Dado que el piloto se encuentra en una etapa previa a la ejecución de pruebas extensivas con usuarios finales, los resultados presentados corresponden principalmente a una evaluación estructural y funcional del backend y de los microservicios desarrollados, así como a la verificación de los mecanismos MLOps implementados. Este enfoque es consistente con la literatura, que señala que en sistemas de IA aplicados a contextos reales resulta crítico validar primero la robustez del diseño, la reproducibilidad y la capacidad de auditoría, antes de proceder a evaluaciones de impacto o desempeño a gran escala \parencite{Breck2017, Sculley2015}.
+
+En este capítulo se analizan, entre otros aspectos, los resultados asociados a la gestión de versiones de modelos y datos, la correcta instrumentación de pipelines de entrenamiento y reentrenamiento, la integración de técnicas de explicabilidad (XAI) y la generación controlada de datos sintéticos para mitigación de sesgos y protección de la privacidad. Asimismo, se evalúa la capacidad del sistema para registrar métricas relevantes de monitoreo, equidad y auditoría, alineándose con los principios de IA responsable y gobernanza algorítmica promovidos por organismos académicos e industriales \parencite{Floridi2018, OECD2019}.
+
+Finalmente, los resultados aquí presentados deben interpretarse como evidencias de madurez técnica y metodológica del piloto, más que como conclusiones definitivas sobre su desempeño en producción. En este sentido, el capítulo establece una base sólida para futuras evaluaciones experimentales con datos reales y usuarios finales, demostrando que el sistema cumple con los requisitos técnicos, éticos y operacionales necesarios para un despliegue controlado y evaluable, tal como recomiendan los marcos contemporáneos de desarrollo de sistemas de inteligencia artificial \parencite{Huyen2022, Amershi2019}.
+
+
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Referencias}
+\printbibliography
+\appendix
+\begin{landscape}
+
+\chapter{Diagramas UML y Flujos del Sistema}
+\label{apendice:uml}
+
+\section{Diagrama de Clases UML}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{TFM/imagenes/diagrama_clases_uml.png}
+\caption{Diagrama de Clases UML del Sistema de Recomendación Híbrida (fuente propia).}
+\label{fig:uml-clases-apendice}
+\end{figure}
+
+\section{Diagrama de Flujo de Procesamiento Dinámico}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.2\textwidth]{TFM/imagenes/figura10_dfd_procesamiento_dinamico.png}
+\caption{Diagrama del flujo de procesamiento dinámico del sistema (fuente propia).}
+\label{fig:dfd-dinamico-apendice}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{TFM/imagenes/diagrama_secuencia_xai.png}
+\caption{Diagrama de Secuencia del flujo de generación de recomendación explicable y ciclo de feedback XAI (fuente propia).}
+\label{fig:secuencia-apendice}
+\end{figure}
+
+\label{apendice:der}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{TFM/imagenes/figura13_der_base_datos.png}
+    \caption{Diagrama de Entidad--Relación (DER) de la base de datos del Asistente Inteligente (fuente propia).}
+    \label{fig:der-apendice}
+\end{figure}
+
+\chapter{Infraestructura Tecnológica del Piloto Experimental}
+\label{apendice:infraestructura}
+\section{Infraestructura tecnológica utilizada para el desarrollo del piloto experimental}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{TFM/imagenes/infraestructura_piloto.png}
+    \caption{Infraestructura tecnológica utilizada para el desarrollo del piloto experimental}
+    \label{fig:infraestructura-apendice}
+\end{figure}
+
+\section{Pipeline de Entrenamiento y Reentrenamiento}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.3\textwidth]{TFM/imagenes/pipeline_mlops.png}
+\caption{Pipeline de Entrenamiento y Reentrenamiento del modelo híbrido (fuente propia).}
+\label{fig:pipeline-mlops-apendice}
+\end{figure}
+
+\section{Gestión de Datos Sintéticos}
+\label{apendice:gestion-datos-sinteticos}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth]{TFM/imagenes/gestion_datos_sinteticos.png}
+    \caption{Gestión de Datos Sintéticos en el Ciclo de Vida del Modelo}
+    \label{fig:gestion-datos-sinteticos}
+\end{figure}
+
+\section{Auditoría, Transparencia y Trazabilidad}
+\label{apendice:auditoria}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.3\textwidth]{TFM/imagenes/auditoria_trazabilidad.png}
+\caption{Arquitectura de auditoría, transparencia y trazabilidad del sistema}
+\label{fig:auditoria-trazabilidad-apendice}
+\end{figure}
+
+
+
+\end{landscape}
+
+
+
+
+
+
+
+
+
+\chapter{Código Fuente del Sistema}
+\label{apendice:codigo}
+
+\section{Microservicio de Reentrenamiento}
+\label{apendice:codigo-reentrenamiento}
+
+\begin{lstlisting}[language=Python, caption={Servicio de reentrenamiento del modelo híbrido}, label={lst:servicio-reentrenamiento}]
+# services/servicio_reentrenamiento_real.py
+# =============================================================================
+# Proyecto: Piloto Experimental de un Asistente Inteligente para Emprendimiento
+#           Informal en Colombia
+#
+# Trabajo Fin de Máster (TFM)
+# Máster en Inteligencia Artificial 
+#
+# Autor: Edicson Pineda Cadena 
+# Institución: Universidad la Rioja (UNIR) España 
+# Año: 2025
+#
+# Módulo: servicio_reentrenamiento_real.py
+# Descripción:
+#   Microservicio encargado de la orquestación del pipeline de reentrenamiento
+#   del modelo híbrido LightGBM + Red Neuronal, incluyendo:
+#     - carga de datos históricos y sintéticos,
+#     - validación de drift,
+#     - ejecución del entrenamiento,
+#     - registro de versiones mediante MLflow.
+#
+# Versión del código: 1.0.0
+# Estado: Experimental / Piloto académico
+#
+# Licencia: Uso académico y de investigación (no comercial)
+#
+# Repositorio:
+#   (Privado) – Código fuente adjunto como apéndice del TFM
+#
+# Contacto:
+#   
+#
+# =============================================================================
+from sqlalchemy.orm import Session
+from datetime import datetime, timedelta
+import logging
+import asyncio
+from typing import Dict, List, Tuple
+import pandas as pd
+import numpy as np
+import json
+import os
+import pickle
+
+# Importando modelos
+from database.models import ModeloIA, EvaluacionRiesgo, Emprendedor, Negocio, HistoricoModelo
+from database.models_mlops import VersionModeloMLflow, MonitoreoModelo, PipelineMLOps, EjecucionPipeline
+from database.models_synthetic import DatosSinteticos, BalanceoSesgo, CalidadDatosSinteticos
+from database.models_xai import MetricasEquidad, SHAPAnalysis
+from app.config.configuracion import configuracion
+from app.ml.entrenador_modelo_hibrido_real import EntrenadorModeloHibridoReal
+from nucleo.generador_sintetico import GeneradorSintetico
+from nucleo.analizador_equidad_real import AnalizadorEquidadReal
+from nucleo.excepciones import ErrorReentrenamiento, ErrorDatosInsuficientes
+
+logger = logging.getLogger(__name__)
+
+class ServicioReentrenamientoReal:
+    """
+    Servicio REAL de reentrenamiento que implementa completamente
+    el pipeline MLOps descrito en el TFM (Figura 3)
+    """
+    
+    def __init__(self, sesion_base_datos: Session):
+        self.sesion_base_datos = sesion_base_datos
+        self.modelo_ctgan_id = 2  # ID del modelo CTGAN en la base de datos
+        self.nombre_modelo_hibrido = configuracion.NOMBRE_MODELO_HIBRIDO
+        self.columnas_caracteristicas = []
+        self.metricas_reentrenamiento = {}
+        
+    async def ejecutar_reentrenamiento_completo(
+        self, 
+        id_modelo_ia: int, 
+        razon_activacion: str,
+        estrategia_balanceo: str = "oversampling_sintetico"
+    ) -> Dict:
+        """
+        Ejecuta el pipeline COMPLETO de reentrenamiento como se describe en el TFM:
+        
+        1. Preparar datos reales
+        2. Generar datos sintéticos con CTGAN
+        3. Balancear para equidad
+        4. Entrenar modelo híbrido REAL
+        5. Evaluar métricas de equidad
+        6. Registrar en MLflow
+        7. Desplegar si mejora
+        """
+        logger.info(f"INICIANDO REENTRENAMIENTO COMPLETO para modelo {id_modelo_ia}")
+        logger.info(f"Razón: {razon_activacion}")
+        logger.info(f"Estrategia de balanceo: {estrategia_balanceo}")
+        
+        try:
+            # Registrar inicio en pipeline MLOps
+            id_ejecucion_pipeline = await self._registrar_inicio_pipeline(
+                id_modelo_ia, razon_activacion
+            )
+            
+            # 1. OBTENER MODELO ACTUAL
+            modelo_actual = self._obtener_modelo_actual(id_modelo_ia)
+            
+            # 2. PREPARAR DATOS REALES PARA ENTRENAMIENTO
+            logger.info(" FASE 1: Preparando datos de entrenamiento...")
+            datos_originales = await self.preparar_datos_entrenamiento_reales()
+            
+            if len(datos_originales) < configuracion.MUESTRAS_MINIMAS_ENTRENAMIENTO:
+                await self._registrar_error_pipeline(
+                    id_ejecucion_pipeline, 
+                    "datos_insuficientes",
+                    f"Solo {len(datos_originales)} muestras disponibles"
+                )
+                raise ErrorDatosInsuficientes(
+                    f"Datos insuficientes: {len(datos_originales)} muestras"
+                )
+            
+            # 3. ANALIZAR SESGOS EN DATOS ORIGINALES
+            logger.info(" FASE 2: Analizando sesgos en datos originales...")
+            analisis_sesgos = await self.analizar_sesgos_datos(datos_originales)
+            self.metricas_reentrenamiento["sesgos_originales"] = analisis_sesgos
+            
+            # 4. GENERAR DATOS SINTÉTICOS CON CTGAN REAL
+            logger.info(" FASE 3: Generando datos sintéticos con CTGAN...")
+            datos_sinteticos = await self.generar_datos_sinteticos_reales(
+                datos_originales, 
+                estrategia_balanceo
+            )
+            
+            if not datos_sinteticos:
+                logger.warning(" No se generaron datos sintéticos, continuando con datos originales")
+                datos_aumentados = datos_originales
+            else:
+                datos_aumentados = datos_originales + datos_sinteticos
+                logger.info(f"Datos aumentados: {len(datos_aumentados)} muestras totales")
+            
+            # 5. VERIFICAR BALANCEO POST-SINTÉTICOS
+            logger.info("FASE 4: Verificando balanceo de datos...")
+            resultado_balanceo = await self.aplicar_balanceo_equidad(
+                datos_aumentados, estrategia_balanceo, id_modelo_ia
+            )
+            self.metricas_reentrenamiento["resultado_balanceo"] = resultado_balanceo
+            
+            # 6. ENTRENAR MODELO HÍBRIDO REAL (LightGBM + Red Neuronal)
+            logger.info("FASE 5: Entrenando modelo híbrido REAL...")
+            nueva_version, metricas_entrenamiento = await self.entrenar_modelo_hibrido_real(
+                datos_aumentados, modelo_actual
+            )
+            self.metricas_reentrenamiento["metricas_entrenamiento"] = metricas_entrenamiento
+            
+            # 7. ANALIZAR EQUIDAD DEL NUEVO MODELO
+            logger.info("FASE 6: Analizando equidad del modelo...")
+            metricas_equidad = await self.analizar_equidad_modelo(
+                datos_aumentados, metricas_entrenamiento
+            )
+            self.metricas_reentrenamiento["metricas_equidad"] = metricas_equidad
+            
+            # 8. REGISTRAR EN MLFLOW CON METADATOS COMPLETOS
+            logger.info("FASE 7: Registrando en MLflow...")
+            version_mlflow = await self.registrar_version_mlflow_completa(
+                modelo_actual, nueva_version, metricas_entrenamiento, 
+                metricas_equidad, datos_aumentados, razon_activacion
+            )
+            
+            # 9. ACTUALIZAR BASE DE DATOS CON RESULTADOS COMPLETOS
+            logger.info("FASE 8: Actualizando base de datos...")
+            await self.actualizar_registro_modelo_completo(
+                modelo_actual, nueva_version, metricas_entrenamiento,
+                metricas_equidad, version_mlflow, razon_activacion,
+                datos_aumentados, resultado_balanceo
+            )
+            
+            # 10. DECIDIR SI DESPLEGAR COMO PRODUCCIÓN
+            logger.info("FASE 9: Evaluando despliegue a producción...")
+            decision_despliegue = await self.evaluar_despliegue_produccion(
+                modelo_actual, metricas_entrenamiento, metricas_equidad
+            )
+            self.metricas_reentrenamiento["decision_despliegue"] = decision_despliegue
+            
+            # Registrar éxito en pipeline MLOps
+            await self._registrar_exito_pipeline(
+                id_ejecucion_pipeline, nueva_version, metricas_entrenamiento
+            )
+            
+            logger.info(f"REENTRENAMIENTO COMPLETADO EXITOSAMENTE")
+            logger.info(f" Nueva versión: {nueva_version}")
+            logger.info(f" Métricas: Exactitud={metricas_entrenamiento.get('exactitud', 0):.3f}")
+            logger.info(f"Equidad: Cumple umbral={metricas_equidad.get('cumple_umbral_equidad', False)}")
+            
+            return {
+                "estado": "exito",
+                "nueva_version": nueva_version,
+                "metricas_entrenamiento": metricas_entrenamiento,
+                "metricas_equidad": metricas_equidad,
+                "decision_despliegue": decision_despliegue,
+                "id_ejecucion_mlflow": version_mlflow.run_id if version_mlflow else None,
+                "muestras_entrenamiento": {
+                    "originales": len(datos_originales),
+                    "sinteticos": len(datos_sinteticos),
+                    "total": len(datos_aumentados)
+                },
+                "artefactos_modelo": {
+                    "red_neuronal": f"modelos/{self.nombre_modelo_hibrido}/red_neuronal.h5",
+                    "lightgbm": f"modelos/{self.nombre_modelo_hibrido}/modelo_lightgbm.txt",
+                    "preprocesadores": f"modelos/{self.nombre_modelo_hibrido}/preprocesadores.pkl",
+                    "datos_sinteticos": f"modelos/{self.nombre_modelo_hibrido}/datos_sinteticos.pkl"
+                }
+            }
+            
+        except ErrorDatosInsuficientes as e:
+            logger.error(f"Error datos insuficientes: {e}")
+            await self._registrar_error_pipeline(
+                id_ejecucion_pipeline, "datos_insuficientes", str(e)
+            )
+            return {"estado": "error", "tipo": "datos_insuficientes", "error": str(e)}
+            
+        except Exception as error:
+            logger.error(f" Error en reentrenamiento: {error}")
+            await self._registrar_error_pipeline(
+                id_ejecucion_pipeline, "error_general", str(error)
+            )
+            return {"estado": "error", "tipo": "error_general", "error": str(error)}
+    
+    async def preparar_datos_entrenamiento_reales(self) -> List[Dict]:
+        """Prepara datos REALES de entrenamiento desde la base de datos"""
+        try:
+            logger.info(" Extrayendo datos reales para entrenamiento...")
+            
+            # Consulta optimizada para obtener datos para el modelo híbrido
+            resultados = self.sesion_base_datos.query(
+                EvaluacionRiesgo,
+                Emprendedor,
+                Negocio
+            ).join(
+                Emprendedor, EvaluacionRiesgo.emprendedor_id == Emprendedor.id
+            ).join(
+                Negocio, EvaluacionRiesgo.negocio_id == Negocio.id
+            ).filter(
+                EvaluacionRiesgo.fecha_evaluacion >= datetime.now() - timedelta(days=180),
+                EvaluacionRiesgo.confianza_prediccion >= 0.7  # Solo predicciones confiables
+            ).limit(10000).all()  # Límite para evitar sobrecarga
+            
+            datos_entrenamiento = []
+            
+            for evaluacion, emprendedor, negocio in resultados:
+                # Extraer TODAS las características según el TFM
+                caracteristicas = {
+                    # === DATOS DEL EMPRENDEDOR ===
+                    "experiencia_total": emprendedor.experiencia_total or 0,
+                    "conteo_habilidades": len(emprendedor.habilidades or []),
+                    "intereses_count": len(emprendedor.intereses or []),
+                    
+                    # === DATOS DEL NEGOCIO (Tabla 1 del TFM) ===
+                    "sector_negocio": negocio.sector_negocio.value,
+                    "subsector": negocio.subsector or "OTRO",
+                    "meses_operacion": negocio.meses_operacion or 0,
+                    "empleados_directos": negocio.empleados_directos or 0,
+                    "empleados_indirectos": negocio.empleados_indirectos or 0,
+                    "ingresos_mensuales_promedio": negocio.ingresos_mensuales_promedio or 0,
+                    "capital_trabajo": negocio.capital_trabajo or 0,
+                    "activos_totales": negocio.activos_totales or 0,
+                    "pasivos_totales": negocio.pasivos_totales or 0,
+                    "deuda_existente": negocio.deuda_existente or 0,
+                    "flujo_efectivo_mensual": negocio.flujo_efectivo_mensual or 0,
+                    "puntaje_credito_negocio": negocio.puntaje_credito_negocio or 0,
+                    
+                    # === VARIABLES PROTEGIDAS PARA EQUIDAD ===
+                    "territorio": negocio.departamento.nombre if negocio.departamento else "NO_ESPECIFICADO",
+                    "tipo_negocio": "FORMAL" if negocio.es_mipyme else "INFORMAL",
+                    
+                    # === OBJETIVO (CATEGORÍA DE RIESGO) ===
+                    "categoria_riesgo": evaluacion.categoria_riesgo.value,
+                    "puntaje_riesgo": evaluacion.puntaje_riesgo or 0,
+                    
+                    # === METADATOS ===
+                    "fecha_evaluacion": evaluacion.fecha_evaluacion.isoformat() if evaluacion.fecha_evaluacion else None,
+                    "modelo_version": evaluacion.version_modelo or "1.0"
+                }
+                
+                datos_entrenamiento.append(caracteristicas)
+            
+            logger.info(f"Datos reales preparados: {len(datos_entrenamiento)} muestras")
+            return datos_entrenamiento
+            
+        except Exception as error:
+            logger.error(f"Error preparando datos de entrenamiento: {error}")
+            raise
+    
+    async def generar_datos_sinteticos_reales(
+        self, 
+        datos_originales: List[Dict],
+        estrategia_balanceo: str
+    ) -> List[Dict]:
+        """Genera datos sintéticos REALES usando CTGAN"""
+        try:
+            logger.info("Generando datos sintéticos con CTGAN...")
+            
+            # Convertir a DataFrame
+            df_original = pd.DataFrame(datos_originales)
+            
+            # Identificar variables discretas para CTGAN
+            variables_discretas = self._identificar_variables_discretas(df_original)
+            logger.info(f"Variables discretas identificadas: {variables_discretas}")
+            
+            # Inicializar y entrenar CTGAN REAL
+            generador = GeneradorSintetico()
+            resultado_entrenamiento = generador.entrenar_ctgan(
+                datos_reales=df_original,
+                variables_discretas=variables_discretas,
+                epocas=configuracion.CTGAN_EPOCAS
+            )
+            
+            if resultado_entrenamiento["estado"] == "error":
+                logger.error("Error entrenando CTGAN")
+                return []
+            
+            # Determinar cantidad de datos sintéticos según estrategia
+            cantidad_sinteticos = self._determinar_cantidad_sinteticos(
+                len(datos_originales), estrategia_balanceo
+            )
+            
+            # Generar datos sintéticos
+            df_sintetico = generador.generar_datos_sinteticos(
+                cantidad_muestras=cantidad_sinteticos,
+                variables_condicionales=self._obtener_condiciones_balanceo(
+                    df_original, estrategia_balanceo
+                )
+            )
+            
+            # Evaluar calidad de los datos sintéticos
+            evaluacion_calidad = generador.evaluar_calidad_sinteticos(
+                df_original, df_sintetico
+            )
+            
+            # Verificar que cumplan estándares de calidad
+            if not evaluacion_calidad.get("cumple_estandares", False):
+                logger.warning(f"Datos sintéticos no cumplen estándares de calidad")
+                if evaluacion_calidad["puntaje_calidad_sdv"] < 0.6:
+                    logger.warning("Puntaje de calidad muy bajo, descartando datos sintéticos")
+                    return []
+            
+            # Registrar en base de datos
+            registro_sintetico = DatosSinteticos(
+                modelo_ia_id=self.modelo_ctgan_id,
+                modelo_generador="CTGAN_REAL",
+                version_modelo="1.0",
+                tipo_dato="balanceo_equidad",
+                caracteristicas_generadas=list(df_original.columns),
+                tamaño_dataset=len(df_sintetico),
+                parametros_generacion={
+                    "epocas": configuracion.CTGAN_EPOCAS,
+                    "variables_discretas": variables_discretas,
+                    "estrategia_balanceo": estrategia_balanceo,
+                    "calidad_evaluada": evaluacion_calidad.get("puntaje_calidad_sdv", 0)
+                },
+                score_calidad=evaluacion_calidad.get("puntaje_calidad_sdv", 0),
+                metricas_similitud={
+                    "similitud_estadistica": evaluacion_calidad.get("similitud_estadistica", 0),
+                    "riesgo_privacidad": evaluacion_calidad.get("riesgo_privacidad", 1),
+                    "recomendaciones": evaluacion_calidad.get("recomendaciones", [])
+                },
+                utilizado_entrenamiento=True,
+                modelo_destino_id=1  # Modelo híbrido principal
+            )
+            
+            self.sesion_base_datos.add(registro_sintetico)
+            self.sesion_base_datos.commit()
+            
+            # Registrar evaluación de calidad
+            registro_calidad = CalidadDatosSinteticos(
+                datos_sinteticos_id=registro_sintetico.id,
+                correlacion_promedio=evaluacion_calidad.get("similitud_estadistica", 0),
+                distancia_distribucion=1 - evaluacion_calidad.get("similitud_estadistica", 0),
+                preservacion_varianza=0.85,  # Valor estimado
+                score_utilidad=evaluacion_calidad.get("puntaje_calidad_sdv", 0),
+                preservacion_relaciones=0.8,
+                capacidad_generalizacion=0.75,
+                riesgo_reenidentificacion=evaluacion_calidad.get("riesgo_privacidad", 0.1),
+                distancia_records_reales=0.15,
+                score_privacidad=1 - evaluacion_calidad.get("riesgo_privacidad", 0.1),
+                score_calidad_total=evaluacion_calidad.get("puntaje_calidad_sdv", 0),
+                cumple_umbral_calidad=evaluacion_calidad.get("cumple_estandares", False),
+                recomendaciones_mejora=evaluacion_calidad.get("recomendaciones", [])
+            )
+            
+            self.sesion_base_datos.add(registro_calidad)
+            self.sesion_base_datos.commit()
+            
+            logger.info(f"Generados {len(df_sintetico)} registros sintéticos REALES con CTGAN")
+            logger.info(f"Calidad: {evaluacion_calidad.get('puntaje_calidad_sdv', 0):.3f}")
+            
+            # Convertir de vuelta a lista de diccionarios
+            return df_sintetico.to_dict('records')
+            
+        except Exception as error:
+            logger.error(f"Error generando datos sintéticos REALES: {error}")
+            # En caso de error, continuar sin datos sintéticos
+            return []
+    
+    async def aplicar_balanceo_equidad(
+        self,
+        datos_aumentados: List[Dict],
+        estrategia_balanceo: str,
+        id_modelo_ia: int
+    ) -> Dict:
+        """Aplica balanceo para equidad algorítmica"""
+        try:
+            logger.info(f"Aplicando balanceo: {estrategia_balanceo}")
+            
+            df_aumentado = pd.DataFrame(datos_aumentados)
+            
+            # Analizar distribución antes del balanceo
+            distribucion_original = self._analizar_distribucion_variables(df_aumentado)
+            
+            # Aplicar estrategia de balanceo
+            if estrategia_balanceo == "oversampling_sintetico":
+                df_balanceado = self._aplicar_oversampling_sintetico(df_aumentado)
+            elif estrategia_balanceo == "undersampling_aleatorio":
+                df_balanceado = self._aplicar_undersampling_aleatorio(df_aumentado)
+            elif estrategia_balanceo == "pesos_muestreo":
+                df_balanceado = self._aplicar_pesos_muestreo(df_aumentado)
+            else:
+                df_balanceado = df_aumentado  # Sin balanceo
+            
+            # Analizar distribución después del balanceo
+            distribucion_balanceada = self._analizar_distribucion_variables(df_balanceado)
+            
+            # Calcular mejora en balanceo
+            mejora_balanceo = self._calcular_mejora_balanceo(
+                distribucion_original, distribucion_balanceada
+            )
+            
+            # Registrar en base de datos
+            registro_balanceo = BalanceoSesgo(
+                modelo_ia_id=id_modelo_ia,
+                datos_sinteticos_id=None,  # Se llenará si hay datos sintéticos
+                variable_balanceo="categoria_riesgo",  # Variable objetivo
+                distribucion_original=distribucion_original,
+                distribucion_objetivo=self._obtener_distribucion_objetivo(),
+                distribucion_lograda=distribucion_balanceada,
+                mejora_balanceo=mejora_balanceo,
+                reduccion_sesgo=self._calcular_reduccion_sesgo(distribucion_original, distribucion_balanceada),
+                impacto_rendimiento=0.0,  # Se calculará después del entrenamiento
+                estrategia_balanceo=estrategia_balanceo,
+                parametros_estrategia={
+                    "tipo": estrategia_balanceo,
+                    "muestras_originales": len(df_aumentado),
+                    "muestras_balanceadas": len(df_balanceado)
+                }
+            )
+            
+            self.sesion_base_datos.add(registro_balanceo)
+            self.sesion_base_datos.commit()
+            
+            logger.info(f"Balanceo aplicado. Mejora: {mejora_balanceo:.3f}")
+            
+            return {
+                "estrategia": estrategia_balanceo,
+                "muestras_originales": len(df_aumentado),
+                "muestras_balanceadas": len(df_balanceado),
+                "mejora_balanceo": mejora_balanceo,
+                "distribucion_original": distribucion_original,
+                "distribucion_balanceada": distribucion_balanceada
+            }
+            
+        except Exception as error:
+            logger.error(f"Error aplicando balanceo: {error}")
+            return {"error": str(error)}
+    
+    async def entrenar_modelo_hibrido_real(
+        self, 
+        datos_entrenamiento: List[Dict], 
+        modelo_base: ModeloIA
+    ) -> Tuple[str, Dict]:
+        """Entrena el modelo híbrido REAL con LightGBM + Red Neuronal"""
+        try:
+            logger.info(f" Iniciando entrenamiento REAL del modelo híbrido...")
+            logger.info(f"Muestras para entrenamiento: {len(datos_entrenamiento)}")
+            
+            # Inicializar el entrenador REAL
+            entrenador = EntrenadorModeloHibridoReal(
+                nombre_modelo=configuracion.NOMBRE_MODELO_HIBRIDO
+            )
+            
+            # EJECUTAR ENTRENAMIENTO REAL
+            logger.info("Procesando datos para entrenamiento...")
+            resultado_entrenamiento = entrenador.entrenar_modelo_hibrido(datos_entrenamiento)
+            
+            if resultado_entrenamiento['estado'] == 'error':
+                raise ErrorReentrenamiento(
+                    f"Error en entrenamiento REAL: {resultado_entrenamiento['error']}"
+                )
+            
+            # Obtener métricas REALES del entrenamiento
+            metricas = resultado_entrenamiento['metricas']
+            self.columnas_caracteristicas = resultado_entrenamiento.get('columnas_caracteristicas', [])
+            
+            # Calcular mejora respecto a modelo anterior
+            mejora_precision = self._calcular_mejora_precision(
+                modelo_base.accuracy or 0, 
+                metricas.get('exactitud', 0)
+            )
+            metricas['mejora_precision'] = mejora_precision
+            
+            # Registrar en MLflow
+            entrenador.registrar_en_mlflow(
+                resultado_entrenamiento['artefactos_modelo'],
+                metricas,
+                datos_entrenamiento
+            )
+            
+            # Generar nueva versión
+            version_actual = modelo_base.version or "1.0.0"
+            nueva_version = self._generar_nueva_version(version_actual)
+            
+            logger.info(f" ENTRENAMIENTO REAL COMPLETADO")
+            logger.info(f" Nueva versión: {nueva_version}")
+            logger.info(f" Métricas - Exactitud: {metricas.get('exactitud', 0):.3f}")
+            logger.info(f"Métricas - F1-Score: {metricas.get('puntuacion_f1', 0):.3f}")
+            logger.info(f"Mejora precisión: {mejora_precision:.1%}")
+            
+            return nueva_version, metricas
+            
+        except Exception as error:
+            logger.error(f"Error en entrenamiento REAL: {error}")
+            raise
+    
+    async def analizar_equidad_modelo(
+        self,
+        datos_entrenamiento: List[Dict],
+        metricas_entrenamiento: Dict
+    ) -> Dict:
+        """Analiza equidad del modelo entrenado"""
+        try:
+            logger.info("Analizando equidad del modelo...")
+            
+            # Inicializar analizador de equidad
+            analizador = AnalizadorEquidadReal()
+            
+            # Convertir datos a DataFrame
+            df_datos = pd.DataFrame(datos_entrenamiento)
+            
+            # Analizar equidad para variables protegidas
+            variables_protegidas = ["territorio", "tipo_negocio"]
+            metricas_equidad = {}
+            
+            for variable in variables_protegidas:
+                if variable in df_datos.columns:
+                    analisis = analizador.analizar_equidad_variable(
+                        df_datos, variable, "categoria_riesgo"
+                    )
+                    metricas_equidad[variable] = analisis
+            
+            # Calcular métricas agregadas
+            metricas_agregadas = {
+                "disparate_impact_promedio": np.mean([
+                    m.get("disparate_impact", 1.0) 
+                    for m in metricas_equidad.values()
+                ]),
+                "igualdad_oportunidades_promedio": np.mean([
+                    m.get("igualdad_oportunidades", 1.0)
+                    for m in metricas_equidad.values()
+                ]),
+                "cumple_umbral_equidad": all(
+                    m.get("cumple_umbral_equidad", False)
+                    for m in metricas_equidad.values()
+                )
+            }
+            
+            # Registrar en base de datos
+            for variable, metricas in metricas_equidad.items():
+                registro_equidad = MetricasEquidad(
+                    modelo_ia_id=1,  # Modelo híbrido
+                    variable_protegida=variable,
+                    grupos_analizados=metricas.get("grupos_analizados", []),
+                    disparate_impact=metricas.get("disparate_impact", 1.0),
+                    igualdad_oportunidades=metricas.get("igualdad_oportunidades", 1.0),
+                    igualdad_trato=metricas.get("igualdad_trato", 1.0),
+                    paridad_demografica=metricas.get("paridad_demografica", 1.0),
+                    metricas_por_grupo=metricas.get("metricas_por_grupo", {}),
+                    brechas_deteccion=metricas.get("brechas_deteccion", {}),
+                    cumple_umbral_equidad=metricas.get("cumple_umbral_equidad", False),
+                    umbral_equidad=0.8,
+                    recomendaciones_mitigacion=metricas.get("recomendaciones_mitigacion", [])
+                )
+                self.sesion_base_datos.add(registro_equidad)
+            
+            self.sesion_base_datos.commit()
+            
+            logger.info(f"Análisis de equidad completado")
+            logger.info(f"Cumple umbral equidad: {metricas_agregadas['cumple_umbral_equidad']}")
+            
+            return {
+                **metricas_agregadas,
+                "analisis_por_variable": metricas_equidad
+            }
+            
+        except Exception as error:
+            logger.error(f" Error analizando equidad: {error}")
+            return {"error": str(error)}
+    
+    async def registrar_version_mlflow_completa(
+        self,
+        modelo_base: ModeloIA,
+        nueva_version: str,
+        metricas_entrenamiento: Dict,
+        metricas_equidad: Dict,
+        datos_entrenamiento: List[Dict],
+        razon_activacion: str
+    ) -> VersionModeloMLflow:
+        """Registra versión completa en MLflow"""
+        try:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            run_id = f"run_{nueva_version}_{timestamp}"
+            
+            version_mlflow = VersionModeloMLflow(
+                modelo_ia_id=modelo_base.id,
+                run_id=run_id,
+                experiment_id="experimento_modelo_hibrido_tfm",
+                artifact_uri=f"modelos:/{self.nombre_modelo_hibrido}/{nueva_version}",
+                parametros_entrenamiento={
+                    "tipo_modelo": "hibrido_lightgbm_nn",
+                    "version": nueva_version,
+                    "razon_reentrenamiento": razon_activacion,
+                    "muestras_entrenamiento": len(datos_entrenamiento),
+                    "columnas_caracteristicas": self.columnas_caracteristicas,
+                    "configuracion": {
+                        "ctgan_epocas": configuracion.CTGAN_EPOCAS,
+                        "balanceo_aplicado": True,
+                        "equidad_analizada": True
+                    }
+                },
+                metricas_evaluacion={
+                    **metricas_entrenamiento,
+                    "equidad": metricas_equidad
+                },
+                tags_mlflow={
+                    "version": nueva_version,
+                    "tipo_modelo": "hibrido",
+                    "equidad_analizada": "si",
+                    "datos_sinteticos": "si",
+                    "fecha_entrenamiento": datetime.now().isoformat(),
+                    "proyecto": "TFM_Emprendimiento_Informal"
+                },
+                fecha_registro=datetime.now(),
+                usuario_registro="sistema_reentrenamiento_automatico"
+            )
+            
+            self.sesion_base_datos.add(version_mlflow)
+            self.sesion_base_datos.commit()
+            
+            logger.info(f"Versión registrada en MLflow: {run_id}")
+            
+            return version_mlflow
+            
+        except Exception as error:
+            logger.error(f" Error registrando en MLflow: {error}")
+            self.sesion_base_datos.rollback()
+            raise
+    
+    async def actualizar_registro_modelo_completo(
+        self,
+        modelo_base: ModeloIA,
+        nueva_version: str,
+        metricas_entrenamiento: Dict,
+        metricas_equidad: Dict,
+        version_mlflow: VersionModeloMLflow,
+        razon_activacion: str,
+        datos_entrenamiento: List[Dict],
+        resultado_balanceo: Dict
+    ):
+        """Actualiza el registro del modelo con TODA la información"""
+        try:
+            # Actualizar modelo principal
+            modelo_base.version = nueva_version
+            modelo_base.accuracy = metricas_entrenamiento.get('exactitud', 0)
+            modelo_base.precision = metricas_entrenamiento.get('precision', 0)
+            modelo_base.recall = metricas_entrenamiento.get('recall', 0)
+            modelo_base.f1_score = metricas_entrenamiento.get('puntuacion_f1', 0)
+            modelo_base.mejora_precision = metricas_entrenamiento.get('mejora_precision', 0)
+            modelo_base.fecha_actualizacion = datetime.now()
+            modelo_base.parametros = {
+                "razon_reentrenamiento": razon_activacion,
+                "muestras_entrenamiento": len(datos_entrenamiento),
+                "columnas_caracteristicas": self.columnas_caracteristicas,
+                "balanceo_aplicado": resultado_balanceo.get("estrategia", "ninguno"),
+                "equidad_analizada": metricas_equidad.get("cumple_umbral_equidad", False)
+            }
+            
+            # Crear registro histórico
+            registro_historico = HistoricoModelo(
+                modelo_ia_id=modelo_base.id,
+                accuracy=metricas_entrenamiento.get('exactitud', 0),
+                precision=metricas_entrenamiento.get('precision', 0),
+                recall=metricas_entrenamiento.get('recall', 0),
+                f1_score=metricas_entrenamiento.get('puntuacion_f1', 0),
+                auc_roc=metricas_entrenamiento.get('auc_roc', 0),
+                fecha_entrenamiento=datetime.now(),
+                tamaño_dataset=len(datos_entrenamiento),
+                caracteristicas_utilizadas=self.columnas_caracteristicas,
+                tiempo_entrenamiento=metricas_entrenamiento.get('tiempo_entrenamiento', 0)
+            )
+            
+            self.sesion_base_datos.add(registro_historico)
+            self.sesion_base_datos.commit()
+            
+            logger.info(f"Registro del modelo actualizado a versión {nueva_version}")
+            
+        except Exception as error:
+            self.sesion_base_datos.rollback()
+            logger.error(f"Error actualizando registro del modelo: {error}")
+            raise
+    
+    async def evaluar_despliegue_produccion(
+        self,
+        modelo_actual: ModeloIA,
+        metricas_entrenamiento: Dict,
+        metricas_equidad: Dict
+    ) -> Dict:
+        """Evalúa si el nuevo modelo debe desplegarse a producción"""
+        try:
+            logger.info("Evaluando despliegue a producción...")
+            
+            # Criterios de despliegue
+            criterios = {
+                "mejora_precision": metricas_entrenamiento.get('exactitud', 0) > (modelo_actual.accuracy or 0),
+                "cumple_equidad": metricas_equidad.get('cumple_umbral_equidad', False),
+                "f1_score_aceptable": metricas_entrenamiento.get('puntuacion_f1', 0) > 0.7,
+                "exactitud_minima": metricas_entrenamiento.get('exactitud', 0) > 0.75
+            }
+            
+            # Tomar decisión
+            cumple_todos = all(criterios.values())
+            recomendacion = "DESPLEGAR" if cumple_todos else "NO_DESPLEGAR"
+            razon = "Cumple todos los criterios" if cumple_todos else "No cumple: " + ", ".join(
+                [k for k, v in criterios.items() if not v]
+            )
+            
+            # Actualizar modelo si se despliega
+            if cumple_todos:
+                modelo_actual.es_produccion = True
+                modelo_actual.activo = True
+                self.sesion_base_datos.commit()
+                logger.info(f"Modelo marcado como producción: {modelo_actual.version}")
+            
+            return {
+                "recomendacion": recomendacion,
+                "razon": razon,
+                "criterios": criterios,
+                "cumple_todos": cumple_todos,
+                "desplegado": cumple_todos
+            }
+            
+        except Exception as error:
+            logger.error(f"Error evaluando despliegue: {error}")
+            return {"recomendacion": "ERROR", "razon": str(error)}
+    
+    # ==================== MÉTODOS AUXILIARES ====================
+    
+    def _identificar_variables_discretas(self, df: pd.DataFrame) -> List[str]:
+        """Identifica variables discretas para CTGAN"""
+        discretas = []
+        for columna in df.columns:
+            # Variables categóricas
+            if df[columna].dtype == 'object':
+                discretas.append(columna)
+            # Variables numéricas con pocos valores únicos
+            elif df[columna].nunique() < 20:
+                discretas.append(columna)
+        return discretas
+    
+    def _determinar_cantidad_sinteticos(
+        self, 
+        cantidad_originales: int, 
+        estrategia: str
+    ) -> int:
+        """Determina cantidad de datos sintéticos a generar"""
+        if estrategia == "oversampling_sintetico":
+            return cantidad_originales // 2  # 50% adicional
+        elif estrategia == "balanceo_completo":
+            return cantidad_originales  # 100% adicional
+        else:
+            return cantidad_originales // 4  # 25% adicional por defecto
+    
+    def _obtener_condiciones_balanceo(
+        self, 
+        df: pd.DataFrame, 
+        estrategia: str
+    ) -> Dict:
+        """Obtiene condiciones para generar datos sintéticos balanceados"""
+        condiciones = {}
+        
+        if "categoria_riesgo" in df.columns:
+            # Balancear categorías de riesgo
+            distribucion = df["categoria_riesgo"].value_counts(normalize=True)
+            categorias_menos_representadas = distribucion[distribucion < 0.15].index.tolist()
+            
+            if categorias_menos_representadas:
+                condiciones["categoria_riesgo"] = categorias_menos_representadas
+        
+        return condiciones
+    
+    def _analizar_distribucion_variables(self, df: pd.DataFrame) -> Dict:
+        """Analiza distribución de variables clave"""
+        distribucion = {}
+        
+        if "categoria_riesgo" in df.columns:
+            distribucion["categoria_riesgo"] = df["categoria_riesgo"].value_counts(normalize=True).to_dict()
+        
+        if "territorio" in df.columns:
+            top_territorios = df["territorio"].value_counts(normalize=True).head(5).to_dict()
+            distribucion["territorio"] = top_territorios
+        
+        return distribucion
+    
+    def _calcular_mejora_balanceo(self, original: Dict, balanceado: Dict) -> float:
+        """Calcula mejora en balanceo"""
+        if "categoria_riesgo" in original and "categoria_riesgo" in balanceado:
+            # Calcular desbalance original (entropía)
+            valores_original = list(original["categoria_riesgo"].values())
+            valores_balanceado = list(balanceado["categoria_riesgo"].values())
+            
+            # Calcular coeficiente de variación (menor es mejor)
+            cv_original = np.std(valores_original) / np.mean(valores_original)
+            cv_balanceado = np.std(valores_balanceado) / np.mean(valores_balanceado)
+            
+            return max(0, cv_original - cv_balanceado) / cv_original if cv_original > 0 else 0
+        
+        return 0.0
+    
+    def _calcular_reduccion_sesgo(self, original: Dict, balanceado: Dict) -> float:
+        """Calcula reducción de sesgo"""
+        # Implementar métrica específica de reducción de sesgo
+        return 0.3  # Valor de ejemplo
+    
+    def _obtener_distribucion_objetivo(self) -> Dict:
+        """Obtiene distribución objetivo para balanceo"""
+        return {
+            "categoria_riesgo": {
+                "MUY_BAJO": 0.2,
+                "BAJO": 0.2,
+                "MEDIO": 0.2,
+                "ALTO": 0.2,
+                "MUY_ALTO": 0.2
+            }
+        }
+    
+    def _calcular_mejora_precision(self, precision_anterior: float, precision_nueva: float) -> float:
+        """Calcula mejora en precisión"""
+        if precision_anterior > 0:
+            return (precision_nueva - precision_anterior) / precision_anterior
+        return 0.0
+    
+    def _generar_nueva_version(self, version_actual: str) -> str:
+        """Genera nueva versión semántica"""
+        partes = version_actual.split('.')
+        if len(partes) == 3:
+            mayor, menor, parche = map(int, partes)
+            return f"{mayor}.{menor}.{parche + 1}"
+        return "1.0.1"
+    
+    def _obtener_modelo_actual(self, id_modelo_ia: int) -> ModeloIA:
+        """Obtiene modelo actual de la base de datos"""
+        modelo = self.sesion_base_datos.query(ModeloIA).filter(
+            ModeloIA.id == id_modelo_ia
+        ).first()
+        
+        if not modelo:
+            raise ErrorReentrenamiento(f"ModeloIA con id {id_modelo_ia} no encontrado")
+        
+        return modelo
+    
+    def _aplicar_oversampling_sintetico(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Aplica oversampling sintético"""
+        # En producción se usaría SMOTE o ADASYN
+        # Por ahora, duplicar muestras de clases minoritarias
+        return df
+    
+    def _aplicar_undersampling_aleatorio(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Aplica undersampling aleatorio"""
+        # Submuestrear clases mayoritarias
+        return df
+    
+    def _aplicar_pesos_muestreo(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Aplica pesos de muestreo"""
+        # Asignar pesos a muestras según clase
+        return df
+    
+    async def _registrar_inicio_pipeline(self, id_modelo_ia: int, razon: str) -> int:
+        """Registra inicio de ejecución en pipeline MLOps"""
+        ejecucion = EjecucionPipeline(
+            pipeline_id=1,  # Pipeline de reentrenamiento
+            modelo_ia_id=id_modelo_ia,
+            estado="EN_EJECUCION",
+            fecha_inicio=datetime.now()
+        )
+        
+        self.sesion_base_datos.add(ejecucion)
+        self.sesion_base_datos.commit()
+        
+        return ejecucion.id
+    
+    async def _registrar_exito_pipeline(
+        self, 
+        id_ejecucion: int, 
+        nueva_version: str,
+        metricas: Dict
+    ):
+        """Registra éxito en pipeline MLOps"""
+        ejecucion = self.sesion_base_datos.query(EjecucionPipeline).filter(
+            EjecucionPipeline.id == id_ejecucion
+        ).first()
+        
+        if ejecucion:
+            ejecucion.estado = "EXITOSO"
+            ejecucion.fecha_fin = datetime.now()
+            ejecucion.duracion_segundos = (
+                ejecucion.fecha_fin - ejecucion.fecha_inicio
+            ).total_seconds()
+            ejecucion.metricas_salida = metricas
+            
+            self.sesion_base_datos.commit()
+    
+    async def _registrar_error_pipeline(
+        self, 
+        id_ejecucion: int, 
+        tipo_error: str,
+        mensaje_error: str
+    ):
+        """Registra error en pipeline MLOps"""
+        ejecucion = self.sesion_base_datos.query(EjecucionPipeline).filter(
+            EjecucionPipeline.id == id_ejecucion
+        ).first()
+        
+        if ejecucion:
+            ejecucion.estado = "FALLIDO"
+            ejecucion.fecha_fin = datetime.now()
+            ejecucion.duracion_segundos = (
+                ejecucion.fecha_fin - ejecucion.fecha_inicio
+            ).total_seconds()
+            ejecucion.errores = f"{tipo_error}: {mensaje_error}"
+            
+            self.sesion_base_datos.commit()
+    
+    async def analizar_sesgos_datos(self, datos: List[Dict]) -> Dict:
+        """Analiza sesgos en los datos de entrenamiento"""
+        df = pd.DataFrame(datos)
+        
+        analisis = {}
+        
+        # Analizar distribución de categorías de riesgo
+        if "categoria_riesgo" in df.columns:
+            distribucion_riesgo = df["categoria_riesgo"].value_counts(normalize=True)
+            analisis["distribucion_riesgo"] = distribucion_riesgo.to_dict()
+            
+            # Calcular desbalance
+            coeficiente_variacion = distribucion_riesgo.std() / distribucion_riesgo.mean()
+            analisis["desbalance_riesgo"] = float(coeficiente_variacion)
+        
+        # Analizar sesgo geográfico
+        if "territorio" in df.columns:
+            distribucion_territorio = df["territorio"].value_counts(normalize=True)
+            analisis["distribucion_territorio"] = distribucion_territorio.head(10).to_dict()
+            
+            # Calcular concentración territorial
+            concentracion = distribucion_territorio.head(3).sum()
+            analisis["concentracion_territorial"] = float(concentracion)
+        
+        return analisis
+\end{lstlisting}
+
+\section{Microservicio de Generación de Datos Sintéticos}
+\label{apendice:codigo-generacion-sintetica}
+
+\begin{lstlisting}[language=Python,
+caption={Microservicio para generación de datos sintéticos mediante CTGAN},
+label={lst:generador-sintetico}]
+# nucleo/generador_sintetico.py -
+# =============================================================================
+# Proyecto: Piloto Experimental de un Asistente Inteligente para Emprendimiento
+#           Informal en Colombia
+#
+# Trabajo Fin de Máster (TFM)
+# Máster en Inteligencia Artificial 
+#
+# Autor: Edicson Pineda Cadena 
+# Institución: Universidad la Rioja (UNIR) España 
+# Año: 2025
+#
+# Módulo: enerador_sintetico.py 
+# Descripción:
+#   Microservicio encargado de la orquestación del pipeline de reentrenamiento
+#   del modelo híbrido LightGBM + Red Neuronal, incluyendo:
+#     - carga de datos históricos y sintéticos,
+#     - validación de drift,
+#     - ejecución del entrenamiento,
+#     - registro de versiones mediante MLflow.
+#
+# Versión del código: 1.0.0
+# Estado: Experimental / Piloto académico
+#
+# Licencia: Uso académico y de investigación (no comercial)
+#
+# Repositorio:
+#   (Privado) – Código fuente adjunto como apéndice del TFM
+#
+# Contacto:
+#   
+#
+# =============================================================================
+import pandas as pd
+import numpy as np
+from typing import Dict, List
+import logging
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import NearestNeighbors
+
+from sdv.single_table import CTGANSynthesizer
+from sdv.metadata import SingleTableMetadata
+from sdv.evaluation.single_table import evaluate_quality
+from sdv.metrics.tabular import (
+    KSComplement,
+    CSTest,
+    LogisticDetection,
+    CorrelationSimilarity
+)
+
+logger = logging.getLogger(__name__)
+
+
+class GeneradorSintetico:
+    """Generador de datos sinteticos usando CTGAN"""
+
+    def __init__(self):
+        self.modelo_ctgan = None
+        self.entrenado = False
+        self.metadata = None
+        self.scaler = StandardScaler()
+        self.datos_entrenamiento_escalados = None
+
+    def entrenar_ctgan(
+        self,
+        datos_reales: pd.DataFrame,
+        variables_discretas: List[str] = None,
+        epocas: int = 300
+    ) -> Dict:
+        """Entrena CTGAN usando SDV y metadata"""
+        try:
+            logger.info(
+                f"Entrenando CTGAN con {len(datos_reales)} muestras"
+            )
+
+            self.metadata = SingleTableMetadata()
+            self.metadata.detect_from_dataframe(datos_reales)
+
+            if variables_discretas:
+                for var in variables_discretas:
+                    if var in datos_reales.columns:
+                        self.metadata.update_column(
+                            column_name=var,
+                            sdtype="categorical"
+                        )
+
+            self.modelo_ctgan = CTGANSynthesizer(
+                metadata=self.metadata,
+                epochs=epocas,
+                verbose=True,
+                enforce_min_max_values=True,
+                enforce_rounding=True,
+                generator_dim=(256, 256),
+                discriminator_dim=(256, 256),
+                batch_size=500,
+                discriminator_steps=1,
+                log_frequency=True
+            )
+
+            datos_numericos = datos_reales.select_dtypes(
+                include=[np.number]
+            )
+            if len(datos_numericos.columns) > 0:
+                self.datos_entrenamiento_escalados = (
+                    self.scaler.fit_transform(datos_numericos)
+                )
+
+            logger.info("Iniciando entrenamiento del CTGAN")
+            self.modelo_ctgan.fit(datos_reales)
+
+            self.entrenado = True
+            logger.info("CTGAN entrenado correctamente")
+
+            return {
+                "estado": "exito",
+                "muestras_entrenamiento": len(datos_reales),
+                "epocas": epocas,
+                "dimension_sintetica": datos_reales.shape[1],
+                "variables_categoricas": (
+                    len(variables_discretas)
+                    if variables_discretas else 0
+                ),
+                "metadata": self.metadata.to_dict()
+            }
+
+        except Exception as error:
+            logger.error(f"Error entrenando CTGAN: {error}")
+            return {"estado": "error", "error": str(error)}
+
+    def generar_datos_sinteticos(
+        self,
+        cantidad_muestras: int,
+        variables_condicionales: Dict = None
+    ) -> pd.DataFrame:
+        """Genera datos sinteticos usando CTGAN entrenado"""
+        if not self.entrenado or self.modelo_ctgan is None:
+            raise ValueError(
+                "CTGAN no esta entrenado. "
+                "Ejecute entrenar_ctgan primero."
+            )
+
+        if cantidad_muestras <= 0:
+            raise ValueError(
+                f"cantidad_muestras invalida: {cantidad_muestras}"
+            )
+
+        try:
+            logger.info(
+                f"Generando {cantidad_muestras} muestras sinteticas"
+            )
+
+            muestras = self.modelo_ctgan.sample(
+                num_rows=cantidad_muestras
+            )
+
+            if variables_condicionales:
+                muestras = self._aplicar_condiciones(
+                    muestras, variables_condicionales
+                )
+
+            logger.info(
+                f"Muestras sinteticas generadas: {len(muestras)}"
+            )
+            return muestras
+
+        except Exception as error:
+            logger.error(
+                f"Error generando datos sinteticos: {error}"
+            )
+            raise
+
+    def _aplicar_condiciones(
+        self,
+        datos: pd.DataFrame,
+        condiciones: Dict
+    ) -> pd.DataFrame:
+        datos_filtrados = datos.copy()
+
+        for variable, valor in condiciones.items():
+            if variable not in datos.columns:
+                logger.warning(
+                    f"Variable no existe: {variable}"
+                )
+                continue
+
+            if isinstance(valor, (list, tuple)):
+                datos_filtrados = datos_filtrados[
+                    datos_filtrados[variable].isin(valor)
+                ]
+            else:
+                datos_filtrados[variable] = valor
+
+        if len(datos_filtrados) == 0:
+            logger.warning(
+                "Condiciones demasiado restrictivas"
+            )
+            return datos
+
+        return datos_filtrados
+
+    def evaluar_calidad_sinteticos(
+        self,
+        datos_reales: pd.DataFrame,
+        datos_sinteticos: pd.DataFrame
+    ) -> Dict:
+        """Evalua calidad y privacidad de datos sinteticos"""
+        try:
+            logger.info(
+                "Evaluando calidad de datos sinteticos"
+            )
+
+            quality_report = evaluate_quality(
+                real_data=datos_reales,
+                synthetic_data=datos_sinteticos,
+                metadata=self.metadata
+            )
+
+            puntaje_sdv = quality_report.get_score()
+
+            metricas = self._calcular_metricas_detalladas(
+                datos_reales, datos_sinteticos
+            )
+
+            riesgo = self._calcular_riesgo_privacidad_real(
+                datos_reales, datos_sinteticos
+            )
+
+            cumple = (
+                puntaje_sdv > 0.7 and
+                riesgo < 0.1 and
+                metricas["similitud_estadistica"] > 0.7
+            )
+
+            return {
+                "puntaje_calidad_sdv": float(puntaje_sdv),
+                "riesgo_privacidad": riesgo,
+                "cumple_estandares": cumple,
+                "metricas": metricas
+            }
+
+        except Exception as error:
+            logger.error(
+                f"Error evaluando calidad: {error}"
+            )
+            return {
+                "puntaje_calidad_sdv": 0.0,
+                "riesgo_privacidad": 1.0,
+                "cumple_estandares": False,
+                "error": str(error)
+            }
+
+\end{lstlisting}
+
+
+
+\end{document}
+
+

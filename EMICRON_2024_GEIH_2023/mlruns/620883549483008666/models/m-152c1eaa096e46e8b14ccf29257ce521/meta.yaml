@@ -1,0 +1,10 @@
+artifact_location: file:///Users/edicsonpin/Documents/maestria/TFM/borrador/EMICRON_2024_GEIH_2023/mlruns/620883549483008666/models/m-152c1eaa096e46e8b14ccf29257ce521/artifacts
+creation_timestamp: 1769718294979
+experiment_id: '620883549483008666'
+last_updated_timestamp: 1769718298171
+model_id: m-152c1eaa096e46e8b14ccf29257ce521
+model_type: null
+name: model
+source_run_id: a26a67a0ec9d4a5490a56d53ae8ea53a
+status: 2
+status_message: null

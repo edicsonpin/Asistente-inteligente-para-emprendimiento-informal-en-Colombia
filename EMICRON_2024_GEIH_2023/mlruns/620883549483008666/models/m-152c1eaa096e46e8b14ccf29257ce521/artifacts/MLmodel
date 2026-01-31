@@ -1,0 +1,22 @@
+artifact_path: file:///Users/edicsonpin/Documents/maestria/TFM/borrador/EMICRON_2024_GEIH_2023/mlruns/620883549483008666/models/m-152c1eaa096e46e8b14ccf29257ce521/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+mlflow_version: 3.7.0
+model_id: m-152c1eaa096e46e8b14ccf29257ce521
+model_size_bytes: 702777
+model_uuid: m-152c1eaa096e46e8b14ccf29257ce521
+prompts: null
+run_id: a26a67a0ec9d4a5490a56d53ae8ea53a
+utc_time_created: '2026-01-29 20:24:54.994528'

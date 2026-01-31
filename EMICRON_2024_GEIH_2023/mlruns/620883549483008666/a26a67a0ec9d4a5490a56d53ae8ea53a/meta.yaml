@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/edicsonpin/Documents/maestria/TFM/borrador/EMICRON_2024_GEIH_2023/mlruns/620883549483008666/a26a67a0ec9d4a5490a56d53ae8ea53a/artifacts
+end_time: 1769718298181
+entry_point_name: ''
+experiment_id: '620883549483008666'
+lifecycle_stage: active
+run_id: a26a67a0ec9d4a5490a56d53ae8ea53a
+run_name: modelo_final_smote
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1769718294965
+status: 3
+tags: []
+user_id: edicsonpin
