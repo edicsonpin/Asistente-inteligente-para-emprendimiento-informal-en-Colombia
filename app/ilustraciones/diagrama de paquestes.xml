@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram id="DP_AsistenteIA" name="Diagrama de Paquetes">
+    <mxGraphModel dx="1018" dy="655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P1_Interfaz" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;P1: InterfazUsuario&lt;/b&gt;&lt;br&gt;&lt;i&gt;&amp;lt;&amp;lt;Web/Móvil&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="package;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#E6F3FF;" parent="1" vertex="1">
+          <mxGeometry x="100" y="200" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P2_Servicios" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;P2: ServiciosAPI&lt;/b&gt;&lt;br&gt;&lt;i&gt;&amp;lt;&amp;lt;FastAPI&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="package;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFF2E6;" parent="1" vertex="1">
+          <mxGeometry x="400" y="200" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P3_NucleoIA" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;P3: NúcleoIA&lt;/b&gt;&lt;br&gt;&lt;i&gt;&amp;lt;&amp;lt;LightGBM/TensorFlow&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="package;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#F0E6FF;" parent="1" vertex="1">
+          <mxGeometry x="700" y="200" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P4_XAI" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;P4: ExplicabilidadXAI&lt;/b&gt;&lt;br&gt;&lt;i&gt;&amp;lt;&amp;lt;SHAP/LIME&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="package;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFF0F5;" parent="1" vertex="1">
+          <mxGeometry x="700" y="380" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P5_MLOps" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;P5: MLOps&lt;/b&gt;&lt;br&gt;&lt;i&gt;&amp;lt;&amp;lt;Monitoreo/Despliegue&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="package;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#F5F5F5;" parent="1" vertex="1">
+          <mxGeometry x="400" y="560" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P6_Datos" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;P6: DatosYPersistencia&lt;/b&gt;&lt;br&gt;&lt;i&gt;&amp;lt;&amp;lt;DB/SyntheticData&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="package;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#E6FFED;" parent="1" vertex="1">
+          <mxGeometry x="700" y="560" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Dep_12" value="&lt;&lt;import&gt;&gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;dashed=1;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" parent="1" source="P1_Interfaz" target="P2_Servicios" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="280" y="240" as="sourcePoint" />
+            <mxPoint x="400" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dep_23" value="&lt;&lt;import&gt;&gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;dashed=1;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" parent="1" source="P2_Servicios" target="P3_NucleoIA" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="580" y="240" as="sourcePoint" />
+            <mxPoint x="700" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dep_34" value="&lt;&lt;import&gt;&gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="P3_NucleoIA" target="P4_XAI" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="810" y="280" as="sourcePoint" />
+            <mxPoint x="810" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dep_42" value="&lt;&lt;import&gt;&gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;dashed=1;exitX=0;exitY=0.5;" parent="1" source="P4_XAI" target="P2_Servicios" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="680" y="420" as="sourcePoint" />
+            <mxPoint x="580" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="590" y="420" />
+              <mxPoint x="590" y="420" />
+              <mxPoint x="590" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dep_26" value="&lt;&lt;import&gt;&gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;dashed=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" parent="1" source="P2_Servicios" target="P6_Datos" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="490" y="280" as="sourcePoint" />
+            <mxPoint x="490" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="420" />
+              <mxPoint x="690" y="420" />
+              <mxPoint x="690" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dep_36" value="&lt;&lt;import&gt;&gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="P3_NucleoIA" target="P6_Datos" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="810" y="280" as="sourcePoint" />
+            <mxPoint x="810" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dep_53" value="&lt;&lt;import&gt;&gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;entryX=0.5;entryY=1;" parent="1" source="P5_MLOps" target="P3_NucleoIA" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="580" y="600" as="sourcePoint" />
+            <mxPoint x="700" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="810" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iUtp5oNIzGgEhsT7HdFe-1" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Dep_53">
+          <mxGeometry x="0.5091" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dep_56" value="&lt;&lt;import&gt;&gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="P5_MLOps" target="P6_Datos" edge="1">
+          <mxGeometry width="160" height="10" relative="1" as="geometry">
+            <mxPoint x="580" y="600" as="sourcePoint" />
+            <mxPoint x="700" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

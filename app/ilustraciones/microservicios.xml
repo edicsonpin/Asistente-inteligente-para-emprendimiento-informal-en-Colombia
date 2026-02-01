@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="29.0.2">
+  <diagram id="microservicios" name="Arquitectura Microservicios">
+    <mxGraphModel dx="1257" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="presentacion" value="Capa de Presentación" style="swimlane;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="760" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="app_movil" value="App Web / Móvil" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#6495ed;" parent="presentacion" vertex="1">
+          <mxGeometry x="40" y="40" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="auditoria" value="Panel Auditoría" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#6495ed;" parent="presentacion" vertex="1">
+          <mxGeometry x="300" y="40" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="servicios" value="Capa de Servicios (Microservicios)" style="swimlane;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="160" width="760" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway" value="API Gateway (KONG)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="servicios" vertex="1">
+          <mxGeometry x="260" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ms_users" value="Microservicio Usuarios y Autenticación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="servicios" vertex="1">
+          <mxGeometry x="260" y="130" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ms_core" value="Microservicio Recomendación (LightGBM + NN)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="servicios" vertex="1">
+          <mxGeometry y="130" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ms_xai" value="Microservicio Explicabilidad (SHAP / LIME)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="servicios" vertex="1">
+          <mxGeometry x="550" y="130" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="broker" value="Kafka (Message Broker)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="servicios" vertex="1">
+          <mxGeometry x="260" y="230" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="persistencia" value="Capa de Persistencia" style="swimlane;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="480" width="760" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="db_core" value="PostgreSQL (Datos Core)" style="shape=cylinder;fillColor=#d5e8d4;strokeColor=#82b366;" parent="persistencia" vertex="1">
+          <mxGeometry x="30" y="60" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="db_analytics" value="BD Analítica (NoSQL / Time-Series)" style="shape=cylinder;fillColor=#f8cecc;strokeColor=#b85450;" parent="persistencia" vertex="1">
+          <mxGeometry x="520" y="60" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" style="endArrow=classic;strokeColor=#0066cc;strokeWidth=2;" parent="1" source="app_movil" target="gateway" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" style="endArrow=classic;strokeColor=#0066cc;strokeWidth=2;" parent="1" source="auditoria" target="gateway" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" style="endArrow=classic;" parent="1" source="gateway" target="ms_users" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" style="endArrow=classic;" parent="1" source="gateway" target="ms_core" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" style="endArrow=classic;" parent="1" source="gateway" target="ms_xai" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" style="dashed=1;strokeColor=#009933;endArrow=block;" parent="1" source="ms_core" target="broker" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" style="dashed=1;strokeColor=#009933;endArrow=block;" parent="1" source="ms_xai" target="broker" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" style="endArrow=classic;" parent="1" source="ms_core" target="db_core" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9" style="endArrow=classic;" parent="1" source="ms_xai" target="db_analytics" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

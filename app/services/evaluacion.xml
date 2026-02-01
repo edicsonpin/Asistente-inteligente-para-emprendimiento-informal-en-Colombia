@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Evaluación avanzada en Macroeconomía (Banco de la República - II trim 2025) -->
+<!-- 10 preguntas de selección única + 10 multirespuesta (cada multirespuesta suma 100%) -->
+
+<!-- ========== PREGUNTAS DE SELECCIÓN ÚNICA ========== -->
+
+<question type="multichoice">
+  <name><text><![CDATA[1. Déficit de la cuenta corriente (II trimestre 2025)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    Según el informe del Banco de la República, ¿cuál fue el déficit de la cuenta corriente de Colombia durante el segundo trimestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[US$ 2.595 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 1.924 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 4.686 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 671 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 525 millones]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[2. Cuenta financiera (II trimestre 2025)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Qué valor registró la cuenta financiera incluyendo variación de reservas internacionales en el segundo trimestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[US$ 1.924 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 2.595 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 525 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 4.686 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 3.538 millones]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[3. Déficit (% PIB trimestral)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿A qué porcentaje del PIB trimestral correspondió el déficit de la cuenta corriente durante abr-jun 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[2,5%]]></text></answer>
+  <answer fraction="0"><text><![CDATA[1,8%]]></text></answer>
+  <answer fraction="0"><text><![CDATA[3,1%]]></text></answer>
+  <answer fraction="0"><text><![CDATA[2,0%]]></text></answer>
+  <answer fraction="0"><text><![CDATA[0,6%]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[4. Causa principal del incremento del déficit]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Qué factor explicó principalmente el incremento del déficit de la cuenta corriente en el segundo trimestre de 2025 frente al primero?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[El mayor déficit en la balanza comercial de bienes y servicios]]></text></answer>
+  <answer fraction="0"><text><![CDATA[La reducción de remesas]]></text></answer>
+  <answer fraction="0"><text><![CDATA[El aumento de reservas internacionales]]></text></answer>
+  <answer fraction="0"><text><![CDATA[El incremento de los ingresos por renta factorial]]></text></answer>
+  <answer fraction="0"><text><![CDATA[La apreciación del peso frente al dólar]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[5. Déficit acumulado (ene-jun 2025)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Cuál fue el déficit acumulado de la cuenta corriente durante el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[US$ 4.686 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 2.595 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 3.538 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 1.407 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 2.611 millones]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[6. Valor de transferencias corrientes (ene-jun 2025)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    En el primer semestre de 2025, ¿cuál fue el valor neto de las transferencias corrientes (ingresos netos)?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[US$ 7.997 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 6.408 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 8.732 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 255 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 4.686 millones]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[7. Flujo de IED (ene-jun 2025)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Qué monto recibió Colombia por Inversión Extranjera Directa (IED) en el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[US$ 6.579 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 7.396 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 11.187 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 5.161 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 2.271 millones]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[8. Sector con mayor participación en IED]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Cuál fue el sector económico con mayor participación en la recepción de IED durante el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[Minería y petróleo]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Financiero y empresarial]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Manufactura]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Electricidad]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Comercio y hoteles]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[9. Variación de reservas (ene-jun 2025)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿En cuánto aumentaron las reservas internacionales brutas por transacciones de balanza de pagos durante el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[US$ 1.088 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 1.866 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 580 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 525 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[US$ 1.407 millones]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[10. Posición de Inversión Internacional (jun-2025)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Cuál fue la posición neta de inversión internacional de Colombia a junio de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <answer fraction="100"><text><![CDATA[-US$ 192.278 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[-US$ 285.544 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[-US$ 477.822 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[-US$ 198 millones]]></text></answer>
+  <answer fraction="0"><text><![CDATA[-US$ 67.500 millones]]></text></answer>
+</question>
+
+<!-- ========== PREGUNTAS MULTIRRESPUESTA (SUMA EXACTA = 100) ========== -->
+
+<question type="multichoice">
+  <name><text><![CDATA[11. Factores que explicaron el aumento del déficit corriente]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    Seleccione los factores que contribuyeron al incremento del déficit de la cuenta corriente en el segundo trimestre de 2025.
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 2 correctas: 50 + 50 = 100 -->
+  <answer fraction="50"><text><![CDATA[Aumento de importaciones de bienes]]></text></answer>
+  <answer fraction="50"><text><![CDATA>Mayor déficit en la balanza comercial de servicios]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Caída de las remesas]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Reducción de exportaciones de café]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Disminución de la renta de factores]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[12. Componentes deficitarios de la cuenta corriente]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Cuáles componentes presentaron balances deficitarios en la cuenta corriente del segundo trimestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 3 correctas: repartir 100 en 3 -> 33.3333,33.3333,33.3334 -->
+  <answer fraction="33.3333"><text><![CDATA[Balanza comercial de bienes]]></text></answer>
+  <answer fraction="33.3333"><text><![CDATA[Balanza de servicios]]></text></answer>
+  <answer fraction="33.3334"><text><![CDATA[Renta de los factores]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Transferencias corrientes]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Errores y omisiones]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[13. Elementos de la cuenta financiera]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Cuáles de los siguientes rubros conforman la cuenta financiera de la balanza de pagos?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 4 correctas: 25 cada una -->
+  <answer fraction="25"><text><![CDATA[Inversión extranjera directa]]></text></answer>
+  <answer fraction="25"><text><![CDATA[Inversión extranjera de cartera]]></text></answer>
+  <answer fraction="25"><text><![CDATA[Créditos externos y otros pasivos]]></text></answer>
+  <answer fraction="25"><text><![CDATA[Activos de reserva]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Transferencias corrientes]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[14. Comportamiento de exportaciones e importaciones]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Qué características presentaron las exportaciones e importaciones de bienes durante el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 2 correctas: 50 + 50 -->
+  <answer fraction="50"><text><![CDATA[Las importaciones crecieron más que las exportaciones]]></text></answer>
+  <answer fraction="50"><text><![CDATA[Las exportaciones crecieron 0,3% anual]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Las exportaciones crecieron 10%]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Las importaciones disminuyeron 5%]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Las exportaciones de carbón aumentaron]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[15. Productos que impulsaron exportaciones (ene-jun 2025)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Cuáles productos contribuyeron al aumento de las exportaciones en el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 3 correctas: repartir con 4 decimales -->
+  <answer fraction="33.3333"><text><![CDATA[Café]]></text></answer>
+  <answer fraction="33.3333"><text><![CDATA[Flores]]></text></answer>
+  <answer fraction="33.3334"><text><![CDATA[Productos industriales]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Petróleo]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Carbón]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[16. Renta de los factores - características]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Qué características tuvo la renta de los factores (ingreso primario) durante el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 3 correctas: 33.3333,33.3333,33.3334 -->
+  <answer fraction="33.3333"><text><![CDATA[Déficit de US$ 6.255 millones]]></text></answer>
+  <answer fraction="33.3333"><text><![CDATA[Disminución de egresos netos por intereses]]></text></answer>
+  <answer fraction="33.3334"><text><![CDATA[Reducción de utilidades de empresas con IED]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Aumento de egresos totales]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Superávit de US$ 255 millones]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[17. Origen del crecimiento de remesas]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Cuáles países explicaron el mayor crecimiento de las remesas en el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 2 correctas: 50 + 50 -->
+  <answer fraction="50"><text><![CDATA[Estados Unidos]]></text></answer>
+  <answer fraction="50"><text><![CDATA[España]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Venezuela]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Chile]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Panamá]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[18. Características de la inversión extranjera de cartera]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Qué características tuvo la inversión extranjera de cartera durante el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 3 correctas: repartir con 4 decimales -->
+  <answer fraction="33.3333"><text><![CDATA[Alcanzó US$ 7.396 millones]]></text></answer>
+  <answer fraction="33.3333"><text><![CDATA[Incluyó títulos en mercados internacionales y locales]]></text></answer>
+  <answer fraction="33.3334"><text><![CDATA[Aumentó respecto a 2024]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Disminuyó frente al año anterior]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Corresponde solo al sector privado]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[19. Componentes de las salidas de capital colombiano]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Qué elementos conformaron las salidas de capital colombiano hacia el exterior en el primer semestre de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 2 correctas: 50 + 50 -->
+  <answer fraction="50"><text><![CDATA[Inversiones directas en el exterior]]></text></answer>
+  <answer fraction="50"><text><![CDATA[Constitución de activos financieros en el extranjero]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Transferencias de remesas]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Créditos externos al sector público]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Reinversión de utilidades extranjeras en Colombia]]></text></answer>
+</question>
+
+<question type="multichoice">
+  <name><text><![CDATA[20. Componentes de la PII (jun-2025)]]></text></name>
+  <questiontext format="html"><text><![CDATA[
+    ¿Qué componentes conforman los activos y pasivos externos de Colombia a junio de 2025?
+  ]]></text></questiontext>
+  <generalfeedback format="html"><text></text></generalfeedback>
+  <defaultgrade>1</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <single>false</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abcde</answernumbering>
+  <!-- 4 correctas: 25 cada una -->
+  <answer fraction="25"><text><![CDATA[Inversión directa]]></text></answer>
+  <answer fraction="25"><text><![CDATA[Inversión de cartera]]></text></answer>
+  <answer fraction="25"><text><![CDATA[Otra inversión]]></text></answer>
+  <answer fraction="25"><text><![CDATA[Activos de reserva]]></text></answer>
+  <answer fraction="0"><text><![CDATA[Transferencias corrientes]]></text></answer>
+</question>
+
+</quiz>
+
+ 

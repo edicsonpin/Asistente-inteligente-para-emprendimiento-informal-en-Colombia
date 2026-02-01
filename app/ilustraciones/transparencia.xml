@@ -1,0 +1,128 @@
+<mxfile host="Electron" modified="2025-12-12T23:15:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64)" etag="A-B-C-D-AUDIT" version="22.1.2" type="embed">
+  <diagram id="audit_traceability_pipeline" name="Auditoría y Trazabilidad">
+    <mxGraphModel dx="1295" dy="728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <mxCell id="2" value="Solicitud de Decisión / Predicción (Usuario/Sistema)" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="10" y="150" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="3" value="Inferencia del Modelo Híbrido (Predicción y Confianza)" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="170" y="140" width="140" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="4" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="5" value="Generación de Explicabilidad (SHAP, LIME, Contrafactuales)" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="350" y="140" width="140" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="6" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="7" value="Auditoría de Explicabilidad (Registro de 'por qué')" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="530" y="50" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="8" value="Auditoría de Decisiones (Registro de Versión, Umbrales, Reglas de Negocio)" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="530" y="240" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="9" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="5" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="140" as="sourcePoint"/>
+            <mxPoint x="530" y="80" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="420" y="110"/>
+              <mxPoint x="530" y="110"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="10" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="3" target="8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="220" as="sourcePoint"/>
+            <mxPoint x="530" y="270" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="240" y="270"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="11" value="EvaluacionRiesgo (ID Usuario, Timestamp, Puntaje, Versión Modelo)" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="720" y="240" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="12" value="SHAPAnalysis / ExplicacionContrafactual (Explicación Persistida)" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="720" y="50" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="13" value="LogSistema (Eventos de Error/Advertencia)" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="340" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="14" value="Write Explicaciones" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="7" target="12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="15" value="Write Decisión" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="8" target="11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="16" value="Log" style="endArrow=open;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="300" as="sourcePoint"/>
+            <mxPoint x="650" y="340" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="240" y="365"/>
+              <mxPoint x="650" y="365"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="17" value="Trazabilidad y Correlación (End-to-End)" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="920" y="140" width="140" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="18" value="Read Explicación" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="12" target="17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="880" y="80" as="sourcePoint"/>
+            <mxPoint x="930" y="80" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="19" value="Read Decisión/Contexto" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="11" target="17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="880" y="270" as="sourcePoint"/>
+            <mxPoint x="930" y="270" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="20" value="Visualización en Frontend / Revisión Humana (Human-in-the-Loop)" style="shape=process;rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="150" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="21" value="Resultado Trazado" style="endArrow=classic;html=1;" edge="1" parent="1" source="17" target="20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="22" value="AuditoriaExplicabilidad (Feedback Humano)" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="50" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="23" value="Registro de Feedback" style="endArrow=open;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="20" target="22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1160" y="150" as="sourcePoint"/>
+            <mxPoint x="1160" y="90" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

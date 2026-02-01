@@ -1,0 +1,199 @@
+<mxfile host="app.diagrams.net">
+    <diagram name="Pidog - Diagrama de Bloques" id="pidog-block-diagram">
+        <mxGraphModel dx="1426" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <!-- Bloque Principal Pidog -->
+                <mxCell id="pidog_main" value="<b>PIDOG</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="40" width="200" height="60" as="geometry"/>
+                </mxCell>
+                
+                <!-- Componentes de Hardware -->
+                <mxCell id="hardware_group" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="50" y="150" width="700" height="400" as="geometry"/>
+                </mxCell>
+                
+                <!-- Robot Hat -->
+                <mxCell id="robot_hat" value="<b>Robot Hat</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="hardware_group">
+                    <mxGeometry x="250" y="0" width="200" height="40" as="geometry"/>
+                </mxCell>
+                
+                <!-- Servomotores -->
+                <mxCell id="servos_group" value="" style="group" vertex="1" connectable="0" parent="hardware_group">
+                    <mxGeometry x="150" y="60" width="400" height="120" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="legs_servos" value="<b>Piernas (8 servos)</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="servos_group">
+                    <mxGeometry x="0" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="head_servos" value="<b>Cabeza (3 servos)</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="servos_group">
+                    <mxGeometry x="140" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="tail_servo" value="<b>Cola (1 servo)</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="servos_group">
+                    <mxGeometry x="280" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sensores -->
+                <mxCell id="sensors_group" value="" style="group" vertex="1" connectable="0" parent="hardware_group">
+                    <mxGeometry x="150" y="200" width="400" height="200" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="imu" value="<b>IMU SH3001</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sensors_group">
+                    <mxGeometry x="0" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="rgb_strip" value="<b>RGB Strip</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sensors_group">
+                    <mxGeometry x="140" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="dual_touch" value="<b>Dual Touch</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sensors_group">
+                    <mxGeometry x="280" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="sound_direction" value="<b>Sound Direction</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sensors_group">
+                    <mxGeometry x="0" y="60" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="ultrasonic" value="<b>Ultrasonic</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sensors_group">
+                    <mxGeometry x="140" y="60" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="music" value="<b>Music Player</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sensors_group">
+                    <mxGeometry x="280" y="60" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sistema de Procesamiento -->
+                <mxCell id="processing_group" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="50" y="600" width="700" height="300" as="geometry"/>
+                </mxCell>
+                
+                <!-- Hilos de Procesamiento -->
+                <mxCell id="threads_title" value="<b>Hilos de Procesamiento</b>" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="processing_group">
+                    <mxGeometry x="300" y="0" width="120" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="legs_thread" value="<b>Legs Action Thread</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="processing_group">
+                    <mxGeometry x="50" y="40" width="140" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="head_thread" value="<b>Head Action Thread</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="processing_group">
+                    <mxGeometry x="210" y="40" width="140" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="tail_thread" value="<b>Tail Action Thread</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="processing_group">
+                    <mxGeometry x="370" y="40" width="140" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="rgb_thread" value="<b>RGB Strip Thread</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="processing_group">
+                    <mxGeometry x="530" y="40" width="140" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="imu_thread" value="<b>IMU Thread</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="processing_group">
+                    <mxGeometry x="50" y="100" width="140" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="sensory_process" value="<b>Sensory Process</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="processing_group">
+                    <mxGeometry x="210" y="100" width="140" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="ultrasonic_thread" value="<b>Ultrasonic Thread</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="processing_group">
+                    <mxGeometry x="370" y="100" width="140" height="40" as="geometry"/>
+                </mxCell>
+                
+                <!-- Buffers de Acción -->
+                <mxCell id="buffers_group" value="" style="group" vertex="1" connectable="0" parent="processing_group">
+                    <mxGeometry x="50" y="180" width="600" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="legs_buffer" value="<b>Legs Action Buffer</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="buffers_group">
+                    <mxGeometry x="0" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="head_buffer" value="<b>Head Action Buffer</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="buffers_group">
+                    <mxGeometry x="160" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="tail_buffer" value="<b>Tail Action Buffer</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="buffers_group">
+                    <mxGeometry x="320" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="legs_coords_buffer" value="<b>Legs Coords Buffer</b>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="buffers_group">
+                    <mxGeometry x="480" y="0" width="120" height="40" as="geometry"/>
+                </mxCell>
+                
+                <!-- Conexiones Principales -->
+                <mxCell id="conn1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="pidog_main" target="robot_hat">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="100" as="sourcePoint"/>
+                        <mxPoint x="450" y="50" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="conn2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="robot_hat" target="servos_group">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="350" y="190" as="sourcePoint"/>
+                        <mxPoint x="350" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="conn3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="robot_hat" target="sensors_group">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="350" y="190" as="sourcePoint"/>
+                        <mxPoint x="350" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Conexiones entre Threads y Buffers -->
+                <mxCell id="conn4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="legs_thread" target="legs_buffer">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="120" y="80" as="sourcePoint"/>
+                        <mxPoint x="60" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="conn5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="head_thread" target="head_buffer">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="80" as="sourcePoint"/>
+                        <mxPoint x="220" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="conn6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="tail_thread" target="tail_buffer">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="440" y="80" as="sourcePoint"/>
+                        <mxPoint x="380" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Leyenda -->
+                <mxCell id="legend" value="<b>Leyenda</b>" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="950" width="60" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="legend_hardware" value="Hardware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="980" width="80" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="legend_servos" value="Actuadores" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="980" width="80" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="legend_sensors" value="Sensores" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="980" width="80" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="legend_threads" value="Procesos/Hilos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="980" width="80" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="legend_buffers" value="Buffers/Memoria" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="980" width="80" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

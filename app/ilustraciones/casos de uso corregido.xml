@@ -1,0 +1,118 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram id="CU_AsistenteIA" name="Diagrama de Casos de Uso">
+    <mxGraphModel dx="1018" dy="655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Sistema" value="&lt;b&gt;Asistente Inteligente para Emprendimiento&lt;/b&gt;" style="rect;html=1;dashed=1;align=center;verticalAlign=top;fillColor=#F8F8FF;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="290" y="100" width="550" height="860" as="geometry" />
+        </mxCell>
+        <mxCell id="CU_Registrar" value="Registrar/Actualizar Perfil" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6F3FF;" parent="Sistema" vertex="1">
+          <mxGeometry x="100" y="95.55555555555556" width="180" height="57.333333333333336" as="geometry" />
+        </mxCell>
+        <mxCell id="CU_Solicitar" value="Solicitar Recomendación" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6F3FF;" parent="Sistema" vertex="1">
+          <mxGeometry x="100" y="191.11111111111111" width="180" height="57.333333333333336" as="geometry" />
+        </mxCell>
+        <mxCell id="CU_Evaluar" value="Evaluar Recomendación" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6F3FF;" parent="Sistema" vertex="1">
+          <mxGeometry x="100" y="286.6666666666667" width="180" height="57.333333333333336" as="geometry" />
+        </mxCell>
+        <mxCell id="CU_FeedbackXAI" value="Proporcionar Feedback XAI" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF0F5;" parent="Sistema" vertex="1">
+          <mxGeometry x="100" y="382.22222222222223" width="180" height="57.333333333333336" as="geometry" />
+        </mxCell>
+        <mxCell id="CU_MonitorearUsabilidad" value="Monitorear Métricas de Usabilidad" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF2E6;" parent="Sistema" vertex="1">
+          <mxGeometry x="170" y="458.6666666666667" width="180" height="57.333333333333336" as="geometry" />
+        </mxCell>
+        <mxCell id="CU_Auditar" value="Auditar Recomendaciones" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF2E6;" parent="Sistema" vertex="1">
+          <mxGeometry x="180" y="554.2222222222223" width="180" height="57.333333333333336" as="geometry" />
+        </mxCell>
+        <mxCell id="CU_MonitorearMLOps" value="Monitorear Rendimiento del Modelo" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0E6FF;" parent="Sistema" vertex="1">
+          <mxGeometry x="120" y="621.1111111111111" width="180" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="CU_Versionar" value="Versionar y Desplegar Modelo" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0E6FF;" parent="Sistema" vertex="1">
+          <mxGeometry x="320" y="716.6666666666667" width="180" height="57.333333333333336" as="geometry" />
+        </mxCell>
+        <mxCell id="CU_DatosSinteticos" value="Gestionar Datos Sintéticos" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0E6FF;" parent="Sistema" vertex="1">
+          <mxGeometry x="100" y="783.5555555555555" width="180" height="57.333333333333336" as="geometry" />
+        </mxCell>
+        <mxCell id="Emprendedor_Actor" value="&lt;b&gt;Emprendedor&lt;/b&gt;" style="actor;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="250" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Analista_Actor" value="&lt;b&gt;Analista / Consultor&lt;/b&gt;" style="actor;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="580" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MLOps_Actor" value="&lt;b&gt;Administrador MLOps&lt;/b&gt;" style="actor;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="750" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Rel_1" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" parent="1" source="Emprendedor_Actor" target="CU_Registrar" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="300" as="sourcePoint" />
+            <mxPoint x="300" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rel_2" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" parent="1" source="Emprendedor_Actor" target="CU_Solicitar" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="300" as="sourcePoint" />
+            <mxPoint x="300" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rel_3" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" parent="1" source="Emprendedor_Actor" target="CU_Evaluar" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="300" as="sourcePoint" />
+            <mxPoint x="300" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rel_4" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" parent="1" source="Emprendedor_Actor" target="CU_FeedbackXAI" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="300" as="sourcePoint" />
+            <mxPoint x="300" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rel_5" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" parent="1" source="Analista_Actor" target="CU_MonitorearUsabilidad" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="600" as="sourcePoint" />
+            <mxPoint x="300" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rel_6" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" parent="1" source="Analista_Actor" target="CU_Auditar" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="600" as="sourcePoint" />
+            <mxPoint x="300" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rel_8" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" parent="1" source="MLOps_Actor" target="CU_MonitorearMLOps" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="850" as="sourcePoint" />
+            <mxPoint x="300" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rel_9" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" parent="1" source="MLOps_Actor" target="CU_Versionar" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="850" as="sourcePoint" />
+            <mxPoint x="300" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rel_10" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" parent="1" source="MLOps_Actor" target="CU_DatosSinteticos" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="850" as="sourcePoint" />
+            <mxPoint x="300" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rel_11" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;dashed=1;html=1;strokeWidth=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" parent="1" source="CU_DatosSinteticos" target="CU_Versionar" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="820" as="sourcePoint" />
+            <mxPoint x="410" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Cm86UuqhrKZan0FixqJJ-1" value="&lt;b&gt;=&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="127" y="204" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Cm86UuqhrKZan0FixqJJ-10" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="105" y="702" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Cm86UuqhrKZan0FixqJJ-14" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="530" width="30" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

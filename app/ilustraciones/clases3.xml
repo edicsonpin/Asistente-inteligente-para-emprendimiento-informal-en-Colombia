@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net">
+<diagram name="Clases con Interfaz - Asistente Inteligente" id="UML-IFACE">
+<mxGraphModel dx="1426" dy="1169" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1800" math="0" shadow="0">
+<root>
+<mxCell id="0"/><mxCell id="1" parent="0"/>
+
+    <!-- Emprendedor -->
+    <mxCell id="Emprendedor" value="&lt;b&gt;Emprendedor&lt;/b&gt;| - id: String; - nombre: String; - edad: Integer; - genero: String; - nivelEducativo: String; - ingresosMensuales: Double; - sectorNegocio: String; - ubicacion: String; - aniosExperiencia: Integer; - estadoFormalizacion: String| + registrarPerfil(): void; + actualizarDatos(): void; + solicitarRecomendacion(): List&lt;Recomendacion&gt;; + evaluarRecomendacion(rec: Recomendacion): Double" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="110" width="340" height="240" as="geometry"/>
+    </mxCell>
+
+    <!-- PerfilSocioeconomico -->
+    <mxCell id="PerfilSocioeconomico" value="&lt;b&gt;PerfilSocioeconomico&lt;/b&gt;| - perfilId: String; - emprendedorId: String; - puntajeRiesgo: Double; - categoriaRiesgo: String; - variablesSocioeconomicas: Map; - embeddingsCategoricos: List&lt;Double&gt;; - fechaActualizacion: Date| + calcularPuntajeRiesgo(): Double; + generarEmbeddings(): List&lt;Double&gt;; + actualizarPerfil(): void" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="470" y="110" width="360" height="220" as="geometry"/>
+    </mxCell>
+
+    <!-- Recomendacion -->
+    <mxCell id="Recomendacion" value="&lt;b&gt;Recomendacion&lt;/b&gt;| - id: String; - emprendedorId: String; - tipo: String; - descripcion: String; - puntuacionConfianza: Double; - nivelPrioridad: Integer; - programaSugerido: String; - fechaGeneracion: Date| + generarExplicacion(): Explicacion; + evaluarUtilidad(): Double; + esAplicable(): Boolean" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="420" width="340" height="210" as="geometry"/>
+    </mxCell>
+
+    <!-- Explicacion -->
+    <mxCell id="Explicacion" value="&lt;b&gt;Explicacion&lt;/b&gt;| - id: String; - recomendacionId: String; - factoresClave: List&lt;String&gt;; - valoresSHAP: Map; - explicacionContrafactual: String; - confianzaExplicacion: Double| + formatearParaUsuario(): String; + generarContrafactual(): String; + calcularImportanciaVariables(): Map" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="680" width="340" height="210" as="geometry"/>
+    </mxCell>
+
+    <!-- Interfaz ModeloPredictivo -->
+    <mxCell id="ModeloPredictivo" value="&lt;&lt;interface&gt;&gt; &lt;b&gt;ModeloPredictivo&lt;/b&gt;| + predecirRiesgo(perfil: PerfilSocioeconomico): Double; + generarRecomendaciones(perfil: PerfilSocioeconomico): List&lt;Recomendacion&gt;; + calcularSHAP(perfil: PerfilSocioeconomico): Map" style="shape=umlClass;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="860" y="380" width="320" height="160" as="geometry"/>
+    </mxCell>
+
+    <!-- ModeloIA (usa la interfaz) -->
+    <mxCell id="ModeloIA" value="&lt;b&gt;ModeloIA&lt;/b&gt;| - version: String; - tipoModelo: String; - metricasRendimiento: Map; - hiperparametros: Map; - fechaEntrenamiento: Date; - estado: String| + entrenarModelo(datos: Any): void; + validarModelo(): Map" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="470" y="420" width="360" height="210" as="geometry"/>
+    </mxCell>
+
+    <!-- Interfaz ModeloEmbeddings -->
+    <mxCell id="ModeloEmbeddings" value="&lt;&lt;interface&gt;&gt; &lt;b&gt;ModeloEmbeddings&lt;/b&gt;| + generarEmbedding(valor: String): List&lt;Double&gt;; + entrenarEmbeddings(): void; + similaridadCoseno(v1: List&lt;Double&gt;, v2: List&lt;Double&gt;): Double" style="shape=umlClass;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="860" y="980" width="320" height="160" as="geometry"/>
+    </mxCell>
+
+    <!-- LightGBMModel implementa ModeloPredictivo -->
+    <mxCell id="LightGBMModel" value="&lt;b&gt;LightGBMModel&lt;/b&gt;| - numLeaves: Integer; - learningRate: Double; - nEstimators: Integer; - featureImportance: Map| + predecirRiesgo(perfil: PerfilSocioeconomico): Double; + generarRecomendaciones(perfil: PerfilSocioeconomico): List&lt;Recomendacion&gt;; + calcularSHAP(perfil: PerfilSocioeconomico): Map; + optimizarHiperparametros(): void" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="860" y="560" width="320" height="200" as="geometry"/>
+    </mxCell>
+
+    <!-- EmbeddingModel implementa ModeloEmbeddings -->
+    <mxCell id="EmbeddingModel" value="&lt;b&gt;EmbeddingModel&lt;/b&gt;| - dimensionEmbedding: Integer; - vocabulario: Map; - pesosModelo: Tensor; - arquitecturaRed: String| + generarEmbedding(valor: String): List&lt;Double&gt;; + entrenarEmbeddings(): void; + similaridadCoseno(v1: List&lt;Double&gt;, v2: List&lt;Double&gt;): Double" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="860" y="1160" width="320" height="180" as="geometry"/>
+    </mxCell>
+
+    <!-- SistemaRecomendacion con inyección -->
+    <mxCell id="SistemaRecomendacion" value="&lt;b&gt;SistemaRecomendacion&lt;/b&gt;| - umbralConfianza: Double; - estrategiaHibrida: String; - modeloPredictivo: ModeloPredictivo; - modeloEmbeddings: ModeloEmbeddings| + procesarSolicitud(perfil: PerfilSocioeconomico): List&lt;Recomendacion&gt;; + combinarModelos(): void; + validarRecomendacion(rec: Recomendacion): Boolean; + actualizarUmbral(nuevo: Double): void" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="470" y="780" width="360" height="220" as="geometry"/>
+    </mxCell>
+
+    <!-- MLOpsManager -->
+    <mxCell id="MLOpsManager" value="&lt;b&gt;MLOpsManager&lt;/b&gt;| - experimentId: String; - versionModelo: String; - metricasSeguimiento: Map; - configDespliegue: Map| + registrarExperimento(): void; + versionarModelo(): void; + monitorearRendimiento(): Map; + detectarDataDrift(): Boolean" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="930" width="340" height="210" as="geometry"/>
+    </mxCell>
+
+    <!-- InteraccionUsuario -->
+    <mxCell id="InteraccionUsuario" value="&lt;b&gt;InteraccionUsuario&lt;/b&gt;| - interaccionId: String; - emprendedorId: String; - recomendacionId: String; - tipoAccion: String; - utilidadPercibida: Integer; - timestamp: Date| + registrarInteraccion(): void; + analizarFeedback(): Map; + calcularMetricasEngagement(): Double" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="680" width="340" height="210" as="geometry"/>
+    </mxCell>
+
+    <!-- Relaciones principales -->
+    <mxCell id="rel_emp_perf" value="tiene" style="endArrow=none;startArrow=none;html=1;" edge="1" parent="1" source="Emprendedor" target="PerfilSocioeconomico"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="rel_emp_perf_m1" value="1" style="edgeLabel;resizable=0;html=1;" vertex="1" connectable="0" parent="rel_emp_perf"><mxGeometry x="-0.1" y="-1" relative="1" as="geometry"><mxPoint x="-8" y="-10" as="offset"/></mxGeometry></mxCell>
+    <mxCell id="rel_emp_perf_m2" value="0..*" style="edgeLabel;resizable=0;html=1;" vertex="1" connectable="0" parent="rel_emp_perf"><mxGeometry x="1.1" y="0" relative="1" as="geometry"><mxPoint x="8" y="10" as="offset"/></mxGeometry></mxCell>
+
+    <mxCell id="rel_emp_rec" value="recibe" style="endArrow=none;startArrow=none;html=1;" edge="1" parent="1" source="Emprendedor" target="Recomendacion"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="rel_emp_rec_m1" value="1" style="edgeLabel;resizable=0;html=1;" vertex="1" connectable="0" parent="rel_emp_rec"><mxGeometry x="-0.1" y="-1" relative="1" as="geometry"><mxPoint x="-8" y="-10" as="offset"/></mxGeometry></mxCell>
+    <mxCell id="rel_emp_rec_m2" value="1..*" style="edgeLabel;resizable=0;html=1;" vertex="1" connectable="0" parent="rel_emp_rec"><mxGeometry x="1.1" y="0" relative="1" as="geometry"><mxPoint x="8" y="10" as="offset"/></mxGeometry></mxCell>
+
+    <mxCell id="rel_perf_modelo" value="alimenta" style="endArrow=open;html=1;" edge="1" parent="1" source="PerfilSocioeconomico" target="ModeloIA"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="rel_modelo_rec" value="genera" style="endArrow=open;html=1;" edge="1" parent="1" source="ModeloIA" target="Recomendacion"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="rel_rec_exp" value="incluye" style="endArrow=open;html=1;" edge="1" parent="1" source="Recomendacion" target="Explicacion"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- Realización de interfaces -->
+    <mxCell id="rel_realiza_pred" value="" style="endArrow=block;dashed=1;html=1;" edge="1" parent="1" source="LightGBMModel" target="ModeloPredictivo"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="rel_realiza_emb" value="" style="endArrow=block;dashed=1;html=1;" edge="1" parent="1" source="EmbeddingModel" target="ModeloEmbeddings"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- Dependencias de SistemaRecomendacion a interfaces -->
+    <mxCell id="rel_dep_pred" value="depende" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="SistemaRecomendacion" target="ModeloPredictivo"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="rel_dep_emb" value="depende" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="SistemaRecomendacion" target="ModeloEmbeddings"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- MLOpsManager gestiona ModeloIA -->
+    <mxCell id="rel_mlops" value="gestiona" style="endArrow=open;html=1;" edge="1" parent="1" source="MLOpsManager" target="ModeloIA"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- InteraccionUsuario -> Recomendacion -->
+    <mxCell id="rel_inter" value="registra" style="endArrow=open;html=1;" edge="1" parent="1" source="InteraccionUsuario" target="Recomendacion"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- Título -->
+    <mxCell id="title" value="&lt;b&gt;Diagrama de Clases con Interfaces - Asistente Inteligente&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="350" y="30" width="700" height="30" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>
+</diagram> </mxfile>

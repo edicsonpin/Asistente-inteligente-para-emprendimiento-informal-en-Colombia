@@ -1,0 +1,147 @@
+<mxfile host="app.diagrams.net">
+    <diagram name="Casos de Uso - Asistente Inteligente" id="UML">
+        <mxGraphModel dx="1426" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <!-- Sistema Principal -->
+                <mxCell id="system" value="Sistema Asistente Inteligente" style="swimlane;whiteSpace=wrap;html=1;fillColor=#E6F3FF;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="120" width="600" height="500" as="geometry"/>
+                </mxCell>
+                
+                <!-- Actores -->
+                <mxCell id="actor1" value="Emprendedor Informal" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="200" width="30" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="actor2" value="Administrador Sistema" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="400" width="30" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="actor3" value="Sistema de Recomendación" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="850" y="200" width="30" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="actor4" value="Módulo XAI" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="850" y="350" width="30" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- Casos de Uso dentro del Sistema -->
+                <mxCell id="uc1" value="Registrar Perfil de Emprendedor" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="180" width="160" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="uc2" value="Solicitar Recomendación Personalizada" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="250" width="160" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="uc3" value="Visualizar Explicación de Recomendación" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="320" width="160" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="uc4" value="Evaluar Utilidad de Recomendación" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="390" width="160" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="uc5" value="Gestionar Modelos de IA" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="180" width="160" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="uc6" value="Monitorear Métricas de Rendimiento" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="250" width="160" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="uc7" value="Auditar Decisiones del Sistema" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="320" width="160" height="40" as="geometry"/>
+                </mxCell>
+
+                <!-- Relaciones Emprendedor -->
+                <mxCell id="rel1" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="actor1" target="uc1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="220" as="sourcePoint"/>
+                        <mxPoint x="120" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="rel2" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="actor1" target="uc2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="270" as="sourcePoint"/>
+                        <mxPoint x="120" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="rel3" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="actor1" target="uc3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="320" as="sourcePoint"/>
+                        <mxPoint x="120" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="rel4" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="actor1" target="uc4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="370" as="sourcePoint"/>
+                        <mxPoint x="120" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Relaciones Administrador -->
+                <mxCell id="rel5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="actor2" target="uc5">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="430" as="sourcePoint"/>
+                        <mxPoint x="120" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="rel6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="actor2" target="uc6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="480" as="sourcePoint"/>
+                        <mxPoint x="120" y="430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="rel7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="actor2" target="uc7">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="530" as="sourcePoint"/>
+                        <mxPoint x="120" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Relaciones con Sistemas Externos -->
+                <mxCell id="rel8" value="«include»" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="uc2" target="actor3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="270" as="sourcePoint"/>
+                        <mxPoint x="510" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="rel9" value="«include»" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="uc3" target="actor4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="340" as="sourcePoint"/>
+                        <mxPoint x="510" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Dependencias entre casos de uso -->
+                <mxCell id="rel10" value="«extend»" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="uc2" target="uc3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="290" as="sourcePoint"/>
+                        <mxPoint x="380" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="rel11" value="«include»" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="uc1" target="uc2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="220" as="sourcePoint"/>
+                        <mxPoint x="380" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Notas explicativas -->
+                <mxCell id="note1" value="Sistema desarrollado con arquitectura de microservicios usando FastAPI, LightGBM y TensorFlow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="50" width="300" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

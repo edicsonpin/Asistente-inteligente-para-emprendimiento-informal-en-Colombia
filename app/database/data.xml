@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net">
+    <diagram name="Casos de Uso" id="UML">
+        <mxGraphModel dx="1426" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <!-- Actores -->
+                <mxCell id="2" value="Emprendedor Informal" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="200" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Administrador del Sistema" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="400" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Sistema de Recomendación" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="500" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Módulo XAI" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="600" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <!-- Límite del sistema -->
+                <mxCell id="6" value="" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="160" y="120" width="520" height="500" as="geometry"/>
+                </mxCell>
+                <!-- Casos de uso dentro del sistema -->
+                <mxCell id="7" value="Registrar Perfil de Emprendedor" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="60" y="60" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Solicitar Recomendación Personalizada" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="60" y="120" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Visualizar Explicación de Recomendación" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="60" y="180" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Gestionar Modelo de IA" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="60" y="240" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Monitorear Interacciones" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="6">
+                    <mxGeometry x="60" y="300" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <!-- Relaciones entre actores y casos de uso -->
+                <!-- Emprendedor -->
+                <mxCell id="12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="2" target="7">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="220" as="sourcePoint"/>
+                        <mxPoint x="120" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="2" target="8">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="220" as="sourcePoint"/>
+                        <mxPoint x="120" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="2" target="9">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="220" as="sourcePoint"/>
+                        <mxPoint x="120" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <!-- Administrador -->
+                <mxCell id="15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="3" target="10">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="430" as="sourcePoint"/>
+                        <mxPoint x="120" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" edge="1" parent="1" source="3" target="11">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="70" y="430" as="sourcePoint"/>
+                        <mxPoint x="120" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <!-- Sistema de Recomendación -->
+                <mxCell id="17" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="8" target="4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="220" y="140" as="sourcePoint"/>
+                        <mxPoint x="270" y="90" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <!-- Módulo XAI -->
+                <mxCell id="18" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="9" target="5">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="220" y="200" as="sourcePoint"/>
+                        <mxPoint x="270" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

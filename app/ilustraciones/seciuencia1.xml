@@ -1,0 +1,128 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.9">
+  <diagram name="Secuencia - Solicitar Recomendaciones" id="SEQ-REC">
+    <mxGraphModel dx="1018" dy="1855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actorUsuario" value="Usuario" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="140" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="lifEmprendedor" value="Emprendedor" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="-30" width="160" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="lifSistema" value="SistemaRecomendacion" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="410" width="200" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="actSistema" value="" style="shape=rectangle;fillColor=#dfefff;strokeColor=#6c8ebf;" parent="lifSistema" vertex="1">
+          <mxGeometry x="80" y="150" width="20" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="lifModeloPred" value=": ModeloPredictivo" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="130" width="340" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" value="La capa Aplicación depende de interfaces (ModeloPredictivo, ModeloEmbeddings) para poder sustituir implementaciones sin cambiar el flujo." style="shape=note;whiteSpace=wrap;html=1;" parent="lifModeloPred" vertex="1">
+          <mxGeometry x="-240" y="880" width="580" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lifModeloEmb" value=": ModeloEmbeddings" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="850" y="60" width="200" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="lifModeloIA" value="ModeloIA" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="980" y="-70" width="180" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="lifMLOps" value="MLOpsManager" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="40" width="180" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="solicitarRecomendacion()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="actorUsuario" target="lifEmprendedor" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="70" />
+              <mxPoint x="230" y="70" />
+              <mxPoint x="230" y="980" />
+              <mxPoint x="290" y="980" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="actualizarDatos()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifEmprendedor" target="lifEmprendedor" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="obtenerPerfilActual()" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifEmprendedor" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m4" value="procesarSolicitud(perfil)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifEmprendedor" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m5" value="predecirRiesgo(perfil)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifSistema" target="lifModeloPred" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m6" value="score" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;html=1;dashed=1;" parent="1" source="lifModeloPred" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m7" value="generarRecomendaciones(perfil)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifSistema" target="lifModeloPred" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="1010" />
+              <mxPoint x="650" y="1010" />
+              <mxPoint x="650" y="120" />
+              <mxPoint x="770" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="candidatas[]" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;html=1;dashed=1;" parent="1" source="lifModeloPred" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m9" value="generarEmbedding(categorias)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifSistema" target="lifModeloEmb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m10" value="vecPerfil" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;html=1;dashed=1;" parent="1" source="lifModeloEmb" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m11" value="calcularSHAP(perfil)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifSistema" target="lifModeloIA" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m12" value="valoresSHAP" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;html=1;dashed=1;" parent="1" source="lifModeloIA" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m13" value="combinarModelos(score, vecPerfil, candidatas)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifSistema" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m14" value="validarRecomendacion(umbralConfianza)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifSistema" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m15" value="construir Explicacion(valoresSHAP, factores, contrafactual)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifSistema" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m16" value="lista Recomendacion+Explicacion" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;html=1;" parent="1" source="lifSistema" target="lifEmprendedor" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m17" value="mostrar recomendaciones" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;html=1;" parent="1" source="lifEmprendedor" target="actorUsuario" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="680" />
+              <mxPoint x="200" y="70" />
+              <mxPoint x="150" y="70" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m18" value="registrarInteraccion(recomendacion, accion, utilidad)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="actorUsuario" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m19" value="monitorearRendimiento(métricas online)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" parent="1" source="lifSistema" target="lifMLOps" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m20" value="alertas/acciones (reentrenar, rollback)" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;html=1;dashed=1;" parent="1" source="lifMLOps" target="lifSistema" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="&lt;b&gt;Diagrama de Secuencia - Solicitar Recomendaciones con Explicación&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="420" y="-350" width="1000" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
