@@ -86,16 +86,8 @@ No se detectaron features con drift significativo.
 
 ---
 
-## 5. PROXIMOS PASOS
-
-1. Modelo entrenado y validado
-2. Drift detectado y documentado
-3. ⏳ Integrar con sistema de scoring (API REST)
-4. ⏳ Dashboard de monitoreo en tiempo real
-5. ⏳ Pipeline de CI/CD para re-entrenamiento automático
-6. ⏳ A/B testing de modelos en producción
 
 ---
 
-**Generado:** 2026-01-29 15:24:59
+**Generado:** 2026-01-31 21:51:48
 **Versión Modelo:** 1.0
